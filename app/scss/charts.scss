@@ -1,0 +1,25 @@
+div.plottable {
+  width: 98%;
+}
+
+.chart {
+  margin-top: 8px;
+  background-color: #f4f4f4;
+  padding: 8px;
+  height: 200px;
+}
+
+.plottable {
+
+  .chart-label {
+    text {
+      font-family: Proxima Nova Regular, sans-serif;
+      font-size: 15px;
+      text-transform: none;
+    }
+  }
+
+  .label, .table {
+    background-color: transparent;
+  }
+}

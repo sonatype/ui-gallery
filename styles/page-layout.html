@@ -1,0 +1,48 @@
+<item-description>
+  <marked>
+    We have two basic layouts in IQ Server. A single column and a double column. The double column is used most frequently and consists of a narrow left hand sidebar and a main content area. The single column appears much less frequently, being used on System Preferences pages and in the Success Metrics pages.
+  
+    `.iq-root-container` is present in both single and double pane layouts. It serves to define the maximum page width and keep the panes centered on the page.
+
+    The main content area of the page is classed with `.iq-body-content`, in a single pane configuration the modifier class `iq-body-content--single-pane` is added. Page specific modifiers should also be created if further custom styles are required.
+    
+    For example: `&lt;main class="iq-body-content iq-body-content--single-pane iq-body-content--page-name"&gt;` would result in a single pane layout with further modifications specific to that page.
+
+    Ideally `.iq-sidebar` and `.iq-body-content` should be applied to their semantically correct HTML5 elements: `&lt;aside&gt;` and `&lt;main&gt;`
+    
+    **Note:** in the examples below the directive `maximize-container-height` is incorrectly displayed as `maximize-container-height=""`. This is a glitch in the code rendering library. The correct usage is simply `maximize-container-height`.
+  </marked>
+</item-description>
+
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>Two column layout</h2>
+    </div>
+  </div>
+  <div hljs>
+    <div class="iq-root-container" maximize-container-height>
+      <aside class="iq-sidebar">
+        <!-- Sidebar contents -->
+      </aside><!--
+    --><main class="iq-body-container">
+        <!-- Main page contents -->
+      </main>
+    </div>
+  </div>
+</div>
+
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>Single column layout</h2>
+    </div>
+  </div>
+  <div hljs>
+    <div class="iq-root-container" maximize-container-height>
+      <main class="iq-body-container iq-body-container--single-pane">
+        <!-- Main page contents -->
+      </main>
+    </div>
+  </div>
+</div>

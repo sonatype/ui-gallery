@@ -1,0 +1,30 @@
+<item-description>
+  <p>
+    Modal HTML/SCSS. Basic modal styles consist of a translucent backdrop that covers the entire screen and the modal
+    itself. The modal has a header, content, and a footer which usually contains buttons. The content section is
+    agnostic, it should be able to hold any content required - text, forms, tables, etc.
+  </p>
+</item-description>
+
+<item-example-html>
+  <button ng-controller="IqModalExampleController as vm" class="btn btn-primary" ng-click="vm.openModal()">
+    Open Modal
+  </button>
+</item-example-html>
+
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>Modal Contents</h2>
+    </div>
+  </div>
+  <div hljs hljs-language="html" hljs-include="'styles/iq-modal/modal-content.html'"></div>
+</div>
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>Controller</h2>
+    </div>
+  </div>
+  <div hljs hljs-language="js" hljs-include="'styles/iq-modal/IqModalExampleController.js'"></div>
+</div>

@@ -1,0 +1,146 @@
+<item-description>
+  Tile partition Grid system.
+</item-description>
+
+<item-example-html>
+  <style>
+    .iq-grid-col {
+      min-height: 60px;
+    }
+    
+    .iq-grid-col--200px {
+      /* Mixin format would be:
+      @include flex(0 0 200px);
+      */
+      -webkit-box-flex: 0 0 200px;
+      -moz-box-flex: 0 0 200px;
+      -webkit-flex: 0 0 200px;
+      -ms-flex: 0 0 200px;
+      flex: 0 0 200px;
+    }
+  </style>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--25">25%</div>
+    <div class="iq-grid-col iq-grid-col--25">25% -- range-rover hacker disposable shoes shoes long-chain hydrocarbons hotdog grenade chrome rain bomb skyscraper weathered engine fetishism cardboard. bicycle knife refrigerator semiotics 3D-printed dome computer</div>
+    <div class="iq-grid-col iq-grid-col--25">25%</div>
+    <div class="iq-grid-col iq-grid-col--25">25%</div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--50">50%</div>
+    <div class="iq-grid-col iq-grid-col--50">50%</div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--25">25%</div>
+    <div class="iq-grid-col">Expanding</div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--33">33%</div>
+    <div class="iq-grid-col iq-grid-col--33">33%</div>
+    <div class="iq-grid-col iq-grid-col--33">33%</div>
+  </div>
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--33">33%</div>
+    <div class="iq-grid-col iq-grid-col--67">67%</div>
+  </div>
+  
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--33">33%</div>
+    <div class="iq-grid-col iq-grid-col--67">
+      67% column which includes two 50% columns
+      <hr>
+      <div class="iq-grid-row">
+        <div class="iq-grid-col iq-grid-col--50">50%</div>
+        <div class="iq-grid-col iq-grid-col--50">50%</div>
+      </div>
+    </div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--25">25%</div>
+    <div class="iq-grid-col iq-grid-col--25 iq-grid-col--noborder">25% no vertical keyline</div>
+    <div class="iq-grid-col iq-grid-col--25 iq-grid-col--noborder">25% no vertical keyline</div>
+    <div class="iq-grid-col iq-grid-col--25">25%</div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--200px">200px fixed width via custom class</div>
+    <div class="iq-grid-col">Default column stretches to fill available space --- range-rover hacker disposable shoes shoes long-chain hydrocarbons hotdog grenade chrome rain bomb skyscraper weathered engine fetishism cardboard. bicycle knife refrigerator semiotics 3D-printed dome computer</div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  
+  <!-- Grids with Titles -->
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--50">
+      <div class="iq-grid-header">
+        <h2 class="iq-grid-header__title">IQ Grid with .iq-grid-header</h2>
+      </div>
+      50% width columns --- range-rover hacker disposable shoes shoes long-chain
+      hydrocarbons hotdog grenade chrome rain bomb skyscraper weathered engine fetishism cardboard. bicycle knife
+      refrigerator semiotics 3D-printed dome computer
+    </div>
+    <div class="iq-grid-col iq-grid-col--50">
+      <div class="iq-grid-header">
+        <h3 class="iq-grid-header__title">
+          <i class="fa fa-sitemap iq-grid-header__icon"></i>IQ Grid with .iq-grid-header
+        </h3>
+      </div>
+      50% width columns --- skyscraper weathered engine fetishism cardboard. bicycle knife
+      refrigerator semiotics 3D-printed dome computer
+    </div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--50">
+      <div class="iq-grid-header">
+        <h2 class="iq-grid-header__title">IQ Grid with .iq-grid-header</h2>
+        <hr class="iq-grid-header__hrule">
+      </div>
+      50% width columns --- range-rover hacker disposable shoes shoes long-chain
+      hydrocarbons hotdog grenade chrome rain bomb skyscraper weathered engine fetishism cardboard. bicycle knife
+      refrigerator semiotics 3D-printed dome computer
+    </div>
+    <div class="iq-grid-col iq-grid-col--50">
+      <div class="iq-grid-header">
+        <h3 class="iq-grid-header__title">
+          <i class="fa fa-sitemap iq-grid-header__icon"></i>IQ Grid with .iq-grid-header
+        </h3>
+        <hr class="iq-grid-header__hrule">
+      </div>
+      50% width columns --- skyscraper weathered engine fetishism cardboard. bicycle knife
+      refrigerator semiotics 3D-printed dome computer
+    </div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+  <div class="iq-grid-row">
+    <div class="iq-grid-col iq-grid-col--50">
+      <div class="iq-grid-header">
+        <h2 class="iq-grid-header__title">IQ Grid with .iq-grid-header</h2>
+        <div class="iq-grid-header__subtitle">
+          This is a sub-title.
+        </div>
+        <hr class="iq-grid-header__hrule">
+      </div>
+      50% width columns --- range-rover hacker disposable shoes shoes long-chain
+      hydrocarbons hotdog grenade chrome rain bomb skyscraper weathered engine fetishism cardboard. bicycle knife
+      refrigerator semiotics 3D-printed dome computer
+    </div>
+    <div class="iq-grid-col iq-grid-col--50">
+      <div class="iq-grid-header">
+        <h3 class="iq-grid-header__title">
+          <i class="fa fa-bank iq-grid-header__icon"></i>IQ Grid with .iq-grid-header
+        </h3>
+        <div class="iq-grid-header__subtitle">
+          This is a sub-title.
+        </div>
+        <hr class="iq-grid-header__hrule">
+      </div>
+      50% width columns --- skyscraper weathered engine fetishism cardboard. bicycle knife
+      refrigerator semiotics 3D-printed dome computer
+    </div>
+  </div>
+  <hr class="iq-grid-h-keyline">
+</item-example-html>

@@ -1,0 +1,11 @@
+<div class="iq-tree-view">
+  <a class="iq-tree-view__trigger" ng-click="vm.isExpanded = !vm.isExpanded">
+    <div class="iq-tree-view__twisty">
+      <span class="iq-tree-view__twisty-icon" ng-class="{ expand: !vm.isExpanded, collapse: vm.isExpanded }"></span>
+    </div>
+    <div class="iq-tree-view__text">
+      <i class="fa fa-cube iq-tree-view__text-icon"></i>{{vm.name}}
+    </div>
+  </a>
+  <div class="iq-tree-view__children" ng-transclude ng-if="vm.isExpanded"></div>
+</div>

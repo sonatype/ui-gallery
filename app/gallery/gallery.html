@@ -1,0 +1,27 @@
+<header class="iq-header">
+  <div class="iq-header__inner">
+    <div class="iq-title">
+      <a ui-sref="home"><img src="img/sonatype-header.png" class="iq-pull-left" alt="Logo"></a>
+      <div class="iq-title__brand">
+        <a ui-sref="home">IQ Server Component Gallery</a>
+      </div>
+      <div class="iq-title__version">
+        Serving all your component needs since 2017
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="iq-main-view">
+  <div class="iq-root-container iq-root-container--gallery" maximize-container-height>
+    <aside class="iq-sidebar">
+      <h2>
+        Components
+      </h2>
+      <navigation></navigation>
+    </aside><!--
+  --><main class="iq-body-container">
+      <div ui-view></div>
+    </main>
+  </div>
+</main>

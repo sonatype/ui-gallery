@@ -1,0 +1,46 @@
+@import "highlight";
+@import "markdown";
+@import "charts";
+
+// Page Layout
+
+.iq-root-container--gallery {
+  .iq-sidebar {
+    padding-left: 8px;
+  }
+}
+
+// Global
+
+.iq-error {
+  background-color: #fce2e2;
+  border-color: #831d1d;
+  color: #831d1d;
+}
+
+.iq-alert__message {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+// CUSTOM STYLES FOR GALLERY
+
+.iq-title__brand {
+  a, a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.iq-tile__gallery {
+  .iq-tile-header {
+    margin-bottom: 0;
+  }
+}

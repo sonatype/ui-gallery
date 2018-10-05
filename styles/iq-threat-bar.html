@@ -1,0 +1,196 @@
+<item-description>
+  <marked>
+`.iq-threat-bar` is used at the left edge of a table cell or list item to indicate via colour the threat level of the information to follow.
+
+There are three scales to choose from: threat level by name, threat level by number, and policy threat level by number. The names and colour variables are located in the `/scss/_variables.scss` file. All three are represented in the table below.
+
+Other threat indicators such as <a href="/#/iq-threat-indicators">threat indicators</a> and threat backgrounds have similar purposes but different applications.
+
+Typically the threat level is set programmatically:
+`&lt;span class="iq-threat-bar iq-threat-bar--critical"&gt;&lt;/span&gt;`
+
+`&lt;span class="iq-threat-bar iq-threat-bar--5"&gt;&lt;/span&gt;`
+
+`&lt;span class="iq-threat-bar iq-threat-bar--policy-level-2"&gt;&lt;/span&gt;`
+
+For examples in the application look at:
+`/frontend/owner.manager/summary/owner.summary.view.html`
+`/frontend/owner.manager/summary/ownerPolicyList/ownerPolicyList.html`
+
+  </marked>
+</item-description>
+
+<item-example-html>
+  <h3>Threat levels by name</h3>
+  <table class="iq-table">
+    <thead>
+      <tr class="iq-table-row">
+        <th class="iq-cell iq-cell--header iq-clickable">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+          </div>
+          Header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable iq-cell--selected">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i>
+          </div>
+          Selected header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+          </div>
+          Header
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--none"></span> Threat Level None
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--moderate"></span> Threat Level Moderate
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--severe"></span> Threat Level Severe
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--critical"></span> Threat Level Critical
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Threat levels by number</h3>
+  <table class="iq-table">
+    <thead>
+      <tr class="iq-table-row">
+        <th class="iq-cell iq-cell--header iq-clickable">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+          </div>
+          Header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable iq-cell--selected">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i>
+          </div>
+          Selected header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+          </div>
+          Header
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--0"></span> Threat Level 0
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--1"></span> Threat Level 1-3
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--4"></span> Threat Level 4-7
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--8"></span> Threat Level 8-10
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Threat levels by policy number</h3>
+  <table class="iq-table">
+    <thead>
+      <tr class="iq-table-row">
+        <th class="iq-cell iq-cell--header iq-clickable">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+          </div>
+          Header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable iq-cell--selected">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i>
+          </div>
+          Selected header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable">
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+          </div>
+          Header
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--policy-level-0"></span> Threat Bar Policy Level 0
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--policy-level-1"></span> Threat Bar Policy Level 1
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--policy-level-2"></span> Threat Bar Policy Level 2-3
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--policy-level-4"></span> Threat Bar Policy Level 4-7
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell">
+          <span class="iq-threat-bar iq-threat-bar--policy-level-8"></span> Threat Bar Policy Level 8-10
+        </td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+      </tr>
+    </tbody>
+  </table>
+</item-example-html>

@@ -1,0 +1,102 @@
+<item-description>
+  <marked>
+    Basic rules for form layout.
+  </marked>
+</item-description>
+
+<item-example-html>
+  <div class="iq-tile-header__subtitle">
+      This is an example of a sub-title that wraps. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+  <form novalidate
+        name="vm.form"
+        class="iq-form"
+        ng-controller="iqFormLayoutExampleController as vm"
+        ng-submit="vm.submit()">
+    <div class="iq-form-group">
+      <label class="iq-label">Default</label>
+      <input type="text"
+             ng-required="true"
+             name="vm.text1Input"
+             clm-input
+             ng-model="vm.text1"
+             class="iq-text-input">
+    </div>
+    <div class="iq-form-group">
+      <label class="iq-label">Long field <span class="iq-sub-label">This is a sub-label. The field element below is 395px wide.</span></label>
+      <input type="text"
+             ng-required="true"
+             name="vm.text2Input"
+             clm-input
+             ng-model="vm.text2"
+             class="iq-text-input iq-text-input--long">
+    </div>
+    <fieldset class="iq-checkbox-group iq-form-group">
+      <legend class="iq-label iq-label--optional">Checkboxes</legend>
+      <iq-checkbox label="Option 1"
+                   on-click="vm.isSubscribed = !vm.isSubscribed"
+                   is-checked="vm.isSubscribed">
+      </iq-checkbox>
+      <iq-checkbox label="Option 2"
+                   on-click="vm.isSubscribed2 = !vm.isSubscribed2"
+                   is-checked="vm.isSubscribed2">
+      </iq-checkbox>
+      <iq-checkbox label="Option 3"
+                   on-click="vm.isSubscribed3 = !vm.isSubscribed3"
+                   is-checked="vm.isSubscribed3">
+      </iq-checkbox>
+      <iq-checkbox label="Option 4"
+                   on-click="vm.isSubscribed4 = !vm.isSubscribed4"
+                   is-checked="vm.isSubscribed4">
+      </iq-checkbox>
+    </fieldset>
+    <div class="iq-form-row">
+      <div class="iq-form-group">
+        <label class="iq-label iq-label--optional">Horizontal layout</label>
+        <dropdown-selector options="vm.objectOptions"
+                           ng-model="vm.dropdown"
+                           option-name-param="name"
+                           option-value-param="value">
+        </dropdown-selector>
+      </div>
+      <div class="iq-form-group">
+        <label class="iq-label iq-label--optional">Field in the second column</label>
+        <input type="text"
+               ng-model="vm.text3"
+               name="vm.text3Input"
+               clm-input
+               class="iq-text-input">
+      </div>
+      <div class="iq-form-group">
+        <button class="iq-btn" type="button">
+          <i class="fa fa-plus"></i>Button
+        </button>
+      </div>
+    </div>
+    <fieldset class="iq-radio-group iq-form-group">
+      <legend>Radio buttons</legend>
+      <iq-radio model="vm.range" value="'high'">high</iq-radio>
+      <iq-radio model="vm.range" value="'medium'">medium</iq-radio>
+      <iq-radio model="vm.range" value="'low'">low</iq-radio>
+    </fieldset>
+    <div class="iq-form-group">
+      <label class="iq-label iq-label--optional">Textarea</label>
+      <textarea ng-model="vm.text4" name="vm.text4Input" clm-input class="iq-textarea"></textarea>
+    </div>
+    <div class="iq-form-group">
+      <label class="iq-label iq-label--optional">Color Picker</label>
+      <color-picker ng-model="vm.color"></color-picker>
+    </div>
+    <!-- Need to set the tooltip target below or it will be cut off by the scrolling container -->
+    <button class="btn btn-primary" submit-validation submit-dirty="vm.isDirty()" submit-tooltip-target="body">Submit</button>
+  </form>
+</item-example-html>
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>Controller</h2>
+    </div>
+  </div>
+  <div hljs hljs-language="js" hljs-include="'styles/iq-form-layout/iqFormLayoutExampleController.js'"></div>
+</div>

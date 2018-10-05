@@ -1,0 +1,66 @@
+<div class="iq-tile iq-tile__gallery">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h1>Welcome to the Component Gallery</h1>
+    </div>
+  </div>
+</div>
+
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>How to add a new component to the gallery</h2>
+    </div>
+  </div>
+  <marked>
+    * create an html page using the following structure (see template.html)
+
+      ```html
+      &lt;item-description&gt;
+        Usage docs
+        &lt;marked&gt;
+          You can use markdown inside &lt;marked&gt; tag
+        &lt;/marked&gt;
+      &lt;/item-description&gt;
+
+      &lt;item-example-html&gt;
+        example html
+      &lt;/item-example-html&gt;
+      ```
+
+    * map the component name to the html page created above (add an entry to `config.js`)
+    ```js
+    'component-name' : 'components/component-name.html',
+    ```
+
+    * (only for js components) add necessary imports and angular module dependencies in `config.js`
+
+  </marked>
+</div>
+
+<div class="iq-tile">
+  <div class="iq-tile-header">
+    <div class="iq-tile-header__title">
+      <h2>Components vs Directives</h2>
+    </div>
+  </div>
+  <marked>
+    In the gallery we distinguish between Components and Directives not by implementation but by usage:
+
+    #### Components
+    Components are independent widgets represented by an html tag.
+    For example here's the 'iq-checkbox' component:
+    ```html
+    &lt;iq-checkbox&gt;&lt;/iq-checkbox&gt;
+    ```
+
+    Internally components can be implemented as an angular directive.
+
+    #### Directives
+    Directives are attributes that are added to existing tags/components to enhance or add functionality.
+    Here is an example using the 'load-wrapper' directive:
+    ```html
+    &lt;div load-wrapper&gt;Content&lt;/div&gt;
+    ```
+  </marked>
+</div>

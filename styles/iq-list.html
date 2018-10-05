@@ -1,0 +1,100 @@
+<item-description>
+  Default styling for various list types. Includes styles for lists with multiple lines.
+  
+  If you're looking for lists with "clickable" list items you should refer to iq-list--clickable.
+</item-description>
+
+<item-example-html>
+  <div class="iq-list">
+    <h4 class="iq-list__title">
+      Unordered list
+    </h4>
+    <ul>
+      <li class="iq-list__item">
+        item 1
+      </li>
+      <li class="iq-list__item">
+        Item 2
+      </li>
+      <li class="iq-list__item">
+        item 3
+      </li>
+    </ul>
+  </div>
+  
+  <div class="iq-list">
+    <h4 class="iq-list__title">
+      List with a tertiary button
+    </h4>
+    <ul>
+      <li class="iq-list__item iq-list-item--with-modifier-icon">
+        <button class="iq-btn iq-btn--tertiary iq-btn--icon-only iq-pull-right" type="button">
+          <i class="fa fa-trash"></i>
+        </button>
+        List item
+      </li>
+      <li class="iq-list__item iq-list-item--with-modifier-icon">
+        <button class="iq-btn iq-btn--tertiary iq-btn--icon-only iq-pull-right" type="button">
+          <i class="fa fa-trash"></i>
+        </button>
+        List item
+      </li>
+    </ul>
+  </div>
+    
+  <div class="iq-list">
+    <h4 class="iq-list__title">
+      Multi-line list
+    </h4>
+    <ul class="iq-list">
+      <li class="iq-list__item">
+        Item 1
+        <p class="iq-list__subtext">This is a second line.</p>
+      </li>
+      <li class="iq-list__item">
+        Item 2
+        <p class="iq-list__subtext">
+          This is a second line. It includes text that, might relate to the top line or might not.
+        </p>
+      </li>
+      <li class="iq-list__item">
+        Item 3
+        <p class="iq-list__subtext">
+          A long line of subtext that wraps. Use @extend .truncate-ellipsis; if you want long lines of text to truncate.
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="iq-list iq-list--bulleted">
+    <h4 class="iq-list__title">
+      Bulleted list
+    </h4>
+    <ul>
+      <li class="iq-list__item">
+        item 1
+      </li>
+      <li class="iq-list__item">
+        Item 2
+      </li>
+      <li class="iq-list__item">
+        item 3
+      </li>
+    </ul>
+  </div>
+  <div class="iq-list">
+    <h4 class="iq-list__title">
+      Empty list
+    </h4>
+    <div class="iq-list__item iq-list__item--empty">
+      No actions message.
+    </div>
+  </div>
+  <div class="iq-list">
+    <h4 class="iq-list__title">
+      List error state
+    </h4>
+    <div class="iq-list__item iq-error">
+      <i class="fa fa-warning"></i>Failed to load actions message
+    </div>
+  </div>
+</item-example-html>

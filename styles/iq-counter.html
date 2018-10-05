@@ -1,0 +1,93 @@
+<item-description>
+  <marked>
+    Basic style for small indicator token which typically displays a single #, a '# of #' string, or a short text string.
+  
+    Some basic positioning CSS examples have been provided.
+  </marked>
+</item-description>
+
+<item-example-html>
+  <style>
+    h2, h3 {
+      max-width: 200px; // shortened to make positioning examples more obvious
+    }
+
+    h2 .iq-counter {
+      float: right;
+      margin-top: 2px;
+    }
+  
+    h3 .iq-counter {
+      float: right;
+    }
+  </style>
+
+  <h3>Default<span class="iq-counter">42</span></h3>
+
+  <hr>
+
+  <h2>Active<span class="iq-counter iq-counter--active">2 of 2</span></h2>
+
+  <hr>
+
+  <h3>Text only<span class="iq-counter">all time</span></h3>
+
+  <hr>
+  
+  <h3>Tree-view positioning</h3>
+  <div class="iq-tree-view">
+    <a class="iq-tree-view__trigger" ng-click="isExpanded1 = !isExpanded1">
+      <div class="iq-tree-view__twisty">
+        <span class="iq-tree-view__twisty-icon" ng-class="{ expand: !isExpanded1, collapse: isExpanded1 }"></span>
+      </div>
+      <div class="iq-counter iq-counter--active iq-tree-view__counter">
+        42
+      </div>
+      <div class="iq-tree-view__text">
+        <i class="fa fa-cube iq-tree-view__text-icon"></i>Default state
+      </div>
+    </a>
+    <div class="iq-tree-view__children" ng-class="{ collapsed: !isExpanded1, expanded: isExpanded1 }">
+      <div class="iq-tree-view__child">
+        Tree view element
+      </div>
+    </div>
+  </div>
+  <div class="iq-tree-view">
+    <a class="iq-tree-view__trigger" ng-click="isExpanded2 = !isExpanded2">
+      <div class="iq-tree-view__twisty">
+        <span class="iq-tree-view__twisty-icon" ng-class="{ expand: !isExpanded2, collapse: isExpanded2 }"></span>
+      </div>
+      <div class="iq-counter iq-counter--active iq-tree-view__counter">
+        3 of 6
+      </div>
+      <div class="iq-tree-view__text">
+        <i class="fa fa-cube iq-tree-view__text-icon"></i>Active state
+      </div>
+    </a>
+    <div class="iq-tree-view__children" ng-class="{ collapsed: !isExpanded2, expanded: isExpanded2 }">
+      <div class="iq-tree-view__child">
+        Tree view element
+      </div>
+    </div>
+  </div>
+  <div class="iq-tree-view">
+    <a class="iq-tree-view__trigger" ng-click="isExpanded3 = !isExpanded3">
+      <div class="iq-tree-view__twisty">
+        <span class="iq-tree-view__twisty-icon" ng-class="{ expand: !isExpanded3, collapse: isExpanded3 }"></span>
+      </div>
+      <div class="iq-counter iq-counter--active iq-tree-view__counter">
+        all time
+      </div>
+      <div class="iq-tree-view__text">
+        <i class="fa fa-cube iq-tree-view__text-icon"></i>Text only
+      </div>
+    </a>
+    <div class="iq-tree-view__children" ng-class="{ collapsed: !isExpanded3, expanded: isExpanded3 }">
+      <div class="iq-tree-view__child">
+        Tree view element
+      </div>
+    </div>
+  </div>
+
+</item-example-html>
