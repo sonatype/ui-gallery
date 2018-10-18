@@ -4,22 +4,7 @@
   "dependencies": {
     "@uirouter/angularjs": "=1.0.5",
     "angular": "=1.6.10",
-    "angular-aria": "=1.6.10",
-    "angular-cookies": "=1.6.10",
-    "angular-route": "=1.6.10",
-    "angular-sanitize": "=1.6.10",
-    "angular-ui-bootstrap": "=0.13.4",
-    "angular-ui-validate": "=1.2.3",
-    "angular-vs-repeat": "=1.1.7",
-    "angular-xeditable": "=0.2.0",
-    "babel-runtime": "=6.26.0",
-    "bootstrap-datepicker": "=1.7.1",
-    "bootstrap-sass": "=2.3.2",
-    "bootstrap-toggle": "=2.2.0",
-    "bootstrap2-umd": "=2.3.2",
-    "components-font-awesome": "=4.3.0",
-    "jquery": "=3.2.1",
-    "ramda": "=0.25.0"
+    "components-font-awesome": "=4.3.0"
   },
   "devDependencies": {
     "angular-highlightjs": "=0.7.1",

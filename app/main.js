@@ -11,11 +11,8 @@ import './scss/gallery.scss';
 import 'angular';
 import '@uirouter/angularjs';
 import '@uirouter/angularjs/release/stateEvents';
-import 'angular-sanitize';
-import 'angular-vs-repeat';
 import 'angular-highlightjs';
 import 'angular-marked';
-import 'angular-aria';
 import hljs from 'highlight.js';
 
 import galleryModule from './gallery/module';
