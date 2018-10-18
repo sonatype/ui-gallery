@@ -2,7 +2,7 @@
   ##Buttons
 */
 
-.iq-btn {
+.nx-btn {
   @include semi-bold();
 
   background-color: $iq-grey-1;
@@ -18,8 +18,8 @@
   vertical-align: middle;
   min-width: 100px;
 
-  + .iq-btn {
-    margin-left: 8px;
+  + .nx-btn {
+    margin-left: 4px;
   }
 
   > .fa {
@@ -47,7 +47,7 @@
   }
 }
 
-.iq-btn--primary {
+.nx-btn--primary {
   background-color: $iq-link-color;
   border-color: transparent;
   border-width: 2px;
@@ -71,7 +71,7 @@
   }
 }
 
-.iq-btn--tertiary {
+.nx-btn--tertiary {
   background-color: transparent;
   border-color: transparent;
 
@@ -90,7 +90,7 @@
   }
 }
 
-.iq-btn--error {
+.nx-btn--error {
   background-color: $iq-fail-color;
   border-color: $iq-fail-color;
   color: $iq-off-white;
@@ -106,7 +106,7 @@
   }
 }
 
-.iq-btn--icon-only {
+.nx-btn--icon-only {
   height: 32px;
   padding: 0;
   width: 32px;
@@ -118,7 +118,7 @@
   }
 }
 
-.iq-btn--inline {
+.nx-btn--inline {
   margin-left: 8px;
 }
 
@@ -126,7 +126,7 @@
  * Standard button container
  */
 
-.iq-btn-bar {
+.nx-btn-bar {
   margin: 8px 0 0 0;
 }
 
@@ -134,7 +134,7 @@
  * Buttons for dropdown menus
  */
 
-.iq-btn--dropdown {
+.nx-btn--dropdown {
   $iq-drop-down-indentation: -12px;
 
   background-color: transparent;
@@ -179,8 +179,8 @@
     text-decoration: none;
   }
 
-  // This overrides the normal spacing for .iq-btn + .iq-btn above
-  + .iq-btn--dropdown {
+  // This overrides the normal spacing for .nx-btn + .nx-btn above
+  + .nx-btn--dropdown {
     margin-left: $iq-drop-down-indentation;
   }
 }

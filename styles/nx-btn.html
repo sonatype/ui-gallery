@@ -1,0 +1,51 @@
+<item-description>
+  <marked>
+  `.nx-btn` is the standard class for all types of buttons. 
+  
+  `.nx-btn-bar` is a container for `.nx-btn`'s if necessary. 
+  
+  </marked>
+  
+  <div class="nx-list">
+    <h4 class="nx-list__title">Required files</h4>
+    <ul>
+      <li class="nx-list-item">
+        _nx-btn.scss
+      </li>
+    </ul>
+  </div>  
+</item-description>
+
+<item-example-html>
+  <h3>Primary</h3>
+  <button class="nx-btn nx-btn--primary">Primary button</button>
+  <button class="nx-btn nx-btn--primary disabled">Disabled by class</button>
+  <button class="nx-btn nx-btn--primary" disabled>Disabled by attribute</button>
+  
+  <h3>Normal</h3>
+  <button class="nx-btn">Button</button>
+  <button class="nx-btn" disabled>Disabled by attribute</button>
+  <button class="nx-btn disabled">Disabled by class</button>
+  
+  <h3>Tertiary</h3>
+  <button class="nx-btn nx-btn--tertiary">Tertiary button</button>
+  <button class="nx-btn nx-btn--tertiary" disabled>Disabled by attribute</button>
+  <button class="nx-btn nx-btn--tertiary disabled">Disabled by class</button>
+  
+  <h3>Error/Retry buttons</h3>
+  <button class="nx-btn nx-btn--error">Error button</button>
+  <button type="button" class="nx-btn nx-btn--error"><i class="fa fa-refresh"></i>Retry</button>
+  
+  <h3>Icon Button</h3>
+  <button class="nx-btn nx-btn--icon-only"><i class="fa fa-warning"></i></button>
+  
+  <h3>Icon and label</h3>
+  <button type="button" class="nx-btn"><i class="fa fa-refresh"></i>Label</button>
+  
+  <h3>Using a button container</h3>
+  <div class="nx-btn-bar">
+    <button class="nx-btn nx-btn--primary">Primary</button>
+    <button class="nx-btn nx-btn">Secondary</button>
+    <button class="nx-btn nx-btn--tertiary">Tertiary</button>
+  </div>
+</item-example-html>
