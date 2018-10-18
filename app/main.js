@@ -20,11 +20,14 @@ import hljs from 'highlight.js';
 
 import galleryModule from './gallery/module';
 import configModule from '../config';
+import home from './home';
 
 var module = angular.module('galleryApp',
     [
       'ui.router', 'ui.router.state.events', 'hljs', 'hc.marked', galleryModule.name, configModule.name
     ]);
+
+module.component('home', home);
 
 module.config(function($stateProvider, $urlRouterProvider, markedProvider, hljsServiceProvider, layoutConfig, widgetsConfig, htmlConfig)
 {
@@ -48,10 +51,7 @@ module.config(function($stateProvider, $urlRouterProvider, markedProvider, hljsS
   $urlRouterProvider.otherwise('/home');
   $stateProvider.state('home', {
     url: '/home',
-    templateUrl: 'app/home.html',
-    data: {
-      title: 'Gallery Home'
-    }
+    component: 'home'
   });
 
   // add configured states
