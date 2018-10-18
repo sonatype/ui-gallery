@@ -1,0 +1,164 @@
+$iq-theme-dark-background: $iq-slate;
+$iq-theme-dark-text: $iq-grey-2;
+$iq-theme-dark-text-hover: $iq-off-white;
+$iq-theme-dark-border-color: $iq-grey-2;
+$iq-theme-dark-box-shadow: $iq-off-black;
+
+.iq-sidebar--theme-dark {
+  background-color: $iq-theme-dark-background;
+  border-right: 1px solid $iq-off-black;
+  color: $iq-theme-dark-text;
+
+  .iq-label {
+    color: $iq-off-white;
+  }
+  
+  dropdown-selector {
+    border: 1px solid $iq-theme-dark-text;
+    width: 238px; // adjust for narrower left border
+  }
+
+  .iq-form-select__item {
+    color: $iq-theme-dark-text;
+
+    .none-selected {
+      color: $iq-theme-dark-text;
+    }
+
+    &:hover {
+      .caret {
+        border-top-color: $iq-theme-dark-text;
+      }
+    } 
+  }
+
+  .dropdown-menu {
+    background: $iq-theme-dark-background;
+    border-color: $iq-theme-dark-text;
+    box-shadow: -4px 6px 10px $iq-off-black;
+    margin: 0 0 0 -1px;
+    width: 100%;
+
+    > li {
+      color: $iq-grey-2;
+      
+      &:hover {
+        color: $iq-off-white;
+      }
+    }
+  }
+
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  textarea {
+    background: $iq-theme-dark-background;
+    width: 222px; //adjust for narrower border
+
+    &.iq-text-input, &.iq-textarea {
+      border: 1px solid $iq-theme-dark-text;
+
+      &:focus {
+        border-color: $iq-theme-dark-text;
+      }
+
+      &.ng-pristine {
+        color: $iq-theme-dark-text;
+      }
+    }
+  }
+
+  .iq-checkbox__label {
+    color: $iq-off-white;
+  }
+
+  .iq-checkbox__input {
+    &:checked + .iq-checkbox__box::after {
+      color: $iq-theme-dark-text;
+    }
+  }
+
+  .iq-checkbox__box {
+    color: $iq-theme-dark-text;
+
+    &::before {
+      border: 1px solid $iq-off-white;
+    }
+  }
+
+  .iq-checkbox--disabled {
+    color: $iq-grey-4;
+
+    .iq-checkbox__box {
+      &::before {
+        border: 1px solid $iq-grey-4;
+      }
+    }
+  }
+  
+  .iq-radio__input {
+    &:checked + .iq-radio__circle::after {
+      background-color: $iq-theme-dark-text;
+      border: 1px solid $iq-theme-dark-text;
+    }
+  }
+
+  .iq-radio__circle {
+    color: $iq-theme-dark-text;
+  
+    &::before {
+      border: 1px solid $iq-theme-dark-text;
+    }
+  }
+  
+  .iq-radio--disabled {
+    .iq-radio__circle {  
+      &::before {
+        border-color: $iq-grey-4;
+      }
+    }
+  }
+  
+  .iq-btn--tertiary {
+    color: $iq-theme-dark-text;
+
+    &:hover, &:focus {
+      border-color: $iq-theme-dark-text;
+    }
+
+    &:active {
+      border-color: $iq-theme-dark-text;
+    }
+
+    &.disabled, &[disabled] {
+      color: $iq-grey-4;
+    }
+  }
+  
+  .iq-tree-view, .iq-tree-view__text {
+    color: $iq-off-white;
+  }
+  
+  .iq-tree-view__twisty-icon {
+    border-left: 5px solid $iq-off-white;
+    
+    &.expand {
+      border-left-color: $iq-off-white;
+    }
+
+    &.collapse {
+      border-left-color: $iq-off-white;
+    }
+  }
+  
+  .iq-tree-view__filter {
+    input[type="text"] {
+      color: $iq-off-white;
+    }
+    
+    .fa-filter, .fa-times {
+      color: $iq-slate;
+    }
+  }
+}

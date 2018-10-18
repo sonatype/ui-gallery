@@ -1,0 +1,373 @@
+/*
+  #Main Header
+*/
+$dropdown-menu-box-shadow: -8px 8px 12px 0px rgba(87, 87, 87, 1);
+$header-dropdown-panel-border: 1px solid $iq-grey-4;
+$header-dropdown-panel-background-color-rgba: rgba(0, 0, 0, 0.2);
+$main-header-color: #CCCCCC;
+$main-header-highlight: #2476FC;
+$notification-item-border: 1px solid $iq-grey-1;
+
+/*
+  First Row
+*/
+.iq-header {
+  background-color: $iq-off-black;
+  height: $iq-main-header-height;
+  margin: 0;
+  overflow: visible;
+  width: 100%;
+}
+
+.iq-header__inner {
+  background-color: $iq-off-black;
+  min-height: inherit;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $iq-page-width-max;
+  min-width: $iq-page-width-min;
+
+  &::before {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+}
+
+i.sonatype-icons, i.glyphicons-sonatype, i.iq-navigation-menu__icon {
+  vertical-align: middle;
+
+  &::before {
+    color: $main-header-color;
+  }
+
+  .active &::before {
+    color: #fff;
+  }
+}
+
+i.iq-navigation-menu__icon {
+  display: inline-block;
+  padding-top: 3px;
+
+  &.fa {
+    font-size: 21px;
+    padding-top: 7px
+  }
+}
+
+.iq-title {
+  border-right: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  line-height: 24px;
+  white-space: nowrap;
+  width: $iq-sidebar-width;
+  min-width: 280px;
+
+  img {
+    display: inline-block;
+    margin: 2px 2px 0 1px;
+  }
+}
+
+.iq-title__brand {
+  @include semi-bold();
+
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 5px 19px 0 2px;
+}
+
+.iq-title__version {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0 19px 4px 2px;
+}
+
+.iq-navbar {
+  float: left;
+  overflow: hidden;
+}
+
+.iq-navigation-menu {
+  margin: 0;
+
+  li {
+    vertical-align: top;
+  }
+}
+
+.iq-navigation-menu__button {
+  display: inline-block;
+  list-style: none;
+
+  span {
+    display: inline-block;
+    height: 38px;
+    margin-top: 2px;
+    position: relative;
+    text-align: center;
+    width: 40px;
+
+    &:hover {
+      color: $iq-off-white;
+
+      i::before {
+        color: $iq-off-white;
+      }
+    }
+  }
+
+  &.active {
+
+    span {
+      background-color: $iq-sonatype-blue;
+
+      &::after {
+        @include iq-arrow-up();
+      }
+    }
+  }
+}
+
+/*
+  #HEADER DROPDOWNS
+*/
+.iq-dropdown-toggle--main-header {
+  color: $main-header-color;
+  display: inline-block;
+  height: 35px;
+  padding-top: 5px;
+  text-align: center;
+  width: 40px;
+
+  &:hover {
+    color: $main-header-color;
+    text-decoration: none;
+  }
+}
+
+.iq-dropdown-menu--main-header {
+  border: $header-dropdown-panel-border;
+  box-shadow: $dropdown-menu-box-shadow;
+  padding: 0;
+
+  &:first-child {
+    padding-bottom: 12px;
+  }
+
+  &::before {
+    border-right: 9px solid transparent;
+    border-bottom: 8px solid $header-dropdown-panel-background-color-rgba;
+    border-left: 9px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left: 1px;
+  }
+
+  &::after {
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid $iq-off-white;
+    border-left: 8px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left: 2px;
+  }
+}
+
+.iq-count-circle {
+  @include bold();
+
+  background-color: $iq-link-color;
+  border-radius: 50%;
+  color: white;
+  font-size: 10px;
+  height: 16px;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  text-align: center;
+  width: 16px;
+
+  &.exclamation {
+    background-color: #F2DEDE;
+    border: solid thin #B94A48;
+    color: #B94A48;
+  }
+}
+
+// This chunk contains customizations to support the notification menu 
+.iq-dropdown--notifications {
+  float: right;
+
+  .iq-dropdown-menu--main-header {
+    padding-bottom: 8px;
+    right: -85px;
+    left: auto;
+    width: 360px;
+
+    &::before {
+      right: 95px;
+      left: inherit;
+    }
+
+    &::after {
+      right: 97px;
+      left: inherit;
+    }
+  }
+  
+  .iq-scrollable {
+    max-height: 318px;
+  }
+}
+
+.iq-notification {
+  background-color: $iq-off-white;
+  color: $iq-off-black;
+  cursor: auto;
+  min-height: 36px;
+  line-height: 18px;
+  padding: 8px;
+
+  &.selected {
+    background-color: $iq-grey-1;
+  }
+
+  &.viewed {
+    color: $iq-slate;
+  }
+}
+
+.iq-notification__age {
+  float: left;
+  font-size: 20px;
+  line-height: 20px;
+  padding-right: 8px;
+  text-align: right;
+  width: 35px;
+}
+
+.iq-notification__age-qualifier {
+  float: left;
+  padding-right: 16px;
+  text-align: left;
+  white-space: normal;
+  width: 50px;
+}
+
+.iq-notification__text {
+  display: inline;
+  white-space: normal;
+}
+
+.iq-dropdown-submenu {
+  background-color: $iq-off-white;
+  border: $header-dropdown-panel-border;
+  border-radius: 4px;
+  box-shadow: $dropdown-menu-box-shadow;
+  height: 378px;
+  list-style: none;
+  margin-right: 12px;
+  padding-bottom: 12px;
+  position: absolute;
+  top: 0px;
+  right: 360px;
+  width: 500px;
+
+  &::before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 8px solid $iq-off-white;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    right: -8px;
+  }
+
+  &::after {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid rgba(254, 254, 254, 0.2);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    right: -8px;
+  }
+}
+
+.iq-dropdown-submenu__title {
+  @include regular();
+  
+  border-bottom: 1px solid $iq-grey-1;
+  color: $iq-slate;
+  line-height: 18px;
+  padding: 12px 8px;
+}
+
+.iq-dropdown-submenu__container {
+  overflow: auto;
+  padding: 8px 8px 0 8px;
+  
+  li {
+    line-height: 18px;
+    list-style: disc;
+    margin: 0 0 10px 25px;
+    padding: 0;
+  }
+}
+
+// Help and System Configuration Menus
+.iq-dropdown--help-menu, .iq-dropdown--system-configuration-menu {
+  float: right;
+
+  .iq-dropdown-menu--main-header {
+    right: 0;
+    left: auto;
+  
+    &::before {
+      right: 9px;
+      left: inherit;
+    }
+
+    &::after {
+      right: 10px;
+      left: inherit;
+    }
+  }
+}
+
+// Help Menu
+.iq-dropdown--help-menu {
+  margin-right: 6px;
+}
+
+// User Menu
+.iq-dropdown--user-menu {
+  float: right;
+  margin-right: 12px;
+  width: auto;
+}
+
+.iq-dropdown-toggle--user-menu {
+  width: auto;
+
+  span {
+    @include bold();
+
+    padding-left: 8px;
+    vertical-align: 3px;
+    width: auto;
+  }
+}

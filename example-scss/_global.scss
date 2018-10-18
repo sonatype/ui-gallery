@@ -1,0 +1,34 @@
+/*
+  #Basic links
+*/
+a {
+  color: $iq-link-color;
+  cursor: pointer;
+}
+
+.iq-clickable {
+  cursor: pointer;
+}
+
+/*
+  #Helper Classes
+*/
+.iq-pull-left {
+  float: left;
+}
+
+.iq-pull-right {
+  float: right;
+}
+
+.iq-error {
+  background-color: $iq-fail-color-bg;
+  border: 1px solid $iq-fail-color;
+  color: $iq-fail-color;
+}
+
+.iq-scrollable {
+  height: auto;
+  max-height: 400px; // default value - magic number
+  overflow-x: hidden;
+}

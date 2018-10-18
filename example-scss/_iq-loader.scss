@@ -1,0 +1,22 @@
+/*
+  #Loader
+*/
+
+.iq-spinner__wrapper {
+  height: 14px;
+  line-height: 14px;
+  margin: 8px 0
+}
+
+.iq-spinner__icon {
+  animation: spin 2s linear infinite;
+  display: inline-block;
+  height: 14px;
+  margin-right: 4px;
+  width: 14px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

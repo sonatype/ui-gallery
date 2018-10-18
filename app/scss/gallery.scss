@@ -2,11 +2,30 @@
 @import "markdown";
 @import "charts";
 
+@import "./example-scss/variables";
+@import "./example-scss/typography";
+@import "./example-scss/mixins";
+@import "./example-scss/global";
+@import "./example-scss/widgets";
+@import "./example-scss/content";
+@import "./example-scss/tiles";
+@import "./example-scss/form";
+@import "./example-scss/icons";
+@import "./example-scss/mainHeader";
+@import "./example-scss/iq-theme-dark";
+
 // Page Layout
 
 .iq-root-container--gallery {
+  display: flex;
+  
   .iq-sidebar {
+    flex: 0 1 auto;
     padding-left: 8px;
+  }
+  
+  main {
+    flex: 0 1 auto;
   }
 }
 

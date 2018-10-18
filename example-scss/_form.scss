@@ -1,0 +1,441 @@
+/*
+  #Form elements
+
+  base form typography is in _typography.scss
+*/
+
+// Shared styles
+
+@mixin iq-pristine() {
+  border-left-color: $iq-valid-color;
+  border-left-style: double;
+  color: $iq-slate;
+}
+
+@mixin iq-valid() {
+  border-left-color: $iq-valid-color;
+  border-left-style: solid;
+}
+
+@mixin iq-dirty() {
+  border-color: $iq-grey-3;
+  border-left-style: solid;
+}
+
+@mixin iq-invalid-dirty() {
+  border-color: $iq-invalid-color;
+  border-left-style: solid;
+}
+
+@mixin iq-disabled() {
+  background: $iq-off-white;
+  border-color: $iq-grey-3;
+  border-left: 4px double $iq-grey-3;
+}
+
+$iq-form-element-wide: 395px;
+
+// Basic form layout
+
+.iq-form {
+  border-top: 1px solid $iq-grey-4;
+  margin: 0;
+  padding-top: 20px;
+  position: relative; // to make a containing block for validation popovers
+}
+
+.iq-form--no-padding {
+  padding: 0;
+}
+
+.iq-form--no-border {
+  border-top: none;
+}
+
+// styles for a form that is the entirety of a modal
+.iq-form--modal-form {
+  padding-top: 0;
+}
+
+.iq-form-row {
+  margin-bottom: 24px;
+  
+  .iq-form-group {
+    display: inline-block;
+    margin-right: 24px;
+    margin-bottom: 0;
+    vertical-align: top; // fixes issue where certain form types display lower
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    .iq-btn {
+      margin-top: 27px;
+    }
+  }
+}
+
+.iq-form-buttons {
+  border-top: 1px solid $iq-grey-4;
+  padding: 8px 0;
+}
+
+.iq-form-group {
+  margin-bottom: 20px;
+    
+  .iq-checkbox__label {
+    display: block;
+    padding-left: 24px;
+  }
+}
+
+// labels
+
+.iq-label {
+  @include semi-bold();
+
+  color: $iq-off-black;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 7px;
+  
+  &:not(.iq-radio):not(.iq-checkbox__label).disabled {
+    color: #cacaca;
+  }
+}
+
+.iq-label--optional {
+  &::after {
+    @include regular();
+
+    color: $iq-slate;
+    content: " - optional";
+    font-style: italic;
+  }
+}
+
+.iq-sub-label {
+  @include regular();
+  
+  color: $iq-off-black;
+  display: block;
+  font-size: 14px;
+  
+  .fa {
+    margin-right: 6px;
+  }
+}
+
+// Defining labels for groups of radio buttons or checkboxes is tricky - each individual radio has a <label>
+// element, so it inappropriate to use a <label> for the group as a whole.  Instead, a <fieldset> and <legend> can
+// be used, but you'll still typically want the <legend> styled the way a <label> on a text field would be.  This
+// class implements that
+fieldset {
+  &.iq-radio-group, &.iq-checkbox-group {
+
+    // override browser-default "min-content"
+    min-width: auto;
+
+    legend {
+      @include semi-bold();
+
+      // use the same styling as <label>s
+      border-style: none;
+      color: $iq-off-black;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+  }
+}
+
+// Text Inputs
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password],
+textarea {
+
+  &.iq-text-input, &.iq-textarea {
+    border: 1px solid $iq-grey-4;
+    border-left-width: 4px;
+    border-radius: 0;
+    box-shadow: none;
+    height: 32px;
+    padding: 0 8px;
+    width: 219px;
+    
+    // The :focus styling is required to over-ride Bootstrap styles.
+    &:focus {
+//      @include box-shadow(none);
+      
+      border-color: $iq-grey-3;
+    }
+
+    &:disabled {
+      @include iq-disabled();
+    }
+
+    &.ng-dirty {
+      @include iq-dirty();
+    }
+
+    &.ng-valid {
+      @include iq-valid();
+    }
+    
+    &.ng-pristine {
+      @include iq-pristine();
+    }
+
+    &.ng-invalid.ng-dirty {
+      @include iq-invalid-dirty();
+    }
+    
+    &.ng-invalid:not(.ng-dirty):focus {
+      // override bootstrap
+      border-color: $iq-grey-4;
+      border-left-color: $iq-valid-color;
+      box-shadow: initial;
+    }
+  }
+  
+  &.iq-text-input--long, &.iq-textarea--long {
+    width: 374px;
+  }
+}
+
+.iq-text-input--wide {
+  width: $iq-form-element-wide;
+}
+
+input.iq-input-file--hidden {
+  left: -9999em;
+  position: absolute;
+}
+
+.iq-textarea {
+  min-height: 64px;
+}
+
+// Dropdown Selector
+
+dropdown-selector {
+  border: 1px solid $iq-grey-4;
+  border-left-width: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 240px;
+
+  &.wide {
+    width: 411px;
+  }
+
+  &.ng-pristine {
+    border-left-color: $iq-valid-color;
+    border-left-style: double;
+  }
+
+  &.ng-valid {
+    border-left-color: $iq-valid-color;
+  }
+
+  &.ng-invalid.ng-dirty {
+    border-color: $iq-invalid-color;
+    border-left-style: solid;
+  }
+  
+  &.no-options {
+    border: none;
+    color: $iq-fail-color;
+    padding: 1px 1px 1px 4px;
+    text-align: center;
+  }
+  
+  &.disabled {
+    border-color: $iq-grey-3;
+    border-left-style: double;
+
+    .iq-form-select__item .caret,
+    .iq-form-select__item:hover .caret {
+      border-top: 6px solid $iq-grey-3;
+    }
+  }
+}
+
+.iq-form-select {
+  &.open {
+    .iq-form-select__item,
+    .iq-form-select__item:hover {
+      color: $iq-grey-4;
+    }
+    
+    .iq-form-select__item:hover .caret {
+      border-top-color: $iq-grey-4;
+    }
+  }
+  
+  .dropdown-menu {
+    background: $iq-off-white;
+    border: 1px solid $iq-grey-4;
+    border-collapse: separate;
+    border-radius: 0;
+    box-shadow: -4px 6px 10px $iq-slate;
+    max-height: 300px; // 10 list items
+    margin: 0 0 0 -4px;
+    overflow-y: auto;
+    padding: 0;
+    width: calc(100% + 3px);
+    min-width: 0;
+
+    > li {
+      @extend .truncate-ellipsis;
+      
+      color: $iq-slate;
+      cursor: pointer;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 11px;
+      
+      &:hover {
+        color: $iq-off-black;
+      }
+    }
+  }
+}
+
+.iq-form-select__item {
+  @extend .truncate-ellipsis;
+
+  color: $iq-off-black;
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  padding: 4px 34px 4px 8px;
+  position: relative;
+  text-decoration: none;
+
+  &.none-selected {
+    color: $iq-slate;
+  }
+
+  & .caret {
+    border-top: 6px solid $iq-grey-4;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+  }
+  
+  &:hover {
+    color: $iq-off-black;
+    text-decoration: none;
+    
+    & .caret {
+      border-top: 6px solid $iq-slate;
+    }
+  }
+}
+
+// Colour Picker
+
+.iq-color-picker {
+  background: $iq-grey-3;
+  padding: 4px;
+  width: 166px;
+}
+
+.iq-color-picker-row {
+  font-size: 0;
+  line-height: 0;
+
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+}
+
+.iq-color-picker-color {
+  border: 1px solid $iq-off-black;
+  cursor: pointer;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  width: 32px;
+
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  @each $color-name, $pickable-color in $pickable-colors {
+    &.#{$color-name} {
+      background-color: $pickable-color;
+    }
+  }
+
+  &.selected {
+    border: 1px solid $iq-off-white;
+    box-shadow: 1px 1px 5px $iq-off-black;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+  }
+}
+
+/*
+  # Read-only form groups
+*/
+
+.iq-read-only {
+  margin-top: 0;
+  margin-bottom: 13px;
+  
+  > dt, > div > dt {
+    @include semi-bold();
+    
+    color: $iq-off-black;
+    display: block;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 1px;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.iq-read-only-data {
+  margin-left: 0;
+  padding-left: 12px;
+
+  .fa {
+    margin-right: 8px;
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 12px;
+    margin-left: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.iq-read-only-data--vertical {
+  span {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.iq-read-only-data--horizontal {
+  dd {
+    display: inline-block;
+  }
+}

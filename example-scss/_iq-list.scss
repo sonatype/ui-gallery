@@ -1,0 +1,160 @@
+.iq-list {
+  margin: 0 0 24px 0;
+  
+  ul, ol {
+    list-style: none;
+    margin: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.iq-list--header {
+  margin-bottom: 0;
+}
+
+.iq-list__title {
+  color: $iq-off-black;
+  line-height: 14px;
+  margin: 0 0 9px 0;
+}
+
+.iq-list__item {
+  @include semi-bold();
+  @extend .truncate-ellipsis;
+
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid $iq-grey-1;
+  box-sizing: border-box;
+  color: $iq-off-black;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding: 12px 10px 12px 8px;
+  
+  &:first-of-type {
+    border-top: 1px solid $iq-grey-3;
+  }
+  
+  &.iq-error {
+    border-top: 1px solid $iq-fail-color;
+    color: $iq-fail-color;
+  }
+
+  .fa {
+    margin-right: 8px;
+  }
+}
+
+.iq-list--bulleted {
+  .iq-list__item {
+    @include regular();
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    list-style: disc outside;
+    margin-left: 36px;
+    overflow: visible;
+    padding: 6px 10px 6px 0;
+    white-space: normal;
+  }
+}
+
+.iq-list__item--empty {
+  @include regular();
+
+  border-top: 1px solid $iq-grey-3; // assume it's always the first item
+  border-bottom: 1px solid $iq-grey-1;
+  color: $iq-slate;
+  font-size: 14px;
+  text-align: center;
+}
+
+.iq-list__item--disabled {
+  color: $iq-grey-4;
+  cursor: default;
+}
+
+.iq-list__item--expanding {
+  height: auto;
+}
+
+.iq-list__item--with-modifier-icon {
+  line-height: 30px;
+}
+
+.iq-list__actions {
+  float: right;
+}
+
+.iq-list__subtext {
+  @include regular();
+
+  display: block;
+  line-height: 14px;
+  margin: 0;
+  padding-top: 4px;
+  white-space: normal;
+  width: $iq-paragraph-width-maximum;
+}
+
+/*
+ * Action or Clickable Lists
+ */
+.iq-list--clickable {
+  .iq-list__title {
+    color: $iq-off-black;
+  }
+
+  .iq-list__item {
+    @include semi-bold();
+
+    color: $iq-slate;
+  
+    &:not(.iq-list__item--empty):not(.iq-disabled):not([disabled]) {
+      &:hover, &:focus {
+        border-top: 1px solid $iq-grey-4;
+        border-bottom: 1px solid $iq-grey-4;
+        color: $iq-off-black;
+        cursor: pointer;
+        outline-style: none; // removes :focus outline
+      }
+
+      &:active {
+        background-color: $iq-grey-1;
+        border-top: 1px solid $iq-grey-4;
+        border-bottom: 1px solid $iq-grey-4;
+      }
+    }
+    
+    &.iq-list__item--empty {
+      @include regular();
+
+      border-top: 1px solid $iq-grey-3; // assume it's always the first item
+      color: $iq-slate;
+    }
+
+    &.iq-error {
+      color: $iq-fail-color;
+
+      &:not(.iq-disabled):not([disabled]) {
+        &:hover, &:focus, &:active {
+          background-color: $iq-fail-color-bg;
+          border: 1px solid $iq-fail-color;
+          color: $iq-fail-color;
+          cursor: default;
+        }
+      }
+    }
+
+    .iq-list__subtext {
+      pointer-events: none; // Fix for IE11 :active state display
+    }
+  }
+  
+  .fa-chevron-right {
+    margin-right: 3px;
+  }
+}

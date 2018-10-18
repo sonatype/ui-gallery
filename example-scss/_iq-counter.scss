@@ -1,0 +1,21 @@
+.iq-counter {
+  @include semi-bold();
+
+  background-color: $iq-grey-3;
+  border: 1px $iq-grey-4 solid;
+  border-radius: 8px;
+  color: $iq-slate;
+  display: inline-block;
+  font-size: 11px;
+  height: 16px;
+  line-height: 18px; // used for vertical alignment
+  margin-left: 8px;
+  padding: 0 4px;
+  text-align: center;
+  min-width: 8px;
+
+  &.iq-counter--active {
+    background-color: $iq-grey-1;
+    border-color: $iq-grey-3;
+  }
+}

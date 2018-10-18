@@ -1,0 +1,11 @@
+.iq-text-indicator {
+  @include semi-bold();
+}
+
+.iq-text-indicator--waived {
+  color: $iq-dark-green;
+  
+  .fa-check {
+    margin-left: 6px;
+  }
+}

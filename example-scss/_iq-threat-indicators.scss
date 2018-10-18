@@ -1,0 +1,39 @@
+.iq-threat-indicators {
+  display: inline-block;
+}
+
+.iq-threat-indicator {
+  @include semi-bold();
+  
+  background: $iq-threat-color-policy-none;
+  color: $iq-off-white;
+  display: inline-block;
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  margin-right: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-align: center;
+  min-width: 20px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.low {
+    background: $iq-threat-color-low;
+  }
+
+  &.moderate {
+    background: $iq-threat-color-moderate;
+  }
+
+  &.severe {
+    background: $iq-threat-color-severe;
+  }
+
+  &.critical {
+    background: $iq-threat-color-critical;
+  }
+}

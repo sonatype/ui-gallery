@@ -1,0 +1,49 @@
+.iq-pagination {
+  display: block;
+  float: right;
+  
+  .iq-dropdown {
+    display: inline-block;
+  }
+  
+  .iq-btn + .iq-btn {
+    margin-left: 1px;
+  }
+}
+
+.iq-pagination--table {
+  float: none;
+  padding-right: 4px;
+  text-align: right;
+}
+
+.iq-pagination--table + .iq-table {
+  margin-top: 4px;
+}
+
+.iq-table + .iq-pagination--table {
+  margin-top: 4px;
+}
+
+.iq-pagination__count-text {
+  @include semi-bold();
+  
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.iq-list-header {
+  height: 32px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  
+  .iq-list__title {
+    display: inline-block;
+    padding-top: 12px;
+  }
+}
+
+.iq-list-footer {
+  height: 32px;
+  padding: 4px 4px 4px 0;
+}

@@ -18,4 +18,4 @@ Gallery for current styles for Sonatype user interfaces. Includes reusable HTML/
 npm run gallery
 ```
 
-Open the app in your browser: http://localhost:4040
+Open the app in your browser: http://localhost:4041

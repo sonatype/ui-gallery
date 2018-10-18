@@ -1,0 +1,250 @@
+/*
+  #Tree view
+*/
+.iq-tree-view {
+  @include semi-bold();
+
+  box-sizing: border-box;
+  color: $iq-slate;
+  padding-right: 8px;
+  min-width: 250px;
+  max-width: 330px;
+}
+
+.iq-tree-view__group {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.iq-tree-view__trigger {
+  @extend .truncate-ellipsis;
+  
+  border: 1px solid transparent;
+  display: block;
+  font-size: 14px;
+  height: 30px;
+  line-height: 32px;
+
+  &:hover, &:focus {
+    color: $iq-slate;
+    text-decoration: none;
+  }
+  
+  .iq-tree-view__counter {
+    float: right;
+    margin-top: 7px;
+  }
+}
+
+.iq-tree-view__trigger--unselectable {
+
+  &, .iq-tree-view__twisty {
+    cursor: default;
+  }
+
+  .iq-tree-view__twisty-icon {
+    &.expand {
+      border-left-color: $iq-grey-4;
+    }
+
+    &.collapse {
+      border-left-color: $iq-grey-4;
+    }
+  }
+}
+
+.iq-tree-view__trigger--empty {
+  
+  &, .iq-tree-view__twisty {
+    cursor: default;
+  }
+
+  .iq-tree-view__twisty-icon {
+    border: none;
+  }
+}
+
+.iq-tree-view__twisty {
+  float: left;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: top;
+  width: 16px;
+}
+
+.iq-tree-view__twisty-icon {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid $iq-slate;
+  content: "";
+  display: block;
+  margin: 10px 0 3px 4px;
+  -ms-transform:rotate(0deg);
+  transform:rotate(0deg);
+  transition: all 300ms ease;
+  vertical-align: text-top;
+  width: 0;
+
+  &.collapse {
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+  }
+
+  &.empty {
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+}
+
+.iq-tree-view__text {
+  @extend .truncate-ellipsis;
+  
+  color: $iq-slate;
+  display: block;
+
+  .fa, .iq-tree-view__text-icon {
+    height: 16px;
+    margin-right: 8px;
+    width: 16px;
+  }
+
+  .hexagon {
+    vertical-align: text-top;
+    margin-right: 8px;
+  }
+}
+
+.iq-tree-view__text-icon--inverse {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+// USING TRANSITIONS 
+.iq-tree-view__children {
+  overflow: hidden;
+  
+  &.expanded {
+    max-height: 300px;
+    transition: all 300ms ease-in;
+    
+    .iq-scrollable {
+      display: block;
+      max-height: 300px;
+      margin-bottom: 12px;
+      overflow-y: auto;
+    }
+    
+    .iq-form-group + .iq-scrollable {
+      max-height: 270px;
+    }
+  }
+  
+  &.collapsed {
+    max-height: 0;
+    transition: all 300ms ease-out;
+    
+    &.iq-scrollable {
+      display: none;
+    }
+  }
+  
+  > .iq-tree-view__child:last-child {
+    margin-bottom: 12px;
+  } 
+}
+
+.iq-tree-view__child {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  padding-right: 8px;
+  padding-left: 45px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+
+  &.selected {
+    a {
+      color: $iq-off-black;
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+
+  label {
+    line-height: 32px;
+    margin: 0;
+  }
+  
+  &.iq-form-group {
+    height: 34px;
+  }
+}
+
+.iq-tree-view--active {
+  background-color: $iq-off-white;
+  border-top-color: $iq-slate;
+  border-bottom-color: $iq-slate;
+}
+
+.iq-tree-view--multi-select {
+
+  min-width: 0; // so that counters are not pushed out
+
+  .iq-counter {
+    float: right;
+    margin-top: 7px;
+  }
+
+  .iq-tree-view__trigger.disabled {
+    cursor: default;
+
+    .iq-tree-view__text {
+      color: $iq-grey-4;
+    }
+
+    .inverse {
+      background-color: $iq-grey-4;
+    }
+
+    .iq-tree-view__twisty-icon.expand {
+      border-left-color: $iq-grey-4;
+    }
+
+    .hexagon path {
+      stroke: $iq-grey-4;
+    }
+  }
+
+  // overflow of tree view children
+  .iq-tree-view__child {
+    padding-right: 0;
+
+    .iq-checkbox__label {
+      @extend .truncate-ellipsis;
+      @include semi-bold();
+
+      // fix checkbox labels vertical alignment
+      // overwrites (back to original): .iq-tree-view__child label { line-height: 32px; }
+      line-height: 20px;
+      margin-top: 4px;
+      vertical-align: top;
+      width: 100%;
+    }
+  }
+
+  .iq-tree-view__filter {
+    display: block;
+    padding-left: 26px;
+    margin-bottom: 12px;
+
+    input {
+      width: calc(100% - 44px);
+    }
+  }
+}

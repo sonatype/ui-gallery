@@ -1,0 +1,65 @@
+/*
+  #Layout
+*/
+body {
+  background-color: $iq-grey-3;
+  color: $iq-off-black;
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+  &.iq-body { // for styles that shouldn't leak out of IQ to e.g. audit reports
+    min-width: 1024px;
+  }
+}
+
+.iq-main-view {
+  background-color: $iq-off-white;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $iq-page-width-max;
+  min-width: $iq-page-width-min;
+}
+
+.iq-sidebar {
+  background-color: $iq-grey-2;
+  border-right: 1px solid $iq-grey-3;
+  border-left: solid 1px $iq-grey-4;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow-x: hidden;
+  position: relative;
+  vertical-align: top;
+  white-space: normal;
+  width: $iq-sidebar-width;
+  z-index: $iq-sidebar-zindex;
+
+  // Hack to prevent rendering issues in Chrome. This will create a new layer with its own backing surface, preventing
+  // the background and text from disappearing. Witnessed on Chrome 43.0.2357.130 (64-bit) on a MBP laptop screen.
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.iq-body-container {
+  background: url("../example-assets/img/tile_bg.png");
+  border-right: solid 1px $iq-grey-4;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow-x: hidden;
+  vertical-align: top;
+  white-space: normal;
+  width: $iq-content-width;
+
+  @media only screen and (-moz-min-device-pixel-ratio: 2), 
+  only screen and (-webkit-min-device-pixel-ratio: 2), 
+  only screen and (min-devicepixel-ratio: 2), 
+  only screen and (min-resolution: 2dppx) {
+    background-image: url("../example-assets/img/tile_bg_@2X.jpg");
+    background-size: 150px 150px;
+  }
+}
+
+.iq-body-container--single-pane {
+  border-left: solid 1px $iq-grey-4;
+  width: 100%;
+}

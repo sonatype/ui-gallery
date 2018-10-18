@@ -1,0 +1,137 @@
+/*
+ #Dropdown menus
+*/
+.iq-dropdown {
+  position: relative;
+  
+  ul, li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+.iq-dropdown-toggle {
+  display: inline-block;
+  height: 35px;
+  padding-top: 5px;
+  text-align: center;
+  width: 40px;
+  
+  .fa-caret-down {
+    margin-left: 4px
+  }
+}
+
+.iq-dropdown-menu {
+  background: $iq-off-white;
+  border: 1px solid $iq-grey-4;
+  border-radius: 4px;
+  box-shadow: -4px 4px 10px 0 $iq-slate;
+  color: $iq-slate;
+  float: left;
+  margin: 2px 0 0;
+  list-style: none;
+  padding: 0 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1000;
+  
+  > :first-child {
+    margin-top: 8px;
+  }
+  
+  > :last-child {
+    margin-bottom: 8px;
+  }
+  
+ .alert {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 8px;
+  }
+
+  // for tile header dropdowns at the right edge of the screen
+  .iq-tile__actions & {
+    right: 0;
+    left: auto;
+  }
+}
+
+.iq-dropdown-menu__title {
+  @include semi-bold();
+
+  background-color: $iq-off-white;
+  border-bottom: 1px solid $iq-grey-4;
+  color: $iq-slate;
+  font-size: 14px;
+  margin: 0;
+  padding: 12px 8px 16px 8px;
+}
+
+.iq-dropdown-menu__actions {
+  margin: 4px 0 0 0;
+  padding-right: 4px;
+  padding-left: 4px;
+
+  .btn.disabled {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+.iq-dropdown-menu__link {
+  height: 32px;
+  line-height: 32px;
+  
+  .fa {
+    margin-right: 8px;
+  }
+  
+  &.disabled {
+    color: $iq-link-color-disabled;
+    cursor: default;
+    
+    &:hover {      
+      text-decoration: none;
+    }
+  }
+}
+
+.iq-dropdown-menu__link--main-header {
+  @include regular();
+
+  background-color: $iq-off-white;
+  border-bottom: 1px solid $iq-grey-1;
+  color: $iq-off-black;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 8px;
+  white-space: nowrap;
+  word-wrap: break-word;
+
+  &:hover {
+    background: $iq-grey-1;
+    filter: none;
+    color: $iq-off-black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  // Necessary to override Bootstrap styles
+  .dropdown-menu > .active > &,
+  .dropdown-menu > .active > &:hover {
+    background: $iq-grey-1;
+    filter: none;
+    color: $iq-off-black;
+  }
+}
+
+//Custom dropdown styles
+.iq-dropdown-menu--manage-filters {
+  width: 254px;
+}

@@ -1,0 +1,172 @@
+/*
+  #Tables
+*/
+
+.iq-table {
+  border-collapse: collapse;
+  display: table;
+  margin-top: 8px;
+  width: 100%;
+}
+
+thead {
+  .iq-table-row {
+    border-top: 1px solid $iq-grey-3;
+    border-bottom: 1px solid $iq-grey-2;
+  }
+}
+
+.iq-table-row {
+  &:last-child {
+    .iq-cell {
+      border-bottom: 1px solid $iq-grey-1;
+    }
+  }
+
+  &.iq-clickable {
+    &:last-child {
+      &:hover .iq-cell {
+        border-bottom: 1px solid $iq-grey-4;
+      }
+    }
+
+    &:hover {
+      .iq-cell {
+        border-top: 1px solid $iq-grey-4;
+      }
+
+      + .iq-table-row .iq-cell {
+        border-top: 1px solid $iq-grey-4;
+      }
+
+      .iq-cell--label, .iq-cell--chevron {
+        color: $iq-off-black;
+      }
+    }
+  
+    .iq-cell--label {
+      @include semi-bold();
+
+      color: $iq-slate;
+    }
+  }
+}
+
+.iq-cell {
+  @extend .truncate-ellipsis;
+  
+  border-top: 1px solid $iq-grey-1;
+  color: $iq-off-black;
+  display: table-cell;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px;
+  text-align: left;
+}
+
+.iq-cell--header {
+  background-color: $iq-grey-1;
+  border-top: none;
+  border-left: 1px solid $iq-grey-2;
+  color: $iq-slate;
+  position: relative;
+  text-align: left;
+  
+  &:first-child {
+    border-left: none;
+  }
+
+  &.iq-cell--chevron {
+    border-color: $iq-grey-1;
+  }
+
+  &.iq-th--selected, &.selected-column {
+    background-color: $iq-grey-2;
+  }
+}
+
+.iq-cell--header--noborder {
+  border-left: 1px solid $iq-grey-1;
+}
+
+.iq-cell--selected-column, .iq-cell--selected {
+  background-color: $iq-grey-2;
+}
+
+.iq-column-sort-trigger {
+  color: $iq-slate;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+
+  &:hover {
+    color: $iq-off-black;
+    text-decoration: none;
+  }
+}
+
+.iq-col-sort-icons, .iq-column-sort-icons {
+  color: $iq-grey-4;
+  display: inline-block;
+  margin-right: 6px;
+  position: relative;
+  top: -13px;
+  width: 6px;
+
+  .fa-caret-up {
+    line-height: 7px;
+    position: absolute;
+    top: 1px;
+
+    &.up {
+      color: $iq-slate;
+    }
+  }
+
+  .fa-caret-down {
+    line-height: 7px;
+    position: absolute;
+    top: 8px;
+
+    &.down {
+      color: $iq-slate;
+    }
+  }
+}
+
+.iq-cell--label {
+  @include semi-bold();
+
+  color: $iq-off-black;
+}
+
+.iq-cell--empty {
+  @include regular();
+
+  color: $iq-slate;
+  text-align: center;
+}
+
+.iq-cell--chevron {
+  color: $iq-slate;
+  padding: 0 12px;
+  text-align: right;
+  width: 14px;
+  max-width: 14px;
+  min-width: 14px;
+}
+
+.iq-cell--icon {
+  color: $iq-slate;
+  padding: 0 12px;
+  text-align: right;
+  width: 14px;
+  max-width: 14px;
+  min-width: 14px;
+}
+
+// a cell that only contains an icon that acts as a button
+.iq-cell--btn-icon {
+  padding-right: 0;
+  width: 32px;
+}

@@ -1,0 +1,166 @@
+/*
+  #Modals
+*/
+
+// Height of mainHeader + 8px margin
+$iq-modal-top-spacing: 48px;
+// Standard margin
+$iq-modal-bottom-spacing: 8px;
+
+.iq-modal-backdrop {
+  background-color: rgba(7, 7, 7, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $iq-modal-backdrop-z-index;
+}
+
+.iq-modal {
+  $iq-modal-width: 560px;
+
+  background-color: $iq-off-white;
+  border: 1px solid $iq-slate;
+  border-radius: 0;
+  box-shadow: -8px 8px 12px $iq-slate;
+  height: auto;
+  max-height: calc(100vh - #{$iq-modal-top-spacing} - #{$iq-modal-bottom-spacing});
+  margin: 0; // override bootstrap .modal style
+  outline: none;
+  position: fixed;
+  top: $iq-modal-top-spacing;
+  left: calc(50% - #{($iq-modal-width / 2)});
+  width: $iq-modal-width;
+  z-index: $iq-modal-z-index;
+
+  form {
+    margin-bottom: 0; // override Bootstrap
+  }
+}
+
+.iq-modal-header {
+  border-bottom: 1px solid $iq-grey-4;
+  padding: 12px 8px;
+
+  h2 {
+    margin-top: -5px;
+    margin-bottom: -6px;
+
+    .fa {
+      margin-right: 6px;
+    }
+  }
+}
+
+.iq-modal-content {
+  padding: 20px 12px 18px 12px;
+
+  .iq-alert {
+    margin: -12px -4px -10px -4px;
+  }
+  
+  .iq-alert--system-notice {
+    border-width: 1px;
+    margin: -12px -4px 12px -4px;
+  }
+  
+  .iq-subsection-header {
+    margin-top: 0;
+    margin-bottom: 18px;
+    
+    .disabled {
+      color: $iq-grey-4;
+    }
+  }
+}
+
+.iq-modal-footer {
+  background-color: $iq-grey-1;
+  border-top: 1px solid $iq-grey-4;
+  padding: 12px;
+  
+  &.error {
+    background-color: $iq-fail-color-bg;
+    border: 1px solid $iq-fail-color;
+    color: $iq-fail-color;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    
+    > .iq-alert--error {
+      border: none;
+    }
+  }
+  
+  .btn {
+    margin-right: 12px;
+
+    &:not(.btn-icon-only) {
+      min-width: 100px;
+    }
+  }
+    
+  // solves the problem where a tooltip inserts itself between two buttons and breaks the standard + .iq-btn rule
+  .iq-btn {
+    margin-right: 8px;
+    
+    + .iq-btn {
+      margin-left: 0;
+    }
+  }
+  
+  .iq-alert {
+    // in case a <span> has been used as the container
+    display: block;
+    margin: 0 0 8px 0;
+  }
+}
+
+// Duplicates for Bootstrap styles we might want/need to remove someday
+.iq-modal.fade.in {
+  top: 48px;
+}
+
+.iq-modal.fade {
+  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+  transition: opacity 0.3s linear, top 0.3s ease-out;
+  top: -25%;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+/*
+  Fix for non-scrolling vulnerability modal
+*/
+#sv-info-modal .iq-modal-content {
+  height: 100%;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.modal-ldap-user-list {
+  > .iq-table {
+    table-layout: fixed;
+  }
+
+  .modal-ldap-user-list__username-column {
+    width: 20%;
+  }
+
+  .modal-ldap-user-list__name-column {
+    width: 20%;
+  }
+
+  .modal-ldap-user-list__email-column {
+    width: 30%;
+  }
+
+  .modal-ldap-user-list__groups-column {
+    width: 30%;
+  }
+}
