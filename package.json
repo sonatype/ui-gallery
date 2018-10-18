@@ -22,11 +22,9 @@
     "node-sass": "=4.5.3",
     "resolve-url-loader": "=2.3.0",
     "sass-loader": "=6.0.6",
-    "tape": "=3.6.1",
     "uglify-js": "=2.8.29",
     "webpack": "=3.8.1",
-    "webpack-dev-server": "=2.7.1",
-    "xmldom": "=0.1.27"
+    "webpack-dev-server": "=2.7.1"
   },
   "scripts": {
     "gallery": "webpack-dev-server --config webpack.config.gallery.js"
