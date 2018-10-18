@@ -1,12 +1,4 @@
 <nav>
-  <tree-view-group name="Components">
-    <nav-item ng-repeat="state in vm.components" state="{{state}}"></nav-item>
-  </tree-view-group>
-
-  <tree-view-group name="Directives">
-    <nav-item ng-repeat="state in vm.directives" state="{{state}}"></nav-item>
-  </tree-view-group>
-
   <tree-view-group name="Styles - HTML Elements">
     <nav-item ng-repeat="state in vm.forms" state="{{state}}"></nav-item>
   </tree-view-group>
@@ -17,11 +9,5 @@
 
   <tree-view-group name="Styles - Widgets">
     <nav-item ng-repeat="state in vm.widgets" state="{{state}}"></nav-item>
-  </tree-view-group>
-
-  <tree-view-group name="Charts">
-    <nav-item state="Line chart"></nav-item>
-    <nav-item state="Stacked Bar chart"></nav-item>
-    <nav-item state="Combined chart"></nav-item>
   </tree-view-group>
 </nav>

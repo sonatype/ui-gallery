@@ -3,11 +3,10 @@
  * Includes the third-party code listed at http://links.sonatype.com/products/clm/attributions.
  * "Sonatype" is a trademark of Sonatype, Inc.
  */
-import utilityModule from '../frontend/utility/utility.module';
 import iqModalModule from './styles/iq-modal/module';
 import iqFormLayoutModule from './styles/iq-form-layout/module';
 
-export default angular.module('config',
+export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.name])
     .constant('layoutConfig', {
       'page layout': 'styles/page-layout.html',
       'iq-tile': 'styles/iq-tile.html',
