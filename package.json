@@ -9,11 +9,9 @@
   "devDependencies": {
     "angular-highlightjs": "=0.7.1",
     "angular-marked": "=1.2.2",
-    "angular-mocks": "=1.6.10",
     "babel-core": "=6.26.0",
     "babel-loader": "=7.1.2",
     "babel-plugin-transform-object-rest-spread": "=6.26.0",
-    "babel-plugin-transform-runtime": "=6.23.0",
     "babel-preset-env": "=1.6.1",
     "copy-modules-webpack-plugin": "=1.0.2",
     "css-loader": "=0.28.7",
