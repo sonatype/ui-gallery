@@ -1,6 +1,5 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CSSSplitPlugin = require('css-split-webpack-plugin').default;
 const transformObjectRestSpread = require('babel-plugin-transform-object-rest-spread');
 
 const extractSass = new ExtractTextPlugin({ filename: 'gallery.css' });
@@ -62,10 +61,10 @@ module.exports = {
   },
   plugins: [
     extractSass,
-    new CSSSplitPlugin({
-      size: 4095,
-      filename: '[name]-[part].[ext]'
-    })
+    // new CSSSplitPlugin({
+    //   size: 4095,
+    //   filename: '[name]-[part].[ext]'
+    // })
   ],
   devtool: 'eval',
   devServer: {
