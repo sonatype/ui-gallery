@@ -11,7 +11,7 @@ $iq-tile-actions-margin-top: 8px;
 
 // Base Tiles
 
-.iq-tile {
+.nx-tile {
   background-color: $iq-main-background-color;
   border: 1px solid $iq-grey-2;
   margin: 8px;
@@ -30,11 +30,11 @@ $iq-tile-actions-margin-top: 8px;
       }
     }
     
-    .iq-tile-header + .iq-tile-content {
+    .nx-tile-header + .nx-tile-content {
       padding-top: 0;
     }
   
-    > .iq-tile-content {
+    > .nx-tile-content {
       padding-top: 12px;
     }
   }
@@ -56,28 +56,28 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
-.iq-tile--summary {
+.nx-tile--summary {
   border: none;
   margin-top: 0;
   padding-top: 0;
   position: relative;
 }
 
-.iq-tile--title-only {
+.nx-tile--title-only {
   padding-bottom: 0;
 }
 
-.iq-tile--grid-tile {
-  .iq-tile-header {
+.nx-tile--grid-tile {
+  .nx-tile-header {
     margin-bottom: 0;
   }
 
-  .iq-tile-footer {
+  .nx-tile-footer {
     margin-top: 0;
   }
 }
 
-.iq-tile-scroll-container {
+.nx-tile-scroll-container {
   margin: 0 8px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -86,31 +86,31 @@ $iq-tile-actions-margin-top: 8px;
   width: calc(100% - 16px);
   z-index: $tile-scroll-container-z-index;
 
-  .iq-tile {
+  .nx-tile {
     margin: 0 0 8px 0;
   }
 }
 
 // used when a <form> is the first element in an iq-tile
-.iq-tile--form-tile {
-  .iq-tile-header {
+.nx-tile--form-tile {
+  .nx-tile-header {
     margin-bottom: 6px;
   }
 }
 
 // Tile headers
 
-.iq-tile-header {
+.nx-tile-header {
   min-height: $iq-tile-header-height;
   margin: 8px 0 15px 0;
   overflow: hidden;
   
-  .iq-tile__actions {
+  .nx-tile__actions {
     margin-top: 1px;
   }
 }
 
-.iq-tile-header__title {
+.nx-tile-header__title {
   display: inline-block;
 
   h1, h2 {
@@ -125,7 +125,7 @@ $iq-tile-actions-margin-top: 8px;
     margin-left: -1px; // Magic number b/c H1 has mysterious 1px to the left
     padding: 0;
 
-    .iq-tile-header__description {
+    .nx-tile-header__description {
       @include regular();
 
       font-weight: normal;
@@ -133,7 +133,7 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
-.iq-tile-header__icon {
+.nx-tile-header__icon {
   display: block;
   float: left;
   font-size: 30px;
@@ -171,25 +171,25 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
-.iq-tile-header__title--no-actions {
+.nx-tile-header__title--no-actions {
   height: $iq-tile-header-height;
 }
 
-.iq-tile-header__subtitle {
+.nx-tile-header__subtitle {
   line-height: 16px;
   margin: 0;
   padding: 0 0 2px 0;
   max-width: $iq-paragraph-width-maximum;
 }
 
-.iq-tile-header--hrule {
+.nx-tile-header--hrule {
   border: 0 solid $iq-grey-4;
   border-bottom-width: 1px;
   margin-bottom: 20px;
   padding-bottom: 5px;
 }
 
-.iq-tile__actions {
+.nx-tile__actions {
   float: right;
   margin-top: $iq-tile-actions-margin-top;
   
@@ -202,7 +202,7 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
-.iq-tile-content {
+.nx-tile-content {
   clear: both;
 
   > :last-child {
@@ -216,7 +216,7 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
-.iq-tile__section-header {
+.nx-tile__section-header {
   @include semi-bold();
 
   border-bottom: 1px solid $iq-grey-4;
@@ -226,13 +226,13 @@ $iq-tile-actions-margin-top: 8px;
   text-transform: uppercase;
 }
 
-.iq-tile__section-header--simple {
+.nx-tile__section-header--simple {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.iq-tile-footer {
+.nx-tile-footer {
   border: 0 solid $iq-grey-4;
   border-top-width: 1px;
   margin-top: 20px;
@@ -243,30 +243,22 @@ $iq-tile-actions-margin-top: 8px;
 
 // Summary Tile
 
-.iq-tile--top-tile {
+.nx-tile--top-tile {
   box-shadow: 0px 5px 6px 0px $iq-grey-1;
   margin-bottom: 0;
   position: relative;
   z-index: $tile-scroll-container-z-index + 1;
 }
 
-// Dashboard Top Tile
-
-.iq-tile--dashboard {
-  border-bottom: none;
-  box-shadow: none;
-  padding-bottom: 0;
-}
-
 // System Preference Tiles
 // Because there's no sidebar tiles are centered and limited to 1024px in width (minus some space for the scrollbar)
-.iq-tile--sys-prefs {
+.nx-tile--sys-prefs {
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
   width: 1024px - 17px;
 
-  .iq-tile__actions {
+  .nx-tile__actions {
     // Various wrapper directives can create intervening divs between the iq-tile and its semantic child, such as the
     // iq-tile__actions and iq-tile-header. The margin of the iq-tile-header collapses out of these divs, moving all
     // of the header's siblings down along with it. To combat that, we remove the top margin that the
@@ -274,13 +266,13 @@ $iq-tile-actions-margin-top: 8px;
     margin-top: 0;
   }
 
-  > .iq-tile__actions {
+  > .nx-tile__actions {
     // do not remove the margin if there are no intervening divs
     margin-top: $iq-tile-actions-margin-top;
   }
 }
 
-.iq-tile--back-button {
+.nx-tile--back-button {
   border: none;
   background: none;
   padding-bottom: 0;

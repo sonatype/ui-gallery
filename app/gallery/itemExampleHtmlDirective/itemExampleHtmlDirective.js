@@ -10,8 +10,8 @@ function itemExampleHtmlDirective() {
 
       var staticHTML = element[0].innerHTML;
 
-      element.html('<div class="iq-tile"><div class="iq-tile-header"><div class="iq-tile-header__title"><h2>Example</h2></div></div>' + staticHTML + '</div>');
-      element.append('<div class="iq-tile"><div class="iq-tile-header"><div class="iq-tile-header__title"><h2>Code</h2></div></div><div hljs hljs-source="code"></div></div>');
+      element.html('<div class="nx-tile"><div class="nx-tile-header"><div class="nx-tile-header__title"><h2>Example</h2></div></div>' + staticHTML + '</div>');
+      element.append('<div class="nx-tile"><div class="nx-tile-header"><div class="nx-tile-header__title"><h2>Code</h2></div></div><div hljs hljs-source="code"></div></div>');
 
       return function postLink(scope) {
         scope.code = staticHTML.replace(/^(\r\n|\r|\n)|=""|\s+$/g, '');

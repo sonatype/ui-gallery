@@ -8,7 +8,7 @@
 @import "./example-scss/global";
 @import "./example-scss/widgets";
 @import "./example-scss/content";
-@import "./example-scss/tiles";
+@import "./example-scss/nx-tile";
 @import "./example-scss/form";
 @import "./example-scss/icons";
 @import "./example-scss/mainHeader";
@@ -58,8 +58,8 @@
   }
 }
 
-.iq-tile__gallery {
-  .iq-tile-header {
+.nx-tile__gallery {
+  .nx-tile-header {
     margin-bottom: 0;
   }
 }

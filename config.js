@@ -9,7 +9,7 @@ import iqFormLayoutModule from './styles/iq-form-layout/module';
 export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.name])
     .constant('layoutConfig', {
       'page layout': 'styles/page-layout.html',
-      'iq-tile': 'styles/iq-tile.html',
+      'tiles': 'styles/nx-tile.html',
       'iq-pull-right': 'styles/iq-pull-right.html',
       'iq-scrollable': 'styles/iq-scrollable.html',
       'iq-grid': 'styles/iq-grid.html'
