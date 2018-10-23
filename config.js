@@ -16,24 +16,24 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     })
 
     .constant('widgetsConfig', {
-      'iq-button': 'styles/iq-btn.html',
-      'iq-nav-pills': 'styles/iq-nav-pills.html',
-      'iq-dropdown': 'styles/iq-dropdown.html',
-      'iq-alerts': 'styles/iq-alerts.html',
-      'iq-modal': 'styles/iq-modal/iq-modal.html',
-      'iq-read-only': 'styles/iq-read-only.html',
-      'iq-tree-view': 'styles/iq-tree-view.html',
-      'iq-list': 'styles/iq-list.html',
-      'iq-list--clickable': 'styles/iq-list--clickable.html',
-      'iq-threat-indicators': 'styles/iq-threat-indicators.html',
-      'iq-counter': 'styles/iq-counter.html',
-      'iq-text-indicators': 'styles/iq-text-indicators.html',
-      'iq-threat-bar': 'styles/iq-threat-bar.html'
+      'buttons': 'styles/nx-btn.html',
+      'nav pills': 'styles/iq-nav-pills.html',
+      //'iq-dropdown': 'styles/iq-dropdown.html',
+      'alerts': 'styles/iq-alerts.html',
+      // 'iq-modal': 'styles/iq-modal/iq-modal.html',
+      'read-only': 'styles/iq-read-only.html',
+      'tree-views': 'styles/iq-tree-view.html',
+      'lists': 'styles/iq-list.html',
+      'clickable lists': 'styles/iq-list--clickable.html',
+      'threat indicators': 'styles/iq-threat-indicators.html',
+      'counters': 'styles/iq-counter.html',
+      'text indicators': 'styles/iq-text-indicators.html',
+      'threat bars': 'styles/iq-threat-bar.html'
     })
 
     .constant('htmlConfig', {
-      'iq-table': 'styles/iq-table.html',
-      'iq-text-input': 'styles/iq-form-text-input.html',
-      'iq-textarea': 'styles/iq-form-textarea.html',
-      'iq-form-layout': 'styles/iq-form-layout/iq-form-layout.html'
+      'tables': 'styles/iq-table.html',
+      'input - text': 'styles/iq-form-text-input.html',
+      'textarea': 'styles/iq-form-textarea.html',
+      'form layout': 'styles/iq-form-layout/iq-form-layout.html'
     });
