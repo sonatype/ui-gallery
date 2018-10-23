@@ -17,6 +17,7 @@ $iq-tile-actions-margin-top: 8px;
   margin: 8px;
   padding: 0 8px 8px 8px;
   
+  // Sometimes we want tiles that consist of alert messages
   &.iq-alert {
     background-color: $iq-warn-color-bg;
     border: 1px solid $iq-warn-color;
@@ -56,17 +57,12 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
-.nx-tile--summary {
-  border: none;
-  margin-top: 0;
-  padding-top: 0;
-  position: relative;
-}
-
+// Used for "headlines"
 .nx-tile--title-only {
   padding-bottom: 0;
 }
 
+// Special tile for containing grids 
 .nx-tile--grid-tile {
   .nx-tile-header {
     margin-bottom: 0;
@@ -77,6 +73,7 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
+// Tile for scrolling content
 .nx-tile-scroll-container {
   margin: 0 8px;
   overflow-y: auto;
@@ -105,6 +102,7 @@ $iq-tile-actions-margin-top: 8px;
   margin: 8px 0 15px 0;
   overflow: hidden;
   
+  // Actions are buttons or dropdowns that appear ina  tile header
   .nx-tile__actions {
     margin-top: 1px;
   }
@@ -139,36 +137,6 @@ $iq-tile-actions-margin-top: 8px;
   font-size: 30px;
   margin-right: 8px;
   vertical-align: middle;
-
-  img {
-    display: block;
-    max-height: 25px; // magic number for default globe graphic
-    margin-top: 2px; // magic number for default globe graphic
-    width: auto;
-  }
-
-  &.fa-university, &.fa-database {
-    font-size: 22px;
-    margin-top: 4px;
-    margin-top: 4px;
-  }
-
-  &.fa.outline {
-    color: $iq-main-background-color;
-  }
-
-  &.hexagon {
-    margin-top: 2px;
-  }
-
-  &.fa-book {
-    margin-top: 2px;
-  }
-
-  &.fa-tag {
-    margin-top: 3px;
-    padding-left: 2px;
-  }
 }
 
 .nx-tile-header__title--no-actions {
@@ -216,6 +184,7 @@ $iq-tile-actions-margin-top: 8px;
   }
 }
 
+// On pages with tiles with multiple sections these are lighter weight titles
 .nx-tile__section-header {
   @include semi-bold();
 
@@ -241,39 +210,10 @@ $iq-tile-actions-margin-top: 8px;
   padding-top: 12px;
 }
 
-// Summary Tile
-
+// A tile at the top of the page, usually contains a nav bar with scrolling buttons
 .nx-tile--top-tile {
   box-shadow: 0px 5px 6px 0px $iq-grey-1;
   margin-bottom: 0;
   position: relative;
   z-index: $tile-scroll-container-z-index + 1;
-}
-
-// System Preference Tiles
-// Because there's no sidebar tiles are centered and limited to 1024px in width (minus some space for the scrollbar)
-.nx-tile--sys-prefs {
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1024px - 17px;
-
-  .nx-tile__actions {
-    // Various wrapper directives can create intervening divs between the iq-tile and its semantic child, such as the
-    // iq-tile__actions and iq-tile-header. The margin of the iq-tile-header collapses out of these divs, moving all
-    // of the header's siblings down along with it. To combat that, we remove the top margin that the
-    // iq-tile__actions would usually have.
-    margin-top: 0;
-  }
-
-  > .nx-tile__actions {
-    // do not remove the margin if there are no intervening divs
-    margin-top: $iq-tile-actions-margin-top;
-  }
-}
-
-.nx-tile--back-button {
-  border: none;
-  background: none;
-  padding-bottom: 0;
 }
