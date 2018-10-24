@@ -1,0 +1,165 @@
+<item-description>
+  <marked>
+    `.nx-tile` is the base building block of our pages.
+    
+    There are three default classes that can be used within an `.nx-tile`
+    
+    `.nx-tile-header` is used for tile titles, it has title and sub-title elements (optional) 
+    
+    `.nx-tile-content` for the tile content
+    
+    `.nx-tile-footer` for footer contents (buttons for example)
+    
+    `.nx-tile` can also be paired with `.nx-alert` styles to create tiles with alert coloring.
+  </marked>
+  
+  <div class="nx-list">
+    <h4 class="nx-list__title">Required files</h4>
+    <ul>
+      <li class="nx-list-item">
+        _nx-tile.scss
+      </li>
+    </ul>
+  </div>
+  
+  <div class="nx-list">
+    <h4 class="nx-list__title">To do</h4>
+    <ul>
+      <li class="nx-list-item">
+        Create example for .nx-tile--top-tile
+      </li>
+      <li class="nx-list-item">
+        Create example for .nx-tile--title-only
+      </li>
+      <li class="nx-list-item">
+        Create example for .nx-tile--subsection-header
+      </li>
+    </ul>
+  </div>
+</item-description>
+
+<item-example-html>
+  <div class="nx-tile">
+    <div class="nx-tile__actions">
+      <button class="nx-btn nx-btn--tertiary">
+        <i class="fa fa-pencil"></i>Action button
+      </button>
+   <button class="nx-btn nx-btn--tertiary">
+        <i class="fa fa-plus"></i>Another button
+      </button>
+    </div>
+    <div class="nx-tile-header">
+      <div class="nx-tile-header__title">
+        <h2>IQ Tile</h2>
+      </div>
+    </div>
+    <div class="nx-tile-content">
+      This is a paragraph inside nx-tile-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+    <div class="nx-tile-footer">
+      <button class="nx-btn nx-btn--primary">
+        Footer button
+      </button>
+    </div>
+  </div>
+  
+  <div class="nx-tile">
+    <div class="nx-tile-header">
+      <div class="nx-tile-header__title">
+        <h2>IQ Tile with sub-title</h2>
+      </div>
+      <div class="nx-tile-header__subtitle">
+        Base nx-tile with nx-tile-content
+      </div>
+    </div>
+    <div class="nx-tile-content">
+      This is a paragraph inside nx-tile-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+    <div class="nx-tile-footer">
+      <button class="nx-btn nx-btn--primary">
+        Footer button
+      </button>
+    </div>
+  </div>
+  
+  <div class="nx-tile">
+    <div class="nx-tile-header nx-tile-header--hrule">
+      <div class="nx-tile-header__title">
+        <h2>IQ Tile with horizontal rule</h2>
+      </div>
+    </div>
+    <div class="nx-tile-content">
+      This is a paragraph inside nx-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+    <div class="nx-tile-footer">
+      <button class="btn btn-primary">
+        Footer button
+      </button>
+    </div>
+  </div>
+  
+  <div class="nx-tile">
+    <div class="nx-tile-header">
+      <div class="nx-tile-header__title">
+        <h1>IQ Top Tile</h1>
+      </div>
+      <div class="nx-tile-header__subtitle">
+        Uses an &lt;h1&gt; for the title text rather than an &lt;h2&gt;. Used as the first tile on a page - when
+        specified.
+      </div>
+    </div>
+  </div>
+  
+  <div class="nx-tile iq-alert">
+    <div class="nx-tile-header">
+      <div class="nx-tile-header__title">
+        <h2>IQ Tile paired with iq-alert</h2>
+      </div>
+    </div>
+    <div class="nx-tile-content">
+      This is a paragraph inside "nx-tile-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+  </div>
+  
+  <div class="nx-tile iq-alert iq-alert--info">
+    <div class="nx-tile-header">
+      <div class="nx-tile-header__title">
+        <h2><i class='fa fa-info-circle'></i> IQ Tile paired with iq-alert--info</h2>
+      </div>
+    </div>
+    <div class="nx-tile-content">
+      This is a paragraph inside nx-tile-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+  </div>
+  
+  <div class="nx-tile iq-alert iq-alert--error">
+    <div class="nx-tile-header">
+      <div class="nx-tile-header__title">
+        <h2><i class="fa fa-warning"></i> IQ Tile paired with iq-alert--error</h2>
+      </div>
+    </div>
+    <div class="nx-tile-content">
+      This is a paragraph inside nx-tile-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+  </div>
+  
+  <div class="nx-tile iq-alert iq-alert--error">
+    <div class="nx-tile-content">
+      <i class="fa fa-warning"></i>This is a paragraph inside nx-tile-content. futurity A.I. grenade nano- nodality vinyl j-pop paranoid refrigerator
+      wristwatch numinous. neural girl long-chain hydrocarbons bicycle film bridge engine dome computer drugs vehicle.
+      Faded marketing 8-bit 8-bit refrigerator corrupted market sentient otaku saturation point cartel.
+    </div>
+  </div>
+</item-example-html>
