@@ -2,7 +2,7 @@
   #Tables
 */
 
-.iq-table {
+.nx-table {
   border-collapse: collapse;
   display: table;
   margin-top: 8px;
@@ -10,41 +10,41 @@
 }
 
 thead {
-  .iq-table-row {
+  .nx-table-row {
     border-top: 1px solid $iq-grey-3;
     border-bottom: 1px solid $iq-grey-2;
   }
 }
 
-.iq-table-row {
+.nx-table-row {
   &:last-child {
-    .iq-cell {
+    .nx-cell {
       border-bottom: 1px solid $iq-grey-1;
     }
   }
 
   &.iq-clickable {
     &:last-child {
-      &:hover .iq-cell {
+      &:hover .nx-cell {
         border-bottom: 1px solid $iq-grey-4;
       }
     }
 
     &:hover {
-      .iq-cell {
+      .nx-cell {
         border-top: 1px solid $iq-grey-4;
       }
 
-      + .iq-table-row .iq-cell {
+      + .nx-table-row .nx-cell {
         border-top: 1px solid $iq-grey-4;
       }
 
-      .iq-cell--label, .iq-cell--chevron {
+      .nx-cell--label, .nx-cell--chevron {
         color: $iq-off-black;
       }
     }
   
-    .iq-cell--label {
+    .nx-cell--label {
       @include semi-bold();
 
       color: $iq-slate;
@@ -52,7 +52,7 @@ thead {
   }
 }
 
-.iq-cell {
+.nx-cell {
   @extend .truncate-ellipsis;
   
   border-top: 1px solid $iq-grey-1;
@@ -64,7 +64,7 @@ thead {
   text-align: left;
 }
 
-.iq-cell--header {
+.nx-cell--header {
   background-color: $iq-grey-1;
   border-top: none;
   border-left: 1px solid $iq-grey-2;
@@ -76,24 +76,24 @@ thead {
     border-left: none;
   }
 
-  &.iq-cell--chevron {
+  &.nx-cell--chevron {
     border-color: $iq-grey-1;
   }
 
-  &.iq-th--selected, &.selected-column {
+  &.nx-th--selected, &.selected-column {
     background-color: $iq-grey-2;
   }
 }
 
-.iq-cell--header--noborder {
+.nx-cell--header--noborder {
   border-left: 1px solid $iq-grey-1;
 }
 
-.iq-cell--selected-column, .iq-cell--selected {
+.nx-cell--selected-column, .nx-cell--selected {
   background-color: $iq-grey-2;
 }
 
-.iq-column-sort-trigger {
+.nx-column-sort-trigger {
   color: $iq-slate;
   display: block;
   height: 40px;
@@ -105,7 +105,7 @@ thead {
   }
 }
 
-.iq-col-sort-icons, .iq-column-sort-icons {
+.nx-col-sort-icons, .nx-column-sort-icons {
   color: $iq-grey-4;
   display: inline-block;
   margin-right: 6px;
@@ -134,20 +134,20 @@ thead {
   }
 }
 
-.iq-cell--label {
+.nx-cell--label {
   @include semi-bold();
 
   color: $iq-off-black;
 }
 
-.iq-cell--empty {
+.nx-cell--empty {
   @include regular();
 
   color: $iq-slate;
   text-align: center;
 }
 
-.iq-cell--chevron {
+.nx-cell--chevron {
   color: $iq-slate;
   padding: 0 12px;
   text-align: right;
@@ -156,7 +156,7 @@ thead {
   min-width: 14px;
 }
 
-.iq-cell--icon {
+.nx-cell--icon {
   color: $iq-slate;
   padding: 0 12px;
   text-align: right;
@@ -166,7 +166,7 @@ thead {
 }
 
 // a cell that only contains an icon that acts as a button
-.iq-cell--btn-icon {
+.nx-cell--btn-icon {
   padding-right: 0;
   width: 32px;
 }

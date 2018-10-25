@@ -32,7 +32,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     })
 
     .constant('htmlConfig', {
-      'tables': 'styles/iq-table.html',
+      'tables': 'styles/nx-table.html',
       'input - text': 'styles/iq-form-text-input.html',
       'textarea': 'styles/iq-form-textarea.html',
       'form layout': 'styles/iq-form-layout/iq-form-layout.html'
