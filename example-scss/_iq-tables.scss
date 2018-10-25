@@ -9,13 +9,6 @@
   width: 100%;
 }
 
-thead {
-  .nx-table-row {
-    border-top: 1px solid $iq-grey-3;
-    border-bottom: 1px solid $iq-grey-2;
-  }
-}
-
 .nx-table-row {
   &:last-child {
     .nx-cell {
@@ -50,6 +43,11 @@ thead {
       color: $iq-slate;
     }
   }
+}
+
+.nx-table-row--header {
+  border-top: 1px solid $iq-grey-3;
+  border-bottom: 1px solid $iq-grey-2;
 }
 
 .nx-cell {
@@ -93,6 +91,7 @@ thead {
   background-color: $iq-grey-2;
 }
 
+// Column sorting icons and indicators
 .nx-column-sort-trigger {
   color: $iq-slate;
   display: block;
@@ -140,6 +139,7 @@ thead {
   color: $iq-off-black;
 }
 
+// Used when table contents are empty
 .nx-cell--empty {
   @include regular();
 
@@ -147,6 +147,7 @@ thead {
   text-align: center;
 }
 
+// special cells that usually contain a button or indicator - usually on the right side
 .nx-cell--chevron {
   color: $iq-slate;
   padding: 0 12px;
