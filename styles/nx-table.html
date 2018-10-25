@@ -1,0 +1,172 @@
+<item-description>
+  Basic table styles
+  
+  <div class="nx-list">
+    <h4 class="nx-list__title">Required files:</h4>
+    <ul>
+      <li class="nx-list-item">
+        _nx-tables.scss
+      </li>
+    </ul>
+  </div>
+  <div class="nx-list">
+    <h4 class="nx-list__title">To do:</h4>
+    <ul>
+      <li class="nx-list-item">
+        Add examples for classes described in the SCSS that aren't shown below.
+      </li>
+      <li>
+        particularly the --label class and per discussion with Neil Donewar:
+        
+        <p>That as well as adding scope=“row” to the th so that screen readers get better context.
+           I was just checking… when there’s both a column header and a row header, then
+           scope=“row” for row and scope=“col” for column is helpful (even though the scope is
+           generally left off when there’s only a single th for a cell).</p>
+
+        <p>More info here, if you’re curious: https://www.w3.org/TR/WCAG20-TECHS/H63.html</p>
+      </li>
+    </ul>
+  </div>
+</item-description>
+
+<item-example-html>
+  <table class="nx-table">
+    <thead>
+      <tr class="nx-table-row nx-table-row--header">
+        <th class="nx-cell nx-cell--header iq-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header 
+        </th>
+        <th class="nx-cell nx-cell--header iq-clickable nx-cell--selected"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i> 
+          </div>
+          Selected header
+        </th>
+        <th class="nx-cell nx-cell--header iq-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header
+        </th>
+        <th class="nx-cell nx-cell--header iq-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header
+        </th>
+        <th class="nx-cell nx-cell--header nx-cell--header--noborder iq-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          No left border
+        </th>
+        <th class="nx-cell nx-cell--header nx-cell--chevron"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="nx-table-row iq-clickable">
+        <td class="nx-cell nx-cell--label">Clickable row</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row iq-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row iq-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row iq-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row iq-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row iq-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row">
+        <td class="nx-cell nx-cell--label">Non-clickable row</td>
+        <td class="nx-cell">with icon</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--icon"><i class="fa fa-check"></i></td>
+      </tr>
+      <tr class="nx-table-row">
+        <td class="nx-cell nx-cell--label">Non-clickable row</td>
+        <td class="nx-cell">with tertiary icon button</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--btn-icon">
+          <button class="nx-btn nx-btn--tertiary nx-btn--icon-only" type="button"><!--
+          --><i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Empty table</h2>
+  
+  <table class="nx-table">
+    <thead>
+      <tr class="nx-table-row nx-table-row--header">
+        <th class="nx-cell nx-cell--header"> 
+          Column 1 
+        </th>
+        <th class="nx-cell nx-cell--header"> 
+          Column 2
+        </th>
+        <th class="nx-cell nx-cell--header"> 
+          Column 3
+        </th>
+        <th class="nx-cell nx-cell--header"> 
+          Column 4
+        </th>
+        <th class="nx-cell nx-cell--header"> 
+          Column 5
+        </th>
+        <th class="nx-cell nx-cell--header">
+          Column 6
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="nx-table-row">
+        <td class="nx-cell nx-cell--empty" colspan="6">This table contains no data and this message tells you that.</td>
+      </tr>
+    </tbody>
+  </table>
+</item-example-html>
