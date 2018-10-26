@@ -1,9 +1,10 @@
-.iq-list {
+.nx-list {
   margin: 0 0 24px 0;
   
   ul, ol {
     list-style: none;
     margin: 0;
+    padding: 0;
   }
 
   &:last-child {
@@ -11,17 +12,17 @@
   }
 }
 
-.iq-list--header {
+.nx-list--header {
   margin-bottom: 0;
 }
 
-.iq-list__title {
+.nx-list__title {
   color: $iq-off-black;
   line-height: 14px;
   margin: 0 0 9px 0;
 }
 
-.iq-list__item {
+.nx-list__item {
   @include semi-bold();
   @extend .truncate-ellipsis;
 
@@ -48,8 +49,8 @@
   }
 }
 
-.iq-list--bulleted {
-  .iq-list__item {
+.nx-list--bulleted {
+  .nx-list__item {
     @include regular();
 
     border-top: 1px solid transparent;
@@ -62,7 +63,7 @@
   }
 }
 
-.iq-list__item--empty {
+.nx-list__item--empty {
   @include regular();
 
   border-top: 1px solid $iq-grey-3; // assume it's always the first item
@@ -72,24 +73,24 @@
   text-align: center;
 }
 
-.iq-list__item--disabled {
+.nx-list__item--disabled {
   color: $iq-grey-4;
   cursor: default;
 }
 
-.iq-list__item--expanding {
+.nx-list__item--expanding {
   height: auto;
 }
 
-.iq-list__item--with-modifier-icon {
+.nx-list__item--with-modifier-icon {
   line-height: 30px;
 }
 
-.iq-list__actions {
+.nx-list__actions {
   float: right;
 }
 
-.iq-list__subtext {
+.nx-list__subtext {
   @include regular();
 
   display: block;
@@ -103,17 +104,17 @@
 /*
  * Action or Clickable Lists
  */
-.iq-list--clickable {
-  .iq-list__title {
+.nx-list--clickable {
+  .nx-list__title {
     color: $iq-off-black;
   }
 
-  .iq-list__item {
+  .nx-list__item {
     @include semi-bold();
 
     color: $iq-slate;
   
-    &:not(.iq-list__item--empty):not(.iq-disabled):not([disabled]) {
+    &:not(.nx-list__item--empty):not(.iq-disabled):not([disabled]) {
       &:hover, &:focus {
         border-top: 1px solid $iq-grey-4;
         border-bottom: 1px solid $iq-grey-4;
@@ -129,7 +130,7 @@
       }
     }
     
-    &.iq-list__item--empty {
+    &.nx-list__item--empty {
       @include regular();
 
       border-top: 1px solid $iq-grey-3; // assume it's always the first item
@@ -149,7 +150,7 @@
       }
     }
 
-    .iq-list__subtext {
+    .nx-list__subtext {
       pointer-events: none; // Fix for IE11 :active state display
     }
   }

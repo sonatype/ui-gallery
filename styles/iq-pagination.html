@@ -1,0 +1,355 @@
+<item-description>
+  <marked>
+    Basic pagination controls which can be added to `.iq-table` and `.nx-list`.
+    
+    Note that new header and footer containers are required for both to hold the pagination controls and header text (if any).
+  </marked>
+</item-description>
+
+<item-example-html>
+  <h2>Table example</h2>
+  <div class="iq-pagination iq-pagination--table">
+    <div class="iq-dropdown">
+      <button class="btn btn-tertiary"
+              type="button"
+              data-toggle="dropdown">
+        1 - 20 of 832
+        <span class="caret"></span>
+      </button>
+
+      <div class="dropdown-menu iq-dropdown-menu">
+        <div class="iq-dropdown-menu__actions">
+          <a class="btn iq-btn--dropdown">
+            50
+          </a>
+          <a class="btn iq-btn--dropdown">
+            100
+          </a>
+          <a class="btn iq-btn--dropdown">
+            200
+          </a>
+          <a class="btn iq-btn--dropdown">
+            All
+          </a>
+        </div>
+      </div>
+    </div>
+    <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-left"></i></button>
+    <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <table class="iq-table">
+    <thead>
+      <tr class="iq-table-row">
+        <th class="iq-cell iq-cell--header iq-clickable"> 
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header 
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable iq-cell--selected"> 
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i> 
+          </div>
+          Selected header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable"> 
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header
+        </th>
+        <th class="iq-cell iq-cell--header iq-clickable"> 
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header
+        </th>
+        <th class="iq-cell iq-cell--header iq-cell--header--noborder iq-clickable"> 
+          <div class="iq-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          No left border
+        </th>
+        <th class="iq-cell iq-cell--header iq-cell--chevron"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Clickable row</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Clickable row</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Clickable row</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Clickable row</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="iq-table-row iq-clickable">
+        <td class="iq-cell iq-cell--label">Row Label</td>
+        <td class="iq-cell">Content 1</td>
+        <td class="iq-cell">Content 2</td>
+        <td class="iq-cell">Content 3</td>
+        <td class="iq-cell">Content 4</td>
+        <td class="iq-cell iq-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="iq-pagination iq-pagination--table">
+    <div class="iq-pagination__count-text">
+      1 - 20 of 832
+    </div>
+    <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-left"></i></button>
+    <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-right"></i></button>
+  </div>
+    
+  <h2>List example</h2>
+  <div class="nx-list">
+    <div class="nx-list-header">
+      <div class="iq-pagination">
+        <div class="iq-dropdown">
+          <button class="btn btn-tertiary"
+                  type="button"
+                  data-toggle="dropdown">
+            1 - 20 of 832
+            <span class="caret"></span>
+          </button>
+
+          <div class="dropdown-menu iq-dropdown-menu">
+            <div class="iq-dropdown-menu__actions">
+              <a class="btn iq-btn--dropdown">
+                50
+              </a>
+              <a class="btn iq-btn--dropdown">
+                100
+              </a>
+              <a class="btn iq-btn--dropdown">
+                200
+              </a>
+              <a class="btn iq-btn--dropdown">
+                All
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-left"></i></button>
+        <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <h4 class="nx-list__title">
+        Unordered list
+      </h4>
+    </div>
+    <ul>
+      <li class="nx-list__item">
+        Lorem ipsum dolor
+      </li>
+      <li class="nx-list__item">
+        sit amet, consectetur adipiscing elit
+      </li>
+      <li class="nx-list__item">
+        sed do eiusmod tempor incididunt
+      </li>
+      <li class="nx-list__item">
+        ut labore et dolore magna aliqua
+      </li>
+      <li class="nx-list__item">
+        Ut enim ad minim veniam, quis nostrud exercitation
+      </li>
+      <li class="nx-list__item">
+        Lorem ipsum dolor
+      </li>
+      <li class="nx-list__item">
+        sit amet, consectetur adipiscing elit
+      </li>
+      <li class="nx-list__item">
+        sed do eiusmod tempor incididunt
+      </li>
+      <li class="nx-list__item">
+        ut labore et dolore magna aliqua
+      </li>
+      <li class="nx-list__item">
+        Ut enim ad minim veniam, quis nostrud exercitation
+      </li>
+      <li class="nx-list__item">
+        Lorem ipsum dolor
+      </li>
+      <li class="nx-list__item">
+        sit amet, consectetur adipiscing elit
+      </li>
+      <li class="nx-list__item">
+        sed do eiusmod tempor incididunt
+      </li>
+      <li class="nx-list__item">
+        ut labore et dolore magna aliqua
+      </li>
+      <li class="nx-list__item">
+        Ut enim ad minim veniam, quis nostrud exercitation
+      </li>
+      <li class="nx-list__item">
+        Lorem ipsum dolor
+      </li>
+      <li class="nx-list__item">
+        sit amet, consectetur adipiscing elit
+      </li>
+      <li class="nx-list__item">
+        sed do eiusmod tempor incididunt
+      </li>
+      <li class="nx-list__item">
+        ut labore et dolore magna aliqua
+      </li>
+      <li class="nx-list__item">
+        Ut enim ad minim veniam, quis nostrud exercitation
+      </li>
+    </ul>
+    <div class="nx-list-footer">
+      <div class="iq-pagination">
+        <div class="iq-pagination__count-text">
+          1 - 20 of 832
+        </div>
+        <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-left"></i></button>
+        <button class="iq-btn iq-btn--icon-only"><i class="fa fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</item-example-html>
