@@ -28,7 +28,8 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'threat indicators': 'styles/iq-threat-indicators.html',
       'counters': 'styles/iq-counter.html',
       'text indicators': 'styles/iq-text-indicators.html',
-      'threat bars': 'styles/iq-threat-bar.html'
+      'threat bars': 'styles/iq-threat-bar.html',
+      'pagination': 'styles/nx-pagination.html'
     })
 
     .constant('htmlConfig', {
