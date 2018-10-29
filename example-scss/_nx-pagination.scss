@@ -1,4 +1,4 @@
-.iq-pagination {
+.nx-pagination {
   display: block;
   float: right;
   
@@ -6,26 +6,26 @@
     display: inline-block;
   }
   
-  .iq-btn + .iq-btn {
+  .nx-btn + .nx-btn {
     margin-left: 1px;
   }
 }
 
-.iq-pagination--table {
+.nx-pagination--table {
   float: none;
   padding-right: 4px;
   text-align: right;
 }
 
-.iq-pagination--table + .iq-table {
+.nx-pagination--table + .nx-table {
   margin-top: 4px;
 }
 
-.iq-table + .iq-pagination--table {
+.nx-table + .nx-pagination--table {
   margin-top: 4px;
 }
 
-.iq-pagination__count-text {
+.nx-pagination__count-text {
   @include semi-bold();
   
   display: inline-block;
