@@ -7,6 +7,7 @@
 import 'components-font-awesome/css/font-awesome.min.css';
 import 'highlight.js/styles/github.css';
 import './scss/gallery.scss';
+import '../example-scss/nx-styles.scss';
 
 import 'angular';
 import '@uirouter/angularjs';
