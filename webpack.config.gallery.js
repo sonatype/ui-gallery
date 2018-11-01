@@ -2,7 +2,9 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const transformObjectRestSpread = require('babel-plugin-transform-object-rest-spread');
 
-const extractSass = new ExtractTextPlugin({ filename: 'gallery.css' });
+const extractGallerySass = new ExtractTextPlugin({ filename: 'gallery.css' });
+const extractNXStylesSass = new ExtractTextPlugin({ filename: 'nx-styles.css' });
+const extractLibrarySass = new ExtractTextPlugin({ filename: 'lib.css' });
 const publicPath = '/assets/';
 
 module.exports = {
@@ -33,7 +35,44 @@ module.exports = {
       }
     }, {
       test: /\.s?css$/,
-      use: extractSass.extract({
+      include: [
+        path.resolve(__dirname, 'app/scss/')
+      ],
+      use: extractGallerySass.extract({
+        use: [
+          { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      })
+    }, {
+      test: /\.s?css$/,
+      include: [
+        path.resolve(__dirname, 'example-scss/')
+      ],
+      use: extractNXStylesSass.extract({
+        use: [
+          { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      })
+    }, {
+      test: /\.s?css$/,
+      include: [
+        path.resolve(__dirname, 'node_modules/')
+      ],
+      use: extractLibrarySass.extract({
         use: [
           { loader: 'css-loader' },
           { loader: 'resolve-url-loader' },
@@ -60,7 +99,9 @@ module.exports = {
     }]
   },
   plugins: [
-    extractSass,
+    extractGallerySass,
+    extractNXStylesSass,
+    extractLibrarySass
     // new CSSSplitPlugin({
     //   size: 4095,
     //   filename: '[name]-[part].[ext]'
