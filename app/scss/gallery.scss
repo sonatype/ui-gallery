@@ -1,18 +1,13 @@
+/*
+  This SCSS file is for styles that a related only to the display and functionality
+  of the gallery.
+  
+  Styles that are related to the examples should be linked in: ../example-scss/nx-styles.scss
+*/
+
 @import "highlight";
 @import "markdown";
 @import "charts";
-
-@import "./example-scss/variables";
-@import "./example-scss/typography";
-@import "./example-scss/mixins";
-@import "./example-scss/global";
-@import "./example-scss/widgets";
-@import "./example-scss/content";
-@import "./example-scss/nx-tile";
-@import "./example-scss/form";
-@import "./example-scss/icons";
-@import "./example-scss/mainHeader";
-@import "./example-scss/iq-theme-dark";
 
 // Page Layout
 
