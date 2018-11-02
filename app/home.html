@@ -9,6 +9,59 @@
 <div class="nx-tile">
   <div class="nx-tile-header">
     <div class="nx-tile-header__title">
+      <h2>Assets and dependencies</h2>
+    </div>
+  </div>
+  <marked>
+    Individual _example.scss files will be linked on the example pages.
+    
+    The compiled SCSS for all of the examples can be found here: nx-styles.css
+    
+    We use Font Awesome ( https://fontawesome.com ) for icons, and in many cases styles are built in to support Font Awesome styles.
+    
+  </marked>
+</div>
+
+<div class="nx-tile">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
+      <h2>The NX Style Gallery</h2>
+    </div>
+  </div>
+  <marked>
+    The NX style gallery is where you can find reusable styles (and hopefully soon components) for use in new or existing Sonatype applications.
+    
+    The styles described here are based off the current IQ styling. You can find descriptions of the various styles, including measurements here: https://docs.sonatype.com/display/INSIGHT/UI+Guidelines The purpose of this site is to take those requirements and turn them into HTML/SCSS that can be used in any project.
+  </marked>
+</div>
+
+<div class="nx-tile">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
+      <h2>What's up with the nx- namespace?</h2>
+    </div>
+  </div>
+  <marked>
+    We namespace the styles so that we can always differentiate between the global Sonatype styles (prefixed with nx-) and specific project styles (for example IQ uses iq-, and FAAS uses io-). No project should ever modify an nx- class. If you need to modify an existing nx- class then do so within your own project's namespace using a --modifier. So for example if you need a custom table cell you should use .nx-cell to get your base styling then add .##-cell--modifier (use your project's namespace in place of ##).
+  </marked>
+</div>
+
+<div class="nx-tile">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
+      <h2>BEM? What the heck is BEM?</h2>
+    </div>
+  </div>
+  <marked>
+    We started using BEM on the IQ project as a standardized naming convention. BEM is pretty simple to understand it stands for Block, Element, Modifier.
+    
+    Here's a simple explainer: https://seesparkbox.com/foundry/bem_by_example and another one: https://css-tricks.com/bem-101/
+  </marked>
+</div>
+
+<div class="nx-tile">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
       <h2>How to add a new page to the gallery</h2>
     </div>
   </div>
@@ -34,5 +87,21 @@
     ```
     
     The UI gallery is maintained by **Glen Hunter** with assistance from **Neil Donewar** and **Andrey Marushkevych**.
+  </marked>
+</div>
+
+<div class="nx-tile">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
+      <h2>To do</h2>
+    </div>
+  </div>
+  <marked>
+    - separate nx-example CSS - see branch /Separate-CSS
+    - link to IQ style guide
+    - link to SCSS formatting rules
+    - description of name-spacing
+    - how to use this gallery
+    
   </marked>
 </div>
