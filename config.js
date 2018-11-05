@@ -10,7 +10,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     .constant('layoutConfig', {
       'page layout': 'styles/page-layout.html',
       'tiles': 'styles/nx-tile.html',
-      'iq-pull-right': 'styles/iq-pull-right.html',
+      'pull-right': 'styles/nx-pull-right.html',
       'scrolling block': 'styles/nx-scrollable.html',
       'iq-grid': 'styles/iq-grid.html'
     })
