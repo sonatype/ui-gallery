@@ -19,7 +19,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'buttons': 'styles/nx-btn.html',
       'nav pills': 'styles/iq-nav-pills.html',
       //'iq-dropdown': 'styles/iq-dropdown.html',
-      'alerts': 'styles/iq-alerts.html',
+      'alerts': 'styles/nx-alerts.html',
       // 'iq-modal': 'styles/iq-modal/iq-modal.html',
       'read-only': 'styles/iq-read-only.html',
       'tree-views': 'styles/iq-tree-view.html',
