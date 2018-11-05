@@ -11,7 +11,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'page layout': 'styles/page-layout.html',
       'tiles': 'styles/nx-tile.html',
       'iq-pull-right': 'styles/iq-pull-right.html',
-      'iq-scrollable': 'styles/iq-scrollable.html',
+      'scrolling block': 'styles/nx-scrollable.html',
       'iq-grid': 'styles/iq-grid.html'
     })
 
