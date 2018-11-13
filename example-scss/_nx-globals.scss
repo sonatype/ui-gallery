@@ -6,18 +6,18 @@ a {
   cursor: pointer;
 }
 
-.iq-clickable {
+.nx-clickable {
   cursor: pointer;
 }
 
 /*
   #Helper Classes
 */
-.iq-pull-left {
+.nx-pull-left {
   float: left;
 }
 
-.iq-pull-right {
+.nx-pull-right {
   float: right;
 }
 
@@ -27,7 +27,7 @@ a {
   color: $iq-fail-color;
 }
 
-.iq-scrollable {
+.nx-scrollable {
   height: auto;
   max-height: 400px; // default value - magic number
   overflow-x: hidden;

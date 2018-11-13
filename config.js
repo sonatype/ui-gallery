@@ -10,8 +10,8 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     .constant('layoutConfig', {
       'page layout': 'styles/page-layout.html',
       'tiles': 'styles/nx-tile.html',
-      'iq-pull-right': 'styles/iq-pull-right.html',
-      'iq-scrollable': 'styles/iq-scrollable.html',
+      'pull-right': 'styles/nx-pull-right.html',
+      'scrolling block': 'styles/nx-scrollable.html',
       'iq-grid': 'styles/iq-grid.html'
     })
 
@@ -19,7 +19,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'buttons': 'styles/nx-btn.html',
       'nav pills': 'styles/iq-nav-pills.html',
       //'iq-dropdown': 'styles/iq-dropdown.html',
-      'alerts': 'styles/iq-alerts.html',
+      'alerts': 'styles/nx-alerts.html',
       // 'iq-modal': 'styles/iq-modal/iq-modal.html',
       'read-only': 'styles/iq-read-only.html',
       'tree-views': 'styles/iq-tree-view.html',
