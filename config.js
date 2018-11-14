@@ -33,11 +33,16 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     })
     
     .constant('presentationConfig', {
-      'What': 'styles/what.html',
-      'Why': 'styles/why.html',
-      'Who': 'styles/who.html',
-      'When': 'styles/when.html',
-      'Where': 'styles/where.html'
+      'What': 'presentation/what.html',
+      'Why': 'presentation/why.html',
+      'Who': 'presentation/who.html',
+      'When': 'presentation/when.html',
+      'Where': 'presentation/where.html'
+    })
+    
+    .constant('userGuideConfig', {
+      'BEM': 'user-guide/bem.html',
+      'Code Styles': 'user-guide/code-style.html'
     })
 
     .constant('htmlConfig', {
