@@ -41,9 +41,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     })
     
     .constant('userGuideConfig', {
-      'How to add a page': 'user-guide/how-to-add-a-page.html',
       'BEM': 'user-guide/bem.html',
-      'NX Namespace': 'user-guide/nx-namespace.html',
       'Code Styles': 'user-guide/code-style.html'
     })
 
