@@ -14,8 +14,13 @@
   margin: 30px 0 20px 0;
 }
 
-.nx-list-item--lightning {
+.nx-list__title--lightning {
   font-size: 41.8px;
+  line-height: 1.5;
+}
+
+.nx-list-item--lightning {
+  font-size: 25.8px;
   line-height: 1.5;
   list-style: disc;
   list-style-position: inside;
