@@ -1,4 +1,8 @@
 <nav>
+  <tree-view-group name="Lightning Talk">
+    <nav-item ng-repeat="state in vm.presentation" state="{{state}}"></nav-item>
+  </tree-view-group>
+  
   <tree-view-group name="Styles - HTML Elements">
     <nav-item ng-repeat="state in vm.forms" state="{{state}}"></nav-item>
   </tree-view-group>

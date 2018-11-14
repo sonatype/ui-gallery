@@ -31,6 +31,14 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'threat bars': 'styles/iq-threat-bar.html',
       'pagination': 'styles/nx-pagination.html'
     })
+    
+    .constant('presentationConfig', {
+      'What': 'styles/what.html',
+      'Why': 'styles/why.html',
+      'Who': 'styles/who.html',
+      'When': 'styles/when.html',
+      'Where': 'styles/where.html'
+    })
 
     .constant('htmlConfig', {
       'tables': 'styles/nx-table.html',
