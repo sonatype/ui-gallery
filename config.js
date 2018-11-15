@@ -17,12 +17,12 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
 
     .constant('widgetsConfig', {
       'buttons': 'styles/nx-btn.html',
-      'nav pills': 'styles/iq-nav-pills.html',
+      'nav pills': 'styles/nx-nav-pills.html',
       //'iq-dropdown': 'styles/iq-dropdown.html',
       'alerts': 'styles/nx-alerts.html',
       // 'iq-modal': 'styles/iq-modal/iq-modal.html',
       'read-only': 'styles/nx-read-only.html',
-      'tree-views': 'styles/iq-tree-view.html',
+      'tree-views': 'styles/nx-tree-view.html',
       'lists': 'styles/nx-list.html',
       'clickable lists': 'styles/iq-list--clickable.html',
       'threat indicators': 'styles/iq-threat-indicators.html',

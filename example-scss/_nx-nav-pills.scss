@@ -1,4 +1,4 @@
-.iq-nav-pills {
+.nx-nav-pills {
   background-color: $iq-grey-2;
   border: 1px solid $iq-grey-3;
   list-style: none;
@@ -6,8 +6,9 @@
   overflow: hidden;
   padding: 8px;
   
-  // The "& >" here and below are required to override Bootstrap styles
-  > .iq-nav-pills__pill {
+  // These aren't strictly necessary but if Bootstrap is in the mix this format
+  // is required to override the Bootstrap styles
+  > .nx-nav-pills__pill {
     float: left;
   
     > a {
