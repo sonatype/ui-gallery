@@ -1,7 +1,7 @@
 /*
   #Tree view
 */
-.iq-tree-view {
+.nx-tree-view {
   @include semi-bold();
 
   box-sizing: border-box;
@@ -11,12 +11,12 @@
   max-width: 330px;
 }
 
-.iq-tree-view__group {
+.nx-tree-view__group {
   margin-bottom: 8px;
   width: 100%;
 }
 
-.iq-tree-view__trigger {
+.nx-tree-view__trigger {
   @extend .truncate-ellipsis;
   
   border: 1px solid transparent;
@@ -30,19 +30,19 @@
     text-decoration: none;
   }
   
-  .iq-tree-view__counter {
+  .nx-tree-view__counter {
     float: right;
     margin-top: 7px;
   }
 }
 
-.iq-tree-view__trigger--unselectable {
+.nx-tree-view__trigger--unselectable {
 
-  &, .iq-tree-view__twisty {
+  &, .nx-tree-view__twisty {
     cursor: default;
   }
 
-  .iq-tree-view__twisty-icon {
+  .nx-tree-view__twisty-icon {
     &.expand {
       border-left-color: $iq-grey-4;
     }
@@ -53,18 +53,18 @@
   }
 }
 
-.iq-tree-view__trigger--empty {
+.nx-tree-view__trigger--empty {
   
-  &, .iq-tree-view__twisty {
+  &, .nx-tree-view__twisty {
     cursor: default;
   }
 
-  .iq-tree-view__twisty-icon {
+  .nx-tree-view__twisty-icon {
     border: none;
   }
 }
 
-.iq-tree-view__twisty {
+.nx-tree-view__twisty {
   float: left;
   height: 17px;
   margin-right: 5px;
@@ -72,7 +72,7 @@
   width: 16px;
 }
 
-.iq-tree-view__twisty-icon {
+.nx-tree-view__twisty-icon {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 5px solid $iq-slate;
@@ -97,13 +97,13 @@
   }
 }
 
-.iq-tree-view__text {
+.nx-tree-view__text {
   @extend .truncate-ellipsis;
   
   color: $iq-slate;
   display: block;
 
-  .fa, .iq-tree-view__text-icon {
+  .fa, .nx-tree-view__text-icon {
     height: 16px;
     margin-right: 8px;
     width: 16px;
@@ -115,7 +115,7 @@
   }
 }
 
-.iq-tree-view__text-icon--inverse {
+.nx-tree-view__text-icon--inverse {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
@@ -123,7 +123,7 @@
 }
 
 // USING TRANSITIONS 
-.iq-tree-view__children {
+.nx-tree-view__children {
   overflow: hidden;
   
   &.expanded {
@@ -151,14 +151,15 @@
     }
   }
   
-  > .iq-tree-view__child:last-child {
+  > .nx-tree-view__child:last-child {
     margin-bottom: 12px;
   } 
 }
 
-.iq-tree-view__child {
+.nx-tree-view__child {
   box-sizing: border-box;
   border: 1px solid transparent;
+  font-size: 14px;
   height: 30px;
   line-height: 30px;
   overflow: hidden;
@@ -186,13 +187,13 @@
   }
 }
 
-.iq-tree-view--active {
+.nx-tree-view--active {
   background-color: $iq-off-white;
   border-top-color: $iq-slate;
   border-bottom-color: $iq-slate;
 }
 
-.iq-tree-view--multi-select {
+.nx-tree-view--multi-select {
 
   min-width: 0; // so that counters are not pushed out
 
@@ -201,10 +202,10 @@
     margin-top: 7px;
   }
 
-  .iq-tree-view__trigger.disabled {
+  .nx-tree-view__trigger.disabled {
     cursor: default;
 
-    .iq-tree-view__text {
+    .nx-tree-view__text {
       color: $iq-grey-4;
     }
 
@@ -212,7 +213,7 @@
       background-color: $iq-grey-4;
     }
 
-    .iq-tree-view__twisty-icon.expand {
+    .nx-tree-view__twisty-icon.expand {
       border-left-color: $iq-grey-4;
     }
 
@@ -222,7 +223,7 @@
   }
 
   // overflow of tree view children
-  .iq-tree-view__child {
+  .nx-tree-view__child {
     padding-right: 0;
 
     .iq-checkbox__label {
@@ -230,7 +231,7 @@
       @include semi-bold();
 
       // fix checkbox labels vertical alignment
-      // overwrites (back to original): .iq-tree-view__child label { line-height: 32px; }
+      // overwrites (back to original): .nx-tree-view__child label { line-height: 32px; }
       line-height: 20px;
       margin-top: 4px;
       vertical-align: top;
@@ -238,7 +239,7 @@
     }
   }
 
-  .iq-tree-view__filter {
+  .nx-tree-view__filter {
     display: block;
     padding-left: 26px;
     margin-bottom: 12px;
