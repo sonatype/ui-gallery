@@ -32,14 +32,6 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'pagination': 'styles/nx-pagination.html'
     })
     
-    .constant('presentationConfig', {
-      'What': 'presentation/what.html',
-      'Why': 'presentation/why.html',
-      'Who': 'presentation/who.html',
-      'When': 'presentation/when.html',
-      'Where': 'presentation/where.html'
-    })
-    
     .constant('userGuideConfig', {
       'How to add a page': 'user-guide/how-to-add-a-page.html',
       'BEM': 'user-guide/bem.html',
@@ -52,4 +44,12 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'input - text': 'styles/iq-form-text-input.html',
       'textarea': 'styles/iq-form-textarea.html',
       'form layout': 'styles/iq-form-layout/iq-form-layout.html'
+    })
+    
+    .constant('presentationConfig', {
+      'What': 'presentation/what.html',
+      'Why': 'presentation/why.html',
+      'Who': 'presentation/who.html',
+      'When': 'presentation/when.html',
+      'Where': 'presentation/where.html'
     });
