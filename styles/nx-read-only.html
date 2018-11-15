@@ -1,0 +1,88 @@
+<item-description>
+  <marked>
+    `.nx-read-only` is used in instances when we want to display data or the output of a form in a read-only fashion. Typically this data takes the form of a label and the output. The output can have icons, and there can also be multiple outputs displayed horizontally.
+    
+    There are two different ways of coding nx-read-only to accomodate the ability to toggle within a form between a read only and an editable state.
+    
+    It is expected that the `&lt;dl&gt;` layout will be used in the vast majority of cases.
+  </marked>
+</item-description>
+
+<item-example-html>
+  <h2>Layout using &lt;dl&gt; elements</h2>
+
+ <dl class="nx-read-only">
+    <dt>Multiple Results</dt>
+    <dd class="nx-read-only-data"><i class="fa fa-file-picture-o"></i>Result One</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-audio-o"></i>Result Two</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-movie-o"></i>Result Three</dd>
+    <dt>Multiple Results</dt>
+    <dd class="nx-read-only-data"><i class="fa fa-file-text-o"></i>Result Four</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-code-o"></i>Result Five</dd>
+  </dl>
+
+  <dl class="nx-read-only nx-read-only-data--horizontal">
+    <dt>Multiple Results - horizontal</dt>
+    <dd class="nx-read-only-data"><i class="fa fa-file-picture-o"></i>Result One</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-audio-o"></i>Result Two</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-movie-o"></i>Result Three</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-text-o"></i>Result Four</dd>
+    <dd class="nx-read-only-data"><i class="fa fa-file-code-o"></i>Result Five</dd>
+  </dl>
+
+  <div class="iq-form-row">
+    <dl class="iq-form-group nx-read-only">
+      <dt>Inside a form row</dt>
+      <dd class="nx-read-only-data">Read-only data</dd>
+    </dl>
+    <dl class="iq-form-group nx-read-only">
+      <dt>Read-only label</dt>
+      <dd class="nx-read-only-data"><i class="fa fa-file-text"></i>Read-only data</dd>
+    </dl>
+  </div>
+
+  <h2>Layout using &lt;label&gt; and &lt;div&gt; elements</h2>
+
+  <div class="iq-form-group nx-read-only">
+    <label class="iq-label">Read-only label</label>
+    <div class="nx-read-only-data">Read-only data</div>
+  </div>
+  <div class="iq-form-group nx-read-only">
+    <label class="iq-label">Read-only label</label>
+    <div class="nx-read-only-data"><i class="fa fa-rocket"></i>Read-only data with icon</div>
+  </div>
+
+  <div class="iq-form-group nx-read-only">
+    <label class="iq-label">Multiple Results - vertical</label>
+    <div class="nx-read-only-data nx-read-only-data--vertical">
+      <span><i class="fa fa-file-picture-o"></i>Result One</span>
+      <span><i class="fa fa-file-audio-o"></i>Result Two</span>
+      <span><i class="fa fa-file-movie-o"></i>Result Three</span>
+      <span><i class="fa fa-file-text-o"></i>Result Four</span>
+      <span><i class="fa fa-file-code-o"></i>Result Five</span>
+    </div>
+  </div>
+
+  <div class="iq-form-group nx-read-only">
+    <label class="iq-label">Multiple Results - horizontal</label>
+    <div class="nx-read-only-data">
+      <span><i class="fa fa-file-picture-o"></i>Result One</span>
+      <span><i class="fa fa-file-audio-o"></i>Result Two</span>
+      <span><i class="fa fa-file-movie-o"></i>Result Three</span>
+      <span><i class="fa fa-file-text-o"></i>Result Four</span>
+      <span><i class="fa fa-file-code-o"></i>Result Five</span>
+    </div>
+  </div>
+  
+  <div class="iq-form-row">
+    <div class="iq-form-group nx-read-only">
+      <label class="iq-label">Inside a form row</label>
+      <div class="nx-read-only-data">Read-only data</div>
+    </div>
+    <div class="iq-form-group nx-read-only">
+      <label class="iq-label">Read-only label</label>
+      <div class="nx-read-only-data"><i class="fa fa-file-text"></i>Read-only data</div>
+    </div>
+  </div>
+
+</item-example-html>
