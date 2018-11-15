@@ -31,6 +31,21 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'threat bars': 'styles/iq-threat-bar.html',
       'pagination': 'styles/nx-pagination.html'
     })
+    
+    .constant('presentationConfig', {
+      'What': 'presentation/what.html',
+      'Why': 'presentation/why.html',
+      'Who': 'presentation/who.html',
+      'When': 'presentation/when.html',
+      'Where': 'presentation/where.html'
+    })
+    
+    .constant('userGuideConfig', {
+      'How to add a page': 'user-guide/how-to-add-a-page.html',
+      'BEM': 'user-guide/bem.html',
+      'NX Namespace': 'user-guide/nx-namespace.html',
+      'Code Styles': 'user-guide/code-style.html'
+    })
 
     .constant('htmlConfig', {
       'tables': 'styles/nx-table.html',
