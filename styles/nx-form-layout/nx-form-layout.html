@@ -1,0 +1,85 @@
+<item-description>
+  <marked>
+    Basic rules for form layout.
+    
+    Styled with generic validation classes, to see the AngularJS styles see the individual pages for examples.
+  </marked>
+</item-description>
+
+<item-example-html>
+  <div class="nx--tile-header__subtitle">
+      This is an example of a sub-title that wraps. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+  <form name="form" class="nx-form">
+    <div class="nx-form-group">
+      <label class="nx-label">Default</label>
+      <input type="text" name="text1Input" class="nx-text-input nx-field-pristine">
+    </div>
+    <div class="nx-form-group">
+      <label class="nx-label">Long field <span class="nx-sub-label">This is a sub-label. The field element below is 395px wide.</span></label>
+      <input type="text" name="text2Input" class="nx-text-input nx-text-input--long  nx-field-pristine">
+    </div>
+    <fieldset class="nx-checkbox-group nx-form-group">
+      <legend class="nx-label nx-label--optional">Checkboxes</legend>
+      <label class="nx-checkbox__label">
+        <input type="checkbox" class="nx-checkbox__input">
+        <span class="nx-checkbox__box"></span>Option 1
+      </label>
+      <label class="nx-checkbox__label">
+        <input type="checkbox" class="nx-checkbox__input">
+        <span class="nx-checkbox__box"></span>Option 2
+      </label>
+      <label class="nx-checkbox__label">
+        <input type="checkbox" class="nx-checkbox__input">
+        <span class="nx-checkbox__box"></span>Option 3
+      </label>
+      <label class="nx-checkbox__label">
+        <input type="checkbox" class="nx-checkbox__input">
+        <span class="nx-checkbox__box"></span>Option 4
+      </label>
+    </fieldset>
+    <div class="nx-form-row">
+      <div class="nx-form-group">
+        <label class="nx-label nx-label--optional">Horizontal layout</label>
+        <input type="text" name="text3Input" class="nx-text-input nx-field-pristine">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label nx-label--optional">Field in the second column</label>
+        <input type="text" name="text3Input" class="nx-text-input nx-field-pristine">
+      </div>
+      <div class="nx-form-group">
+        <button class="nx-btn" type="button">
+          <i class="fa fa-plus"></i>Button
+        </button>
+      </div>
+    </div>
+    <fieldset class="nx-radio-group nx-form-group">
+      <legend>Radio buttons</legend>
+      <label class="nx-radio">
+        <input type="radio" class="nx-radio__input" value="high" aria-invalid="false">
+        <span class="nx-radio__circle"></span>high
+      </label>
+      <label class="nx-radio">
+        <input type="radio" class="nx-radio__input" value="medium" aria-invalid="false">
+        <span class="nx-radio__circle"></span>medium
+      </label>
+      <label class="nx-radio">
+        <input type="radio" class="nx-radio__input" value="low" aria-invalid="false">
+        <span class="nx-radio__circle"></span>low
+      </label>
+    </fieldset>
+    <div class="nx-form-group">
+      <label class="nx-label nx-label--optional">Textarea</label>
+      <textarea name="text4Input" class="nx-textarea nx-field-pristine"></textarea>
+    </div>
+    <div class="nx-form-group">
+      <label class="nx-label nx-label--optional">Color Picker</label>
+      Replace with color picker component
+    </div>
+    
+    <div class="nx-form-buttons">
+      <button class="nx-btn nx-btn--primary">Submit</button>
+    </div>
+  </form>
+</item-example-html>

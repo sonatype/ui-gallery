@@ -7,6 +7,13 @@ import iqModalModule from './styles/iq-modal/module';
 import iqFormLayoutModule from './styles/iq-form-layout/module';
 
 export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.name])
+    .constant('userGuideConfig', {
+      'How to add a page': 'user-guide/how-to-add-a-page.html',
+      'BEM': 'user-guide/bem.html',
+      'NX Namespace': 'user-guide/nx-namespace.html',
+      'Code Styles': 'user-guide/code-style.html'
+    })
+    
     .constant('layoutConfig', {
       'page layout': 'styles/page-layout.html',
       'tiles': 'styles/nx-tile.html',
@@ -31,19 +38,12 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'threat bars': 'styles/iq-threat-bar.html',
       'pagination': 'styles/nx-pagination.html'
     })
-    
-    .constant('userGuideConfig', {
-      'How to add a page': 'user-guide/how-to-add-a-page.html',
-      'BEM': 'user-guide/bem.html',
-      'NX Namespace': 'user-guide/nx-namespace.html',
-      'Code Styles': 'user-guide/code-style.html'
-    })
 
     .constant('htmlConfig', {
       'tables': 'styles/nx-table.html',
-      'input - text': 'styles/iq-form-text-input.html',
-      'textarea': 'styles/iq-form-textarea.html',
-      'form layout': 'styles/iq-form-layout/iq-form-layout.html'
+      'input - text': 'styles/nx-form-text-input.html',
+      'textarea': 'styles/nx-form-textarea.html',
+      'form layout': 'styles/nx-form-layout/nx-form-layout.html'
     })
     
     .constant('presentationConfig', {

@@ -1,0 +1,67 @@
+.nx-checkbox__label {
+  @include regular();
+
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 1px;
+  overflow: hidden;
+
+  ng-transclude > * {
+    margin-left: 8px;
+  }
+}
+
+.nx-checkbox__input {
+  display: none;
+
+  &:checked + .nx-checkbox__box::after {
+    color: $iq-slate;
+    content: "\f00c"; // unicode for fa-check
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+  }
+}
+
+.nx-checkbox__box {
+  color: $iq-off-black;
+  display: block;
+  float: left;
+  position: relative;
+
+  &::before {
+    border: 1px solid $iq-slate;
+    border-radius: 2px;
+    content: '';
+    display: inline-block;
+    height: 14px;
+    margin-right: 8px;
+    vertical-align: -3px;
+    width: 14px;
+  }
+}
+
+.nx-checkbox--disabled {
+  color: $iq-grey-4;
+  cursor: not-allowed;
+
+  .nx-checkbox__input:checked + .nx-checkbox__box::after {
+    color: $iq-grey-4;
+  }
+
+  .nx-checkbox__box {
+    &::before {
+      border: 1px solid $iq-grey-4;
+    }
+  }
+}
+
+.nx-checkbox__label--no-text {
+  .nx-checkbox__box::before {
+    margin-right: 0;
+  }
+}
