@@ -1,8 +1,8 @@
-.iq-threat-indicators {
+.nx-threat-indicators {
   display: inline-block;
 }
 
-.iq-threat-indicator {
+.nx-threat-indicator {
   @include semi-bold();
   
   background: $nx-threat-color-policy-none;
