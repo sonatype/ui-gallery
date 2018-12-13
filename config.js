@@ -26,7 +26,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'lists': 'styles/nx-list.html',
       'clickable lists': 'styles/iq-list--clickable.html',
       'threat indicators': 'styles/iq-threat-indicators.html',
-      'counters': 'styles/iq-counter.html',
+      'counters': 'styles/nx-counter.html',
       'text indicators': 'styles/iq-text-indicators.html',
       'threat bars': 'styles/iq-threat-bar.html',
       'pagination': 'styles/nx-pagination.html'
