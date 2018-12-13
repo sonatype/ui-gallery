@@ -1,4 +1,4 @@
-import iqFormLayoutExampleController from './iqFormLayoutExampleController';
+import nxFormLayoutExampleController from './nxFormLayoutExampleController';
 
-export default angular.module('iqFormLayoutExampleModule', [])
-    .controller('iqFormLayoutExampleController', iqFormLayoutExampleController);
+export default angular.module('nxFormLayoutExampleModule', [])
+    .controller('nxFormLayoutExampleController', nxFormLayoutExampleController);

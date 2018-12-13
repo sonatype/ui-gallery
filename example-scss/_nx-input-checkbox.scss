@@ -17,7 +17,7 @@
   display: none;
 
   &:checked + .nx-checkbox__box::after {
-    color: $iq-slate;
+    color: $nx-slate;
     content: "\f00c"; // unicode for fa-check
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -28,13 +28,13 @@
 }
 
 .nx-checkbox__box {
-  color: $iq-off-black;
+  color: $nx-off-black;
   display: block;
   float: left;
   position: relative;
 
   &::before {
-    border: 1px solid $iq-slate;
+    border: 1px solid $nx-slate;
     border-radius: 2px;
     content: '';
     display: inline-block;
@@ -46,16 +46,16 @@
 }
 
 .nx-checkbox--disabled {
-  color: $iq-grey-4;
+  color: $nx-grey-4;
   cursor: not-allowed;
 
   .nx-checkbox__input:checked + .nx-checkbox__box::after {
-    color: $iq-grey-4;
+    color: $nx-grey-4;
   }
 
   .nx-checkbox__box {
     &::before {
-      border: 1px solid $iq-grey-4;
+      border: 1px solid $nx-grey-4;
     }
   }
 }

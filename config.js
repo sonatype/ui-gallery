@@ -4,7 +4,7 @@
  * "Sonatype" is a trademark of Sonatype, Inc.
  */
 import iqModalModule from './styles/iq-modal/module';
-import iqFormLayoutModule from './styles/iq-form-layout/module';
+import iqFormLayoutModule from './styles/nx-form-layout/module';
 
 export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.name])
     .constant('userGuideConfig', {
