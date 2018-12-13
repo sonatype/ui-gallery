@@ -1,0 +1,77 @@
+/*
+  #Radio inputs
+*/
+
+.nx-radio {
+  @include regular();
+
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 24px;
+  padding-left: 24px;
+  position: relative;
+  
+  &:hover:not(.nx-radio--disabled) {
+    cursor: pointer;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+input.nx-radio__input {
+  display: none;
+
+  &:checked + .nx-radio__circle::after {
+    background-color: $nx-slate;
+    border: 1px solid $nx-slate;
+    border-radius: 50%;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    z-index: 0;
+  }
+}
+
+.nx-radio__circle {
+  color: $nx-off-black;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nx-radio__circle::before, .nx-radio__circle::after {
+  content: '';
+  height: 14px;
+  margin-top: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  z-index: 0;
+}
+
+.nx-radio__circle::before {
+  border: 1px solid $nx-slate;
+  border-radius: 50%;
+}
+
+.nx-radio--disabled {
+  color: $nx-grey-4;
+
+  .nx-radio__circle {
+    color: $nx-slate;
+    cursor: default;
+  
+    &::before {
+      border-color: $nx-grey-4;
+    }
+  }
+
+  .nx-radio__input:checked + .nx-radio__circle::after {
+    background-color: $nx-grey-4;
+    border-color: $nx-grey-4;
+  }
+}
