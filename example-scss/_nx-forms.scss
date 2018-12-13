@@ -4,63 +4,68 @@
   base form typography is in _typography.scss
 */
 
+@import "nx-input-checkbox";
+@import "nx-input-radio";
+
+$nx-form-element-height: 32px;
+$nx-form-element-width-normal: 219px;
+$nx-form-element-width-wide: 395px;
+
 // Shared styles
 
-@mixin iq-pristine() {
+@mixin nx-pristine() {
   border-left-color: $nx-valid-color;
   border-left-style: double;
   color: $nx-slate;
 }
 
-@mixin iq-valid() {
+@mixin nx-valid() {
   border-left-color: $nx-valid-color;
   border-left-style: solid;
 }
 
-@mixin iq-dirty() {
+@mixin nx-dirty() {
   border-color: $nx-grey-3;
   border-left-style: solid;
 }
 
-@mixin iq-invalid-dirty() {
+@mixin nx-invalid-dirty() {
   border-color: $nx-invalid-color;
   border-left-style: solid;
 }
 
-@mixin iq-disabled() {
+@mixin nx-disabled() {
   background: $nx-off-white;
   border-color: $nx-grey-3;
   border-left: 4px double $nx-grey-3;
 }
 
-$nx-form-element-wide: 395px;
-
 // Basic form layout
 
-.iq-form {
+.nx-form {
   border-top: 1px solid $nx-grey-4;
   margin: 0;
   padding-top: 20px;
   position: relative; // to make a containing block for validation popovers
 }
 
-.iq-form--no-padding {
+.nx-form--no-padding {
   padding: 0;
 }
 
-.iq-form--no-border {
+.nx-form--no-border {
   border-top: none;
 }
 
 // styles for a form that is the entirety of a modal
-.iq-form--modal-form {
+.nx-form--modal-form {
   padding-top: 0;
 }
 
-.iq-form-row {
+.nx-form-row {
   margin-bottom: 24px;
   
-  .iq-form-group {
+  .nx-form-group {
     display: inline-block;
     margin-right: 24px;
     margin-bottom: 0;
@@ -70,21 +75,21 @@ $nx-form-element-wide: 395px;
       margin-right: 0;
     }
     
-    .iq-btn {
+    .nx-btn {
       margin-top: 27px;
     }
   }
 }
 
-.iq-form-buttons {
+.nx-form-buttons {
   border-top: 1px solid $nx-grey-4;
   padding: 8px 0;
 }
 
-.iq-form-group {
+.nx-form-group {
   margin-bottom: 20px;
     
-  .iq-checkbox__label {
+  .nx-checkbox__label {
     display: block;
     padding-left: 24px;
   }
@@ -92,7 +97,7 @@ $nx-form-element-wide: 395px;
 
 // labels
 
-.iq-label {
+.nx-label {
   @include semi-bold();
 
   color: $nx-off-black;
@@ -100,12 +105,12 @@ $nx-form-element-wide: 395px;
   font-size: 16px;
   margin-bottom: 7px;
   
-  &:not(.iq-radio):not(.iq-checkbox__label).disabled {
+  &:not(.nx-radio):not(.nx-checkbox__label).disabled {
     color: #cacaca;
   }
 }
 
-.iq-label--optional {
+.nx-label--optional {
   &::after {
     @include regular();
 
@@ -115,7 +120,7 @@ $nx-form-element-wide: 395px;
   }
 }
 
-.iq-sub-label {
+.nx-sub-label {
   @include regular();
   
   color: $nx-off-black;
@@ -132,7 +137,11 @@ $nx-form-element-wide: 395px;
 // be used, but you'll still typically want the <legend> styled the way a <label> on a text field would be.  This
 // class implements that
 fieldset {
-  &.iq-radio-group, &.iq-checkbox-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  &.nx-radio-group, &.nx-checkbox-group {
 
     // override browser-default "min-content"
     min-width: auto;
@@ -141,82 +150,75 @@ fieldset {
       @include semi-bold();
 
       // use the same styling as <label>s
+      display: block;
+      border: 0;
       border-style: none;
       color: $nx-off-black;
       font-size: 16px;
       line-height: 20px;
       margin-bottom: 7px;
+      padding: 0;
+      width: 100%;      
     }
   }
 }
 
 // Text Inputs
 
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=password],
-textarea {
+.nx-text-input, .nx-textarea {
+  border: 1px solid $nx-grey-4;
+  border-left-width: 4px;
+  border-radius: 0;
+  box-shadow: none;
+  height: $nx-form-element-height;
+  padding: 0 8px;
+  width: $nx-form-element-width-normal;
+  
+  &:focus {
+    border-color: $nx-grey-3;
+  }
 
-  &.iq-text-input, &.iq-textarea {
-    border: 1px solid $nx-grey-4;
-    border-left-width: 4px;
-    border-radius: 0;
-    box-shadow: none;
-    height: 32px;
-    padding: 0 8px;
-    width: 219px;
-    
-    // The :focus styling is required to over-ride Bootstrap styles.
-    &:focus {
-//      @include box-shadow(none);
-      
-      border-color: $nx-grey-3;
-    }
+  &:disabled {
+    @include nx-disabled();
+  }
 
-    &:disabled {
-      @include iq-disabled();
-    }
+  &.ng-dirty, &.nx-field-dirty {
+    @include nx-dirty();
+  }
 
-    &.ng-dirty {
-      @include iq-dirty();
-    }
-
-    &.ng-valid {
-      @include iq-valid();
-    }
-    
-    &.ng-pristine {
-      @include iq-pristine();
-    }
-
-    &.ng-invalid.ng-dirty {
-      @include iq-invalid-dirty();
-    }
-    
-    &.ng-invalid:not(.ng-dirty):focus {
-      // override bootstrap
-      border-color: $nx-grey-4;
-      border-left-color: $nx-valid-color;
-      box-shadow: initial;
-    }
+  &.ng-valid, &.nx-field-valid {
+    @include nx-valid();
   }
   
-  &.iq-text-input--long, &.iq-textarea--long {
-    width: 374px;
+  &.ng-pristine, &.nx-field-pristine {
+    @include nx-pristine();
+  }
+
+  &.ng-invalid.ng-dirty, &.nx-field-invalid.nx-field-dirty {
+    @include nx-invalid-dirty();
+  }
+  
+  &.ng-invalid:not(.ng-dirty):focus,
+  &.invalid:not(.nx-field-dirty):focus {
+    // override bootstrap
+    border-color: $nx-grey-4;
+    border-left-color: $nx-valid-color;
+    box-shadow: initial;
   }
 }
 
-.iq-text-input--wide {
-  width: $nx-form-element-wide;
+.nx-text-input--long,
+.iq-textarea--long,
+.nx-text-input--wide {
+  width: $nx-form-element-width-wide;
 }
 
-input.iq-input-file--hidden {
+input.nx-input-file--hidden {
   left: -9999em;
   position: absolute;
 }
 
-.iq-textarea {
+.nx-textarea {
   min-height: 64px;
 }
 
@@ -227,10 +229,10 @@ dropdown-selector {
   border-left-width: 4px;
   display: inline-block;
   vertical-align: middle;
-  width: 240px;
+  width: $nx-form-element-width-normal + 21px;
 
   &.wide {
-    width: 411px;
+    width: $nx-form-element-width-wide;
   }
 
   &.ng-pristine {
@@ -361,7 +363,7 @@ dropdown-selector {
   border: 1px solid $nx-off-black;
   cursor: pointer;
   display: inline-block;
-  height: 32px;
+  height: $nx-form-element-height;
   position: relative;
   width: 32px;
 
@@ -378,7 +380,7 @@ dropdown-selector {
   &.selected {
     border: 1px solid $nx-off-white;
     box-shadow: 1px 1px 5px $nx-off-black;
-    height: 32px;
+    height: $nx-form-element-height;
     width: 32px;
     z-index: 1;
   }

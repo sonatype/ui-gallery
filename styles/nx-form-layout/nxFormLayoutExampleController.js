@@ -1,4 +1,4 @@
-export default function iqFormLayoutExampleController() {
+export default function nxFormLayoutExampleController() {
   const vm = this;
 
   Object.assign(vm, {
