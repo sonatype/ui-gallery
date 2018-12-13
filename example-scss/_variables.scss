@@ -2,127 +2,116 @@
   #Colors
 */
 // Sonatype brand colours
-$iq-sonatype-blue: #336699;
-$iq-sonatype-orange: #f89100;
+$nx-sonatype-blue: #336699;
+$nx-sonatype-orange: #f89100;
 
 // Colour variables
-$iq-main-background-color: #fff;
+$nx-main-background-color: #fff;
 
-$iq-off-black: #070707;
-$iq-slate: #575757;
-$iq-off-white: #fefefe;
+$nx-off-black: #070707;
+$nx-slate: #575757;
+$nx-off-white: #fefefe;
 
-$iq-grey-4: #cacaca;
-$iq-grey-3: #dedede;
-$iq-grey-2: #eaeaea;
-$iq-grey-1: #f5f5f5;
+$nx-grey-4: #cacaca;
+$nx-grey-3: #dedede;
+$nx-grey-2: #eaeaea;
+$nx-grey-1: #f5f5f5;
 
-$iq-link-color: #2476c3;
-$iq-link-color-active: #0046b1;
-$iq-link-color-disabled: #97cbee;
+$nx-link-color: #2476c3;
+$nx-link-color-active: #0046b1;
+$nx-link-color-disabled: #97cbee;
 
-$iq-dark-blue: #006bbf;
-$iq-light-blue: #97cbee;
+$nx-dark-blue: #006bbf;
+$nx-light-blue: #97cbee;
 
-$iq-dark-purple: #885195;
-$iq-light-purple: #dbc6df;
-$iq-medium-purple: #b087ba;
+$nx-dark-purple: #885195;
+$nx-light-purple: #dbc6df;
+$nx-medium-purple: #b087ba;
 
-$iq-dark-green: #099843;
-$iq-light-green: #b6e9ab;
+$nx-dark-green: #099843;
+$nx-light-green: #b6e9ab;
 
-$iq-dark-red: #bc012f;
-$iq-light-red: #edb1af;
+$nx-dark-red: #bc012f;
+$nx-light-red: #edb1af;
 
-$iq-orange: #f4861d;
-$iq-yellow: #f5c648;
+$nx-orange: #f4861d;
+$nx-yellow: #f5c648;
 
-$iq-invalid-color: #c70000;
-$iq-valid-color: #84c900;
+$nx-invalid-color: #c70000;
+$nx-valid-color: #84c900;
 
 // Was alert-fg & alert-bg
-$iq-warn-color: #9d6800;
-$iq-warn-color-bg: #fcf8e3;
+$nx-warn-color: #9d6800;
+$nx-warn-color-bg: #fcf8e3;
 
-$iq-fail-color: #831d1d;
-$iq-fail-color-bg: #fce2e2;
+$nx-fail-color: #831d1d;
+$nx-fail-color-bg: #fce2e2;
 
-$iq-fail-color-active: #5c0000;
-$iq-fail-color-disabled: #dd9595;
-$iq-fail-color-hover: #5d0000;
+$nx-fail-color-active: #5c0000;
+$nx-fail-color-disabled: #dd9595;
+$nx-fail-color-hover: #5d0000;
 
 $pickable-colors:
-  ('dark-blue', $iq-dark-blue),
-  ('light-blue', $iq-light-blue),
-  ('dark-green', $iq-dark-green),
-  ('light-green', $iq-light-green),
-  ('orange', $iq-orange),
-  ('dark-purple', $iq-dark-purple),
-  ('light-purple', $iq-light-purple),
-  ('dark-red', $iq-dark-red),
-  ('light-red', $iq-light-red),
-  ('yellow', $iq-yellow);
+  ('dark-blue', $nx-dark-blue),
+  ('light-blue', $nx-light-blue),
+  ('dark-green', $nx-dark-green),
+  ('light-green', $nx-light-green),
+  ('orange', $nx-orange),
+  ('dark-purple', $nx-dark-purple),
+  ('light-purple', $nx-light-purple),
+  ('dark-red', $nx-dark-red),
+  ('light-red', $nx-light-red),
+  ('yellow', $nx-yellow);
 
 /*
   ##Threat Colors
 */
-$iq-threat-color-unspecified: #d9dade;
-$iq-threat-color-none: $iq-dark-blue;
-$iq-threat-color-low: $iq-dark-blue;
-$iq-threat-color-moderate: $iq-yellow;
-$iq-threat-color-severe: $iq-orange;
-$iq-threat-color-critical: $iq-dark-red;
+$nx-threat-color-unspecified: #d9dade;
+$nx-threat-color-none: $nx-dark-blue;
+$nx-threat-color-low: $nx-dark-blue;
+$nx-threat-color-moderate: $nx-yellow;
+$nx-threat-color-severe: $nx-orange;
+$nx-threat-color-critical: $nx-dark-red;
 
-$iq-threat-color-ignore: $iq-light-blue;
-$iq-threat-color-policy-none: $iq-light-blue;
+$nx-threat-color-ignore: $nx-light-blue;
+$nx-threat-color-policy-none: $nx-light-blue;
 
-$iq-threat-color-policy-none-light: #d9ecfb;
-$iq-threat-color-low-light: #92cbff;
-$iq-threat-color-moderate-light: #fdecaf;
-$iq-threat-color-severe-light: #ffd6a2;
-$iq-threat-color-critical-light: #ff9493;
+$nx-threat-color-policy-none-light: #d9ecfb;
+$nx-threat-color-low-light: #92cbff;
+$nx-threat-color-moderate-light: #fdecaf;
+$nx-threat-color-severe-light: #ffd6a2;
+$nx-threat-color-critical-light: #ff9493;
 
 $threat-levels:
-  ("none", #FFF, $iq-threat-color-none, (0)),
-  ("moderate", #444, $iq-threat-color-moderate, (1, 2, 3)),
-  ("severe", #FFF, $iq-threat-color-severe, (4, 5, 6, 7)),
-  ("critical", #FFF, $iq-threat-color-critical, (8, 9, 10));
+  ("none", #FFF, $nx-threat-color-none, (0)),
+  ("moderate", #444, $nx-threat-color-moderate, (1, 2, 3)),
+  ("severe", #FFF, $nx-threat-color-severe, (4, 5, 6, 7)),
+  ("critical", #FFF, $nx-threat-color-critical, (8, 9, 10));
 
 $policy-threat-levels:
-  ("none", #FFF, $iq-threat-color-policy-none, (0)),
-  ("low", #444, $iq-threat-color-low, (1)),
-  ("moderate", #444, $iq-threat-color-moderate, (2, 3)),
-  ("severe", #FFF, $iq-threat-color-severe, (4, 5, 6, 7)),
-  ("critical", #FFF, $iq-threat-color-critical, (8, 9, 10));
+  ("none", #FFF, $nx-threat-color-policy-none, (0)),
+  ("low", #444, $nx-threat-color-low, (1)),
+  ("moderate", #444, $nx-threat-color-moderate, (2, 3)),
+  ("severe", #FFF, $nx-threat-color-severe, (4, 5, 6, 7)),
+  ("critical", #FFF, $nx-threat-color-critical, (8, 9, 10));
 
 $threat-bars: 
-  ("ignore", #FFF, $iq-threat-color-ignore),
-  ("unspecified", #FFF, $iq-threat-color-unspecified);
+  ("ignore", #FFF, $nx-threat-color-ignore),
+  ("unspecified", #FFF, $nx-threat-color-unspecified);
 
 /*
-  #Borders
+  #Default Borders
 */
-$iq-grey-border: 1px solid $iq-grey-3;
-
-// sidebar manage filter dropdown higher than main content
-$iq-sidebar-zindex: 4;
-
-// dropdowns to appear above table headers
-$iq-dashboard-summary-zindex: 3;
-
-// box-shadow to appear over scrollable contents 
-$iq-dashboard-headers-zindex: 2;
-
-$iq-dashboard-mask-zindex: 1;
+$nx-grey-border: 1px solid $nx-grey-3;
 
 /*
   #Page elements
 */
-$iq-main-header-height: 40px;
+$nx-main-header-height: 40px;
 
-$iq-page-width-max: 1366px;
-$iq-page-width-min: 1024px;
-$iq-content-width: 75.9%;
-$iq-sidebar-width: 100% - $iq-content-width;
+$nx-page-width-max: 1366px;
+$nx-page-width-min: 1024px;
+$nx-content-width: 75.9%;
+$nx-sidebar-width: 100% - $nx-content-width;
 
-$iq-paragraph-width-maximum: 562px;
+$nx-paragraph-width-maximum: 562px;
