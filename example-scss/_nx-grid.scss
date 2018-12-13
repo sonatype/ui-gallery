@@ -1,8 +1,8 @@
-.iq-grid-row {
+.nx-grid-row {
   @include flexbox();
 }
 
-.iq-grid-col {
+.nx-grid-col {
   @include flex(1 0);
 
   border-left: 1px solid $nx-grey-2;
@@ -19,12 +19,12 @@
     padding-right: 0;
   }
   
-  .iq-grid-col {
+  .nx-grid-col {
     margin: 0;
   }
 }
 
-.iq-grid-col--25 {
+.nx-grid-col--25 {
   @include flex(0 0 25%);
 
   // IE10 and 11 don't respect box-sizing for flex-basis, so we need
@@ -32,54 +32,54 @@
   max-width: 25%;
 }
 
-.iq-grid-col--50 {
+.nx-grid-col--50 {
   @include flex(0 0 50%);
   max-width: 50%;
 }
 
-.iq-grid-col--75 {
+.nx-grid-col--75 {
   @include flex(0 0 75%);
   max-width: 75%;
 }
 
-.iq-grid-col--33 {
+.nx-grid-col--33 {
   @include flex(0 0 33%);
   max-width: 33%;
 }
 
-.iq-grid-col--67 {
+.nx-grid-col--67 {
   @include flex(0 0 67%);
   max-width: 67%;
 }
 
-.iq-grid-h-keyline {
+.nx-grid-h-keyline {
   border: none;
   border-top: 1px solid $nx-grey-2;
   margin: 0;
 }
 
-.iq-grid-h-keyline--white {
+.nx-grid-h-keyline--white {
   border: none;
   border-top: 1px solid $nx-off-white;
   margin: 0;
 }
 
-.iq-grid-col--noborder {
+.nx-grid-col--noborder {
   border-left-color: $nx-off-white;
 }
 
-.iq-grid-col {
-  .iq-grid-h-keyline {
+.nx-grid-col {
+  .nx-grid-h-keyline {
     margin: 12px 0 4px 0;
   }
 }
 
 // Grid headers
-.iq-grid-header {
+.nx-grid-header {
   margin: 0 0 18px 0;
 }
 
-.iq-grid-header__title {
+.nx-grid-header__title {
   @extend .truncate-ellipsis;
 
   line-height: 100%;
@@ -87,36 +87,36 @@
   max-width: $nx-paragraph-width-maximum;
 }
 
-h1.iq-grid-header__title {
+h1.nx-grid-header__title {
   font-size: 26px;
   margin-left: -1px; // Magic number b/c H1 has mysterious 1px to the left
 }
 
-h2.iq-grid-header__title {
+h2.nx-grid-header__title {
   padding-top: 2px;
 }
 
-h3.iq-grid-header__title {
-  .iq-grid-header__icon {
+h3.nx-grid-header__title {
+  .nx-grid-header__icon {
     font-size: 18px;
     vertical-align: text-top;
   }
 }
 
-.iq-grid-header__icon {
+.nx-grid-header__icon {
   display: inline-block;
   font-size: 20px;
   margin: 0 8px 2px 0;
   vertical-align: middle;
 }
 
-.iq-grid-header__subtitle {
+.nx-grid-header__subtitle {
   line-height: 16px;
   max-width: $nx-paragraph-width-maximum;
   padding-top: 2px;
 }
 
-.iq-grid-header__hrule {
+.nx-grid-header__hrule {
   border: 0 solid $nx-grey-4;
   border-bottom-width: 1px;
   margin: 0;
