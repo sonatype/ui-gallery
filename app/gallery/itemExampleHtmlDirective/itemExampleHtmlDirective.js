@@ -6,15 +6,27 @@
 function itemExampleHtmlDirective() {
   return {
     restrict: 'E',
+    scope: true,
     compile: function(element) {
 
       var staticHTML = element[0].innerHTML;
 
-      element.html('<div class="nx-tile"><div class="nx-tile-header"><div class="nx-tile-header__title"><h2>Example</h2></div></div>' + staticHTML + '</div>');
-      element.append('<div class="nx-tile"><div class="nx-tile-header"><div class="nx-tile-header__title"><h2>Code</h2></div></div><div hljs hljs-source="code"></div></div>');
+      element.html(`
+        <div class="nx-tile">
+          <div class="nx-tile-header">
+            <div class="nx-tile-header__title">
+              <h2>{{title}}</h2>
+            </div>
+          </div>
+          <div class="nx-tile-content">
+            ${staticHTML}
+            <div hljs hljs-source="code"></div>
+          </div>
+        </div>`);
 
-      return function postLink(scope) {
+      return function postLink(scope, elm, attrs) {
         scope.code = staticHTML.replace(/^(\r\n|\r|\n)|=""|\s+$/g, '');
+        scope.title = attrs.title || 'Example';
       };
     }
   };
