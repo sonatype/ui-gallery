@@ -1,0 +1,90 @@
+/*
+  #Main Header
+*/
+$dropdown-menu-box-shadow: -8px 8px 12px 0px rgba(87, 87, 87, 1);
+$header-dropdown-panel-border: 1px solid $nx-grey-4;
+$header-dropdown-panel-background-color-rgba: rgba(0, 0, 0, 0.2);
+$main-header-color: #CCCCCC;
+$main-header-highlight: #2476FC;
+$notification-item-border: 1px solid $nx-grey-1;
+
+/*
+  First Row
+*/
+.nx-header {
+  background-color: $nx-off-black;
+  height: $nx-main-header-height;
+  margin: 0;
+  overflow: visible;
+  width: 100%;
+}
+
+// Apply this modifer if you want to fix the header to the top of the viewport
+.nx-header--fixed {
+  position: fixed;
+  z-index: 40;
+  
+  + .nx-root-container {
+    padding-top: $nx-main-header-height;
+  }
+}
+
+.nx-header__inner {
+  background-color: $nx-off-black;
+  min-height: inherit;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $nx-page-width-max;
+  min-width: $nx-page-width-min;
+
+  &::before {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+}
+
+i.sonatype-icons, i.glyphicons-sonatype {
+  vertical-align: middle;
+
+  &::before {
+    color: $main-header-color;
+  }
+
+  .active &::before {
+    color: #fff;
+  }
+}
+
+.nx-title {
+  border-right: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  line-height: 24px;
+  white-space: nowrap;
+  width: $nx-sidebar-width;
+  min-width: 280px;
+
+  img {
+    display: inline-block;
+    margin: 2px 2px 0 1px;
+  }
+}
+
+.nx-title__brand {
+  @include semi-bold();
+
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 5px 19px 0 2px;
+}
+
+.nx-title__version {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0 19px 4px 2px;
+}
