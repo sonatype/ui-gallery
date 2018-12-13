@@ -1,6 +1,6 @@
 .nx-nav-pills {
-  background-color: $iq-grey-2;
-  border: 1px solid $iq-grey-3;
+  background-color: $nx-grey-2;
+  border: 1px solid $nx-grey-3;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -14,7 +14,7 @@
     > a {
       border: 1px solid transparent;
       border-radius: 4px;
-      color: $iq-slate;
+      color: $nx-slate;
       display: inline-block;
       font-size: 14px;
       line-height: 20px;
@@ -26,7 +26,7 @@
 
       &:hover, &:focus {
         background-color: transparent; // Bootstrap override
-        border-color: $iq-grey-4;
+        border-color: $nx-grey-4;
       }
     }
 
@@ -36,9 +36,9 @@
 
     &.active a {
       &, &:hover, &:focus {
-        background-color: $iq-off-white;
-        border-color: $iq-grey-4;
-        color: $iq-off-black;   
+        background-color: $nx-off-white;
+        border-color: $nx-grey-4;
+        color: $nx-off-black;   
       }
     }
   }

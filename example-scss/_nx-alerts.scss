@@ -2,9 +2,9 @@
   #Alerts
 */
 .nx-alert {
-  background-color: $iq-warn-color-bg;
-  border: 1px solid $iq-warn-color;
-  color: $iq-warn-color;
+  background-color: $nx-warn-color-bg;
+  border: 1px solid $nx-warn-color;
+  color: $nx-warn-color;
   margin: 8px;
   padding: 9px 8px 8px 8px;
 
@@ -23,18 +23,18 @@
 }
 
 .nx-alert--error {
-  background-color: $iq-fail-color-bg;
-  border-color: $iq-fail-color;
-  color: $iq-fail-color;
+  background-color: $nx-fail-color-bg;
+  border-color: $nx-fail-color;
+  color: $nx-fail-color;
 }
 
 .nx-alert--info {
-  background-color: $iq-off-white;
-  border-color: $iq-dark-blue;
-  color: $iq-off-black;
+  background-color: $nx-off-white;
+  border-color: $nx-dark-blue;
+  color: $nx-off-black;
 
   .fa {
-    color: $iq-dark-blue;
+    color: $nx-dark-blue;
     font-size: 16px;
   }
 }

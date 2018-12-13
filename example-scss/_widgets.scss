@@ -23,14 +23,14 @@
   #System notice
  */
 .iq-system-notice {
-  max-width: $iq-paragraph-width-maximum;
+  max-width: $nx-paragraph-width-maximum;
 }
 
 /*
   #Tabs
 */
 .iq-tab-bar {
-  border-bottom: 1px solid $iq-grey-3;
+  border-bottom: 1px solid $nx-grey-3;
   height: 32px;
 }
 
@@ -43,7 +43,7 @@
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   box-sizing: border-box;
-  color: $iq-slate;
+  color: $nx-slate;
   display: inline-block;
   font-size: 14px;
   height: 32px;
@@ -54,11 +54,11 @@
   vertical-align: bottom;
 
   &:hover, &:focus {
-    color: $iq-off-black;
+    color: $nx-off-black;
     text-decoration: none;
 
     .fa.inverse {
-      background-color: $iq-off-black;
+      background-color: $nx-off-black;
     }
   }
 
@@ -67,11 +67,11 @@
   }
 
   &.active {
-    background-color: $iq-grey-1;
-    border-top: 1px solid $iq-grey-3;
-    border-right: 1px solid $iq-grey-3;
-    border-left: 1px solid $iq-grey-3;
-    color: $iq-off-black;
+    background-color: $nx-grey-1;
+    border-top: 1px solid $nx-grey-3;
+    border-right: 1px solid $nx-grey-3;
+    border-left: 1px solid $nx-grey-3;
+    color: $nx-off-black;
     cursor: default;
   }
 

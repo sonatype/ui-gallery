@@ -2,7 +2,7 @@
   #Basic links
 */
 a {
-  color: $iq-link-color;
+  color: $nx-link-color;
   cursor: pointer;
 }
 
@@ -22,9 +22,9 @@ a {
 }
 
 .iq-error {
-  background-color: $iq-fail-color-bg;
-  border: 1px solid $iq-fail-color;
-  color: $iq-fail-color;
+  background-color: $nx-fail-color-bg;
+  border: 1px solid $nx-fail-color;
+  color: $nx-fail-color;
 }
 
 .nx-scrollable {

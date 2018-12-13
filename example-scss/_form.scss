@@ -7,38 +7,38 @@
 // Shared styles
 
 @mixin iq-pristine() {
-  border-left-color: $iq-valid-color;
+  border-left-color: $nx-valid-color;
   border-left-style: double;
-  color: $iq-slate;
+  color: $nx-slate;
 }
 
 @mixin iq-valid() {
-  border-left-color: $iq-valid-color;
+  border-left-color: $nx-valid-color;
   border-left-style: solid;
 }
 
 @mixin iq-dirty() {
-  border-color: $iq-grey-3;
+  border-color: $nx-grey-3;
   border-left-style: solid;
 }
 
 @mixin iq-invalid-dirty() {
-  border-color: $iq-invalid-color;
+  border-color: $nx-invalid-color;
   border-left-style: solid;
 }
 
 @mixin iq-disabled() {
-  background: $iq-off-white;
-  border-color: $iq-grey-3;
-  border-left: 4px double $iq-grey-3;
+  background: $nx-off-white;
+  border-color: $nx-grey-3;
+  border-left: 4px double $nx-grey-3;
 }
 
-$iq-form-element-wide: 395px;
+$nx-form-element-wide: 395px;
 
 // Basic form layout
 
 .iq-form {
-  border-top: 1px solid $iq-grey-4;
+  border-top: 1px solid $nx-grey-4;
   margin: 0;
   padding-top: 20px;
   position: relative; // to make a containing block for validation popovers
@@ -77,7 +77,7 @@ $iq-form-element-wide: 395px;
 }
 
 .iq-form-buttons {
-  border-top: 1px solid $iq-grey-4;
+  border-top: 1px solid $nx-grey-4;
   padding: 8px 0;
 }
 
@@ -95,7 +95,7 @@ $iq-form-element-wide: 395px;
 .iq-label {
   @include semi-bold();
 
-  color: $iq-off-black;
+  color: $nx-off-black;
   display: block;
   font-size: 16px;
   margin-bottom: 7px;
@@ -109,7 +109,7 @@ $iq-form-element-wide: 395px;
   &::after {
     @include regular();
 
-    color: $iq-slate;
+    color: $nx-slate;
     content: " - optional";
     font-style: italic;
   }
@@ -118,7 +118,7 @@ $iq-form-element-wide: 395px;
 .iq-sub-label {
   @include regular();
   
-  color: $iq-off-black;
+  color: $nx-off-black;
   display: block;
   font-size: 14px;
   
@@ -142,7 +142,7 @@ fieldset {
 
       // use the same styling as <label>s
       border-style: none;
-      color: $iq-off-black;
+      color: $nx-off-black;
       font-size: 16px;
       line-height: 20px;
       margin-bottom: 7px;
@@ -159,7 +159,7 @@ input[type=password],
 textarea {
 
   &.iq-text-input, &.iq-textarea {
-    border: 1px solid $iq-grey-4;
+    border: 1px solid $nx-grey-4;
     border-left-width: 4px;
     border-radius: 0;
     box-shadow: none;
@@ -171,7 +171,7 @@ textarea {
     &:focus {
 //      @include box-shadow(none);
       
-      border-color: $iq-grey-3;
+      border-color: $nx-grey-3;
     }
 
     &:disabled {
@@ -196,8 +196,8 @@ textarea {
     
     &.ng-invalid:not(.ng-dirty):focus {
       // override bootstrap
-      border-color: $iq-grey-4;
-      border-left-color: $iq-valid-color;
+      border-color: $nx-grey-4;
+      border-left-color: $nx-valid-color;
       box-shadow: initial;
     }
   }
@@ -208,7 +208,7 @@ textarea {
 }
 
 .iq-text-input--wide {
-  width: $iq-form-element-wide;
+  width: $nx-form-element-wide;
 }
 
 input.iq-input-file--hidden {
@@ -223,7 +223,7 @@ input.iq-input-file--hidden {
 // Dropdown Selector
 
 dropdown-selector {
-  border: 1px solid $iq-grey-4;
+  border: 1px solid $nx-grey-4;
   border-left-width: 4px;
   display: inline-block;
   vertical-align: middle;
@@ -234,33 +234,33 @@ dropdown-selector {
   }
 
   &.ng-pristine {
-    border-left-color: $iq-valid-color;
+    border-left-color: $nx-valid-color;
     border-left-style: double;
   }
 
   &.ng-valid {
-    border-left-color: $iq-valid-color;
+    border-left-color: $nx-valid-color;
   }
 
   &.ng-invalid.ng-dirty {
-    border-color: $iq-invalid-color;
+    border-color: $nx-invalid-color;
     border-left-style: solid;
   }
   
   &.no-options {
     border: none;
-    color: $iq-fail-color;
+    color: $nx-fail-color;
     padding: 1px 1px 1px 4px;
     text-align: center;
   }
   
   &.disabled {
-    border-color: $iq-grey-3;
+    border-color: $nx-grey-3;
     border-left-style: double;
 
     .iq-form-select__item .caret,
     .iq-form-select__item:hover .caret {
-      border-top: 6px solid $iq-grey-3;
+      border-top: 6px solid $nx-grey-3;
     }
   }
 }
@@ -269,20 +269,20 @@ dropdown-selector {
   &.open {
     .iq-form-select__item,
     .iq-form-select__item:hover {
-      color: $iq-grey-4;
+      color: $nx-grey-4;
     }
     
     .iq-form-select__item:hover .caret {
-      border-top-color: $iq-grey-4;
+      border-top-color: $nx-grey-4;
     }
   }
   
   .dropdown-menu {
-    background: $iq-off-white;
-    border: 1px solid $iq-grey-4;
+    background: $nx-off-white;
+    border: 1px solid $nx-grey-4;
     border-collapse: separate;
     border-radius: 0;
-    box-shadow: -4px 6px 10px $iq-slate;
+    box-shadow: -4px 6px 10px $nx-slate;
     max-height: 300px; // 10 list items
     margin: 0 0 0 -4px;
     overflow-y: auto;
@@ -293,14 +293,14 @@ dropdown-selector {
     > li {
       @extend .truncate-ellipsis;
       
-      color: $iq-slate;
+      color: $nx-slate;
       cursor: pointer;
       height: 30px;
       line-height: 30px;
       padding: 0 11px;
       
       &:hover {
-        color: $iq-off-black;
+        color: $nx-off-black;
       }
     }
   }
@@ -309,7 +309,7 @@ dropdown-selector {
 .iq-form-select__item {
   @extend .truncate-ellipsis;
 
-  color: $iq-off-black;
+  color: $nx-off-black;
   display: block;
   height: 22px;
   line-height: 22px;
@@ -318,11 +318,11 @@ dropdown-selector {
   text-decoration: none;
 
   &.none-selected {
-    color: $iq-slate;
+    color: $nx-slate;
   }
 
   & .caret {
-    border-top: 6px solid $iq-grey-4;
+    border-top: 6px solid $nx-grey-4;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
     position: absolute;
@@ -331,11 +331,11 @@ dropdown-selector {
   }
   
   &:hover {
-    color: $iq-off-black;
+    color: $nx-off-black;
     text-decoration: none;
     
     & .caret {
-      border-top: 6px solid $iq-slate;
+      border-top: 6px solid $nx-slate;
     }
   }
 }
@@ -343,7 +343,7 @@ dropdown-selector {
 // Colour Picker
 
 .iq-color-picker {
-  background: $iq-grey-3;
+  background: $nx-grey-3;
   padding: 4px;
   width: 166px;
 }
@@ -358,7 +358,7 @@ dropdown-selector {
 }
 
 .iq-color-picker-color {
-  border: 1px solid $iq-off-black;
+  border: 1px solid $nx-off-black;
   cursor: pointer;
   display: inline-block;
   height: 32px;
@@ -376,8 +376,8 @@ dropdown-selector {
   }
 
   &.selected {
-    border: 1px solid $iq-off-white;
-    box-shadow: 1px 1px 5px $iq-off-black;
+    border: 1px solid $nx-off-white;
+    box-shadow: 1px 1px 5px $nx-off-black;
     height: 32px;
     width: 32px;
     z-index: 1;
@@ -395,7 +395,7 @@ dropdown-selector {
   > dt, > div > dt {
     @include semi-bold();
     
-    color: $iq-off-black;
+    color: $nx-off-black;
     display: block;
     font-size: 16px;
     margin-top: 12px;

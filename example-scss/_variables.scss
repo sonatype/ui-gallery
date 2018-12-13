@@ -100,9 +100,12 @@ $threat-bars:
   ("unspecified", #FFF, $nx-threat-color-unspecified);
 
 /*
-  #Default Borders
+  #Borders
 */
 $nx-grey-border: 1px solid $nx-grey-3;
+
+// sidebar manage filter dropdown higher than main content
+$nx-sidebar-zindex: 4;
 
 /*
   #Page elements

@@ -37,24 +37,24 @@
 */
 %link {
   &.disabled {
-    color: $iq-light-blue;
+    color: $nx-light-blue;
     cursor: default;
 
     &:hover {
-      color: $iq-light-blue;
+      color: $nx-light-blue;
     }
   }
 
   &:not(.disabled) {
-    color: $iq-link-color;
+    color: $nx-link-color;
 
     &:hover:not(:active) {
-      color: $iq-link-color;
+      color: $nx-link-color;
       text-decoration: underline;
     }
     
     &:active {
-      color: $iq-link-color-active;
+      color: $nx-link-color-active;
       text-decoration: none;
     }
   }
