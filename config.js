@@ -31,7 +31,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'read-only': 'styles/nx-read-only.html',
       'tree-views': 'styles/nx-tree-view.html',
       'lists': 'styles/nx-list.html',
-      'clickable lists': 'styles/iq-list--clickable.html',
+      'clickable lists': 'styles/nx-list--clickable.html',
       'threat indicators': 'styles/nx-threat-indicators.html',
       'counters': 'styles/nx-counter.html',
       'text indicators': 'styles/iq-text-indicators.html',

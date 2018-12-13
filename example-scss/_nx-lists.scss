@@ -39,7 +39,7 @@
     border-top: 1px solid $nx-grey-3;
   }
   
-  &.iq-error {
+  &.nx-error {
     border-top: 1px solid $nx-fail-color;
     color: $nx-fail-color;
   }
@@ -114,7 +114,7 @@
 
     color: $nx-slate;
   
-    &:not(.nx-list__item--empty):not(.iq-disabled):not([disabled]) {
+    &:not(.nx-list__item--empty):not(.nx-disabled):not([disabled]) {
       &:hover, &:focus {
         border-top: 1px solid $nx-grey-4;
         border-bottom: 1px solid $nx-grey-4;
@@ -137,10 +137,10 @@
       color: $nx-slate;
     }
 
-    &.iq-error {
+    &.nx-error {
       color: $nx-fail-color;
 
-      &:not(.iq-disabled):not([disabled]) {
+      &:not(.nx-disabled):not([disabled]) {
         &:hover, &:focus, &:active {
           background-color: $nx-fail-color-bg;
           border: 1px solid $nx-fail-color;
@@ -152,6 +152,16 @@
 
     .nx-list__subtext {
       pointer-events: none; // Fix for IE11 :active state display
+    }
+    
+    &.nx-list__item--disabled {
+      color: $nx-grey-4;
+      cursor: default;
+      
+      &:hover {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid $nx-grey-1;
+      }
     }
   }
   
