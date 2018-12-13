@@ -1,4 +1,4 @@
-.iq-counter {
+.nx-counter {
   @include semi-bold();
 
   background-color: $iq-grey-3;
@@ -14,7 +14,7 @@
   text-align: center;
   min-width: 8px;
 
-  &.iq-counter--active {
+  &.nx-counter--active {
     background-color: $iq-grey-1;
     border-color: $iq-grey-3;
   }
