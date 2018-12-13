@@ -2,30 +2,30 @@
   #Main Header
 */
 $dropdown-menu-box-shadow: -8px 8px 12px 0px rgba(87, 87, 87, 1);
-$header-dropdown-panel-border: 1px solid $iq-grey-4;
+$header-dropdown-panel-border: 1px solid $nx-grey-4;
 $header-dropdown-panel-background-color-rgba: rgba(0, 0, 0, 0.2);
 $main-header-color: #CCCCCC;
 $main-header-highlight: #2476FC;
-$notification-item-border: 1px solid $iq-grey-1;
+$notification-item-border: 1px solid $nx-grey-1;
 
 /*
   First Row
 */
 .iq-header {
-  background-color: $iq-off-black;
-  height: $iq-main-header-height;
+  background-color: $nx-off-black;
+  height: $nx-main-header-height;
   margin: 0;
   overflow: visible;
   width: 100%;
 }
 
 .iq-header__inner {
-  background-color: $iq-off-black;
+  background-color: $nx-off-black;
   min-height: inherit;
   margin: 0 auto;
   width: 100%;
-  max-width: $iq-page-width-max;
-  min-width: $iq-page-width-min;
+  max-width: $nx-page-width-max;
+  min-width: $nx-page-width-min;
 
   &::before {
     display: table;
@@ -64,7 +64,7 @@ i.iq-navigation-menu__icon {
   float: left;
   line-height: 24px;
   white-space: nowrap;
-  width: $iq-sidebar-width;
+  width: $nx-sidebar-width;
   min-width: 280px;
 
   img {
@@ -115,10 +115,10 @@ i.iq-navigation-menu__icon {
     width: 40px;
 
     &:hover {
-      color: $iq-off-white;
+      color: $nx-off-white;
 
       i::before {
-        color: $iq-off-white;
+        color: $nx-off-white;
       }
     }
   }
@@ -126,7 +126,7 @@ i.iq-navigation-menu__icon {
   &.active {
 
     span {
-      background-color: $iq-sonatype-blue;
+      background-color: $nx-sonatype-blue;
 
       &::after {
         @include iq-arrow-up();
@@ -174,7 +174,7 @@ i.iq-navigation-menu__icon {
 
   &::after {
     border-right: 8px solid transparent;
-    border-bottom: 8px solid $iq-off-white;
+    border-bottom: 8px solid $nx-off-white;
     border-left: 8px solid transparent;
     content: "";
     display: inline-block;
@@ -187,7 +187,7 @@ i.iq-navigation-menu__icon {
 .iq-count-circle {
   @include bold();
 
-  background-color: $iq-link-color;
+  background-color: $nx-link-color;
   border-radius: 50%;
   color: white;
   font-size: 10px;
@@ -232,19 +232,19 @@ i.iq-navigation-menu__icon {
 }
 
 .iq-notification {
-  background-color: $iq-off-white;
-  color: $iq-off-black;
+  background-color: $nx-off-white;
+  color: $nx-off-black;
   cursor: auto;
   min-height: 36px;
   line-height: 18px;
   padding: 8px;
 
   &.selected {
-    background-color: $iq-grey-1;
+    background-color: $nx-grey-1;
   }
 
   &.viewed {
-    color: $iq-slate;
+    color: $nx-slate;
   }
 }
 
@@ -271,7 +271,7 @@ i.iq-navigation-menu__icon {
 }
 
 .iq-dropdown-submenu {
-  background-color: $iq-off-white;
+  background-color: $nx-off-white;
   border: $header-dropdown-panel-border;
   border-radius: 4px;
   box-shadow: $dropdown-menu-box-shadow;
@@ -287,7 +287,7 @@ i.iq-navigation-menu__icon {
   &::before {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 8px solid $iq-off-white;
+    border-left: 8px solid $nx-off-white;
     content: "";
     display: inline-block;
     position: absolute;
@@ -310,8 +310,8 @@ i.iq-navigation-menu__icon {
 .iq-dropdown-submenu__title {
   @include regular();
   
-  border-bottom: 1px solid $iq-grey-1;
-  color: $iq-slate;
+  border-bottom: 1px solid $nx-grey-1;
+  color: $nx-slate;
   line-height: 18px;
   padding: 12px 8px;
 }

@@ -28,11 +28,11 @@
 }
 
 .iq-dropdown-menu {
-  background: $iq-off-white;
-  border: 1px solid $iq-grey-4;
+  background: $nx-off-white;
+  border: 1px solid $nx-grey-4;
   border-radius: 4px;
-  box-shadow: -4px 4px 10px 0 $iq-slate;
-  color: $iq-slate;
+  box-shadow: -4px 4px 10px 0 $nx-slate;
+  color: $nx-slate;
   float: left;
   margin: 2px 0 0;
   list-style: none;
@@ -67,9 +67,9 @@
 .iq-dropdown-menu__title {
   @include semi-bold();
 
-  background-color: $iq-off-white;
-  border-bottom: 1px solid $iq-grey-4;
-  color: $iq-slate;
+  background-color: $nx-off-white;
+  border-bottom: 1px solid $nx-grey-4;
+  color: $nx-slate;
   font-size: 14px;
   margin: 0;
   padding: 12px 8px 16px 8px;
@@ -97,7 +97,7 @@
   }
   
   &.disabled {
-    color: $iq-link-color-disabled;
+    color: $nx-link-color-disabled;
     cursor: default;
     
     &:hover {      
@@ -109,9 +109,9 @@
 .iq-dropdown-menu__link--main-header {
   @include regular();
 
-  background-color: $iq-off-white;
-  border-bottom: 1px solid $iq-grey-1;
-  color: $iq-off-black;
+  background-color: $nx-off-white;
+  border-bottom: 1px solid $nx-grey-1;
+  color: $nx-off-black;
   display: block;
   font-size: 14px;
   line-height: 18px;
@@ -120,9 +120,9 @@
   word-wrap: break-word;
 
   &:hover {
-    background: $iq-grey-1;
+    background: $nx-grey-1;
     filter: none;
-    color: $iq-off-black;
+    color: $nx-off-black;
     cursor: pointer;
     text-decoration: none;
   }
@@ -130,9 +130,9 @@
   // Necessary to override Bootstrap styles
   .dropdown-menu > .active > &,
   .dropdown-menu > .active > &:hover {
-    background: $iq-grey-1;
+    background: $nx-grey-1;
     filter: none;
-    color: $iq-off-black;
+    color: $nx-off-black;
   }
 }
 

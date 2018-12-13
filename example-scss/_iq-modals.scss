@@ -3,9 +3,9 @@
 */
 
 // Height of mainHeader + 8px margin
-$iq-modal-top-spacing: 48px;
+$nx-modal-top-spacing: 48px;
 // Standard margin
-$iq-modal-bottom-spacing: 8px;
+$nx-modal-bottom-spacing: 8px;
 
 .iq-modal-backdrop {
   background-color: rgba(7, 7, 7, 0.4);
@@ -14,25 +14,25 @@ $iq-modal-bottom-spacing: 8px;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $iq-modal-backdrop-z-index;
+  z-index: $nx-modal-backdrop-z-index;
 }
 
 .iq-modal {
-  $iq-modal-width: 560px;
+  $nx-modal-width: 560px;
 
-  background-color: $iq-off-white;
-  border: 1px solid $iq-slate;
+  background-color: $nx-off-white;
+  border: 1px solid $nx-slate;
   border-radius: 0;
-  box-shadow: -8px 8px 12px $iq-slate;
+  box-shadow: -8px 8px 12px $nx-slate;
   height: auto;
-  max-height: calc(100vh - #{$iq-modal-top-spacing} - #{$iq-modal-bottom-spacing});
+  max-height: calc(100vh - #{$nx-modal-top-spacing} - #{$nx-modal-bottom-spacing});
   margin: 0; // override bootstrap .modal style
   outline: none;
   position: fixed;
-  top: $iq-modal-top-spacing;
-  left: calc(50% - #{($iq-modal-width / 2)});
-  width: $iq-modal-width;
-  z-index: $iq-modal-z-index;
+  top: $nx-modal-top-spacing;
+  left: calc(50% - #{($nx-modal-width / 2)});
+  width: $nx-modal-width;
+  z-index: $nx-modal-z-index;
 
   form {
     margin-bottom: 0; // override Bootstrap
@@ -40,7 +40,7 @@ $iq-modal-bottom-spacing: 8px;
 }
 
 .iq-modal-header {
-  border-bottom: 1px solid $iq-grey-4;
+  border-bottom: 1px solid $nx-grey-4;
   padding: 12px 8px;
 
   h2 {
@@ -70,20 +70,20 @@ $iq-modal-bottom-spacing: 8px;
     margin-bottom: 18px;
     
     .disabled {
-      color: $iq-grey-4;
+      color: $nx-grey-4;
     }
   }
 }
 
 .iq-modal-footer {
-  background-color: $iq-grey-1;
-  border-top: 1px solid $iq-grey-4;
+  background-color: $nx-grey-1;
+  border-top: 1px solid $nx-grey-4;
   padding: 12px;
   
   &.error {
-    background-color: $iq-fail-color-bg;
-    border: 1px solid $iq-fail-color;
-    color: $iq-fail-color;
+    background-color: $nx-fail-color-bg;
+    border: 1px solid $nx-fail-color;
+    color: $nx-fail-color;
     margin-right: -1px;
     margin-bottom: -1px;
     margin-left: -1px;

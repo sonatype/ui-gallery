@@ -2,8 +2,8 @@
   #Layout
 */
 body {
-  background-color: $iq-grey-3;
-  color: $iq-off-black;
+  background-color: $nx-grey-3;
+  color: $nx-off-black;
   display: block;
   height: auto;
   margin: 0;
@@ -15,25 +15,25 @@ body {
 }
 
 .iq-main-view {
-  background-color: $iq-off-white;
+  background-color: $nx-off-white;
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: $iq-page-width-max;
-  min-width: $iq-page-width-min;
+  max-width: $nx-page-width-max;
+  min-width: $nx-page-width-min;
 }
 
 .iq-sidebar {
-  background-color: $iq-grey-2;
-  border-right: 1px solid $iq-grey-3;
-  border-left: solid 1px $iq-grey-4;
+  background-color: $nx-grey-2;
+  border-right: 1px solid $nx-grey-3;
+  border-left: solid 1px $nx-grey-4;
   box-sizing: border-box;
   display: inline-block;
   overflow-x: hidden;
   position: relative;
   vertical-align: top;
   white-space: normal;
-  width: $iq-sidebar-width;
-  z-index: $iq-sidebar-zindex;
+  width: $nx-sidebar-width;
+  z-index: $nx-sidebar-zindex;
 
   // Hack to prevent rendering issues in Chrome. This will create a new layer with its own backing surface, preventing
   // the background and text from disappearing. Witnessed on Chrome 43.0.2357.130 (64-bit) on a MBP laptop screen.
@@ -42,13 +42,13 @@ body {
 
 .iq-body-container {
   background: url("../example-assets/img/tile_bg.png");
-  border-right: solid 1px $iq-grey-4;
+  border-right: solid 1px $nx-grey-4;
   box-sizing: border-box;
   display: inline-block;
   overflow-x: hidden;
   vertical-align: top;
   white-space: normal;
-  width: $iq-content-width;
+  width: $nx-content-width;
 
   @media only screen and (-moz-min-device-pixel-ratio: 2), 
   only screen and (-webkit-min-device-pixel-ratio: 2), 
@@ -60,6 +60,6 @@ body {
 }
 
 .iq-body-container--single-pane {
-  border-left: solid 1px $iq-grey-4;
+  border-left: solid 1px $nx-grey-4;
   width: 100%;
 }

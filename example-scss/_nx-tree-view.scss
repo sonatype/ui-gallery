@@ -5,7 +5,7 @@
   @include semi-bold();
 
   box-sizing: border-box;
-  color: $iq-slate;
+  color: $nx-slate;
   padding-right: 8px;
   min-width: 250px;
   max-width: 330px;
@@ -26,7 +26,7 @@
   line-height: 32px;
 
   &:hover, &:focus {
-    color: $iq-slate;
+    color: $nx-slate;
     text-decoration: none;
   }
   
@@ -44,11 +44,11 @@
 
   .nx-tree-view__twisty-icon {
     &.expand {
-      border-left-color: $iq-grey-4;
+      border-left-color: $nx-grey-4;
     }
 
     &.collapse {
-      border-left-color: $iq-grey-4;
+      border-left-color: $nx-grey-4;
     }
   }
 }
@@ -75,7 +75,7 @@
 .nx-tree-view__twisty-icon {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid $iq-slate;
+  border-left: 5px solid $nx-slate;
   content: "";
   display: block;
   margin: 10px 0 3px 4px;
@@ -100,7 +100,7 @@
 .nx-tree-view__text {
   @extend .truncate-ellipsis;
   
-  color: $iq-slate;
+  color: $nx-slate;
   display: block;
 
   .fa, .nx-tree-view__text-icon {
@@ -171,7 +171,7 @@
 
   &.selected {
     a {
-      color: $iq-off-black;
+      color: $nx-off-black;
       cursor: default;
       text-decoration: none;
     }
@@ -188,9 +188,9 @@
 }
 
 .nx-tree-view--active {
-  background-color: $iq-off-white;
-  border-top-color: $iq-slate;
-  border-bottom-color: $iq-slate;
+  background-color: $nx-off-white;
+  border-top-color: $nx-slate;
+  border-bottom-color: $nx-slate;
 }
 
 .nx-tree-view--multi-select {
@@ -206,19 +206,19 @@
     cursor: default;
 
     .nx-tree-view__text {
-      color: $iq-grey-4;
+      color: $nx-grey-4;
     }
 
     .inverse {
-      background-color: $iq-grey-4;
+      background-color: $nx-grey-4;
     }
 
     .nx-tree-view__twisty-icon.expand {
-      border-left-color: $iq-grey-4;
+      border-left-color: $nx-grey-4;
     }
 
     .hexagon path {
-      stroke: $iq-grey-4;
+      stroke: $nx-grey-4;
     }
   }
 

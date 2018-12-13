@@ -32,8 +32,8 @@ $font-families: ('sonatype-icons', 'sonatype-glyphicons');
 */
 .fa {
   &.inverse {
-    background-color: $iq-slate;
-    color: $iq-off-white;
+    background-color: $nx-slate;
+    color: $nx-off-white;
   }
 
   &.size-26px {
@@ -116,15 +116,15 @@ $font-families: ('sonatype-icons', 'sonatype-glyphicons');
 
   &.outline {
     // A single shadow is too light. We layer it multiple times to simulate a text stroke/outline
-    text-shadow: $iq-slate 0 0 1px, $iq-slate 0 0 1px, $iq-slate 0 0 1px, $iq-slate 0 0 1px, $iq-slate 0 0 1px, $iq-slate 0 0 1px;
+    text-shadow: $nx-slate 0 0 1px, $nx-slate 0 0 1px, $nx-slate 0 0 1px, $nx-slate 0 0 1px, $nx-slate 0 0 1px, $nx-slate 0 0 1px;
   }
 
   &.fail {
-    color: $iq-dark-red;
+    color: $nx-dark-red;
   }
 
   &.warn {
-    color: $iq-orange;
+    color: $nx-orange;
   }
 }
 
@@ -140,7 +140,7 @@ $font-families: ('sonatype-icons', 'sonatype-glyphicons');
   &.outline {
     > path {
       fill: none;
-      stroke: $iq-slate;
+      stroke: $nx-slate;
       stroke-width: 12px;
     }
   }
@@ -184,7 +184,7 @@ $font-families: ('sonatype-icons', 'sonatype-glyphicons');
 }
 
 .fa-info-circle {
-  color: $iq-dark-blue;
+  color: $nx-dark-blue;
 }
 
 .fa.loading-spinner {

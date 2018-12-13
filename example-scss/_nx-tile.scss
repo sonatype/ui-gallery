@@ -1,9 +1,9 @@
 $tile-scroll-container-z-index: 0;
 
-$iq-tile-header-height: 24px; // Minimum height
-$iq-tile-header-height-actions: 43px; // Height with sub-title and/or right actions
+$nx-tile-header-height: 24px; // Minimum height
+$nx-tile-header-height-actions: 43px; // Height with sub-title and/or right actions
 
-$iq-tile-actions-margin-top: 8px;
+$nx-tile-actions-margin-top: 8px;
 
 /*
   #Name-spaced Tile System
@@ -12,16 +12,16 @@ $iq-tile-actions-margin-top: 8px;
 // Base Tiles
 
 .nx-tile {
-  background-color: $iq-main-background-color;
-  border: 1px solid $iq-grey-2;
+  background-color: $nx-main-background-color;
+  border: 1px solid $nx-grey-2;
   margin: 8px;
   padding: 0 8px 8px 8px;
   
   // Sometimes we want tiles that consist of alert messages
   &.iq-alert {
-    background-color: $iq-warn-color-bg;
-    border: 1px solid $iq-warn-color;
-    color: $iq-warn-color;
+    background-color: $nx-warn-color-bg;
+    border: 1px solid $nx-warn-color;
+    color: $nx-warn-color;
     
     > :first-child {
       margin-top: 0;
@@ -41,15 +41,15 @@ $iq-tile-actions-margin-top: 8px;
   }
 
   &.iq-alert--error {
-    background-color: $iq-fail-color-bg;
-    border-color: $iq-fail-color;
-    color: $iq-fail-color;
+    background-color: $nx-fail-color-bg;
+    border-color: $nx-fail-color;
+    color: $nx-fail-color;
   }
 
   &.iq-alert--info {
-    background-color: $iq-off-white;
-    border-color: $iq-dark-blue;
-    color: $iq-off-black;
+    background-color: $nx-off-white;
+    border-color: $nx-dark-blue;
+    color: $nx-off-black;
     
     .fa {
       font-size: 23px;
@@ -98,7 +98,7 @@ $iq-tile-actions-margin-top: 8px;
 // Tile headers
 
 .nx-tile-header {
-  min-height: $iq-tile-header-height;
+  min-height: $nx-tile-header-height;
   margin: 8px 0 15px 0;
   overflow: hidden;
   
@@ -140,18 +140,18 @@ $iq-tile-actions-margin-top: 8px;
 }
 
 .nx-tile-header__title--no-actions {
-  height: $iq-tile-header-height;
+  height: $nx-tile-header-height;
 }
 
 .nx-tile-header__subtitle {
   line-height: 16px;
   margin: 0;
   padding: 0 0 2px 0;
-  max-width: $iq-paragraph-width-maximum;
+  max-width: $nx-paragraph-width-maximum;
 }
 
 .nx-tile-header--hrule {
-  border: 0 solid $iq-grey-4;
+  border: 0 solid $nx-grey-4;
   border-bottom-width: 1px;
   margin-bottom: 20px;
   padding-bottom: 5px;
@@ -159,7 +159,7 @@ $iq-tile-actions-margin-top: 8px;
 
 .nx-tile__actions {
   float: right;
-  margin-top: $iq-tile-actions-margin-top;
+  margin-top: $nx-tile-actions-margin-top;
   
   .btn {
     margin-right: 8px;
@@ -188,7 +188,7 @@ $iq-tile-actions-margin-top: 8px;
 .nx-tile__section-header {
   @include semi-bold();
 
-  border-bottom: 1px solid $iq-grey-4;
+  border-bottom: 1px solid $nx-grey-4;
   font-size: 14px;
   margin-bottom: 20px;
   padding-bottom: 8px;
@@ -202,7 +202,7 @@ $iq-tile-actions-margin-top: 8px;
 }
 
 .nx-tile-footer {
-  border: 0 solid $iq-grey-4;
+  border: 0 solid $nx-grey-4;
   border-top-width: 1px;
   margin-top: 20px;
   padding-bottom: 4px;
@@ -212,7 +212,7 @@ $iq-tile-actions-margin-top: 8px;
 
 // A tile at the top of the page, usually contains a nav bar with scrolling buttons
 .nx-tile--top-tile {
-  box-shadow: 0px 5px 6px 0px $iq-grey-1;
+  box-shadow: 0px 5px 6px 0px $nx-grey-1;
   margin-bottom: 0;
   position: relative;
   z-index: $tile-scroll-container-z-index + 1;
