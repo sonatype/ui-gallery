@@ -5,10 +5,10 @@
 .nx-btn {
   @include semi-bold();
 
-  background-color: $iq-grey-1;
-  border: 1px solid $iq-grey-4;
+  background-color: $nx-grey-1;
+  border: 1px solid $nx-grey-4;
   border-radius: 4px;
-  color: $iq-slate;
+  color: $nx-slate;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -27,18 +27,18 @@
   }
 
   &:hover, &:focus, &:active {
-    border-color: $iq-slate;
-    color: $iq-off-black;
+    border-color: $nx-slate;
+    color: $nx-off-black;
   }
 
   &:active {
-    background-color: $iq-grey-2;
+    background-color: $nx-grey-2;
   }
 
   &.disabled, &[disabled] {
-    background-color: $iq-grey-1;
-    border-color: $iq-grey-2;
-    color: $iq-grey-4;
+    background-color: $nx-grey-1;
+    border-color: $nx-grey-2;
+    color: $nx-grey-4;
     cursor: default;
 
     &:focus {
@@ -48,26 +48,26 @@
 }
 
 .nx-btn--primary {
-  background-color: $iq-link-color;
+  background-color: $nx-link-color;
   border-color: transparent;
   border-width: 2px;
-  color: $iq-off-white;
+  color: $nx-off-white;
   padding: 4px 11px;
 
   &:hover, &:focus, &:active {
-    border-color: $iq-link-color-active;
-    color: $iq-off-white;
+    border-color: $nx-link-color-active;
+    color: $nx-off-white;
   }
 
   &:active {
-    background: $iq-link-color-active;
-    border-color: $iq-link-color-active;
+    background: $nx-link-color-active;
+    border-color: $nx-link-color-active;
   }
 
   &.disabled, &[disabled] {
-    background-color: $iq-link-color-disabled;
+    background-color: $nx-link-color-disabled;
     border-color: transparent;
-    color: $iq-off-white;
+    color: $nx-off-white;
   }
 }
 
@@ -76,12 +76,12 @@
   border-color: transparent;
 
   &:hover, &:focus {
-    border-color: $iq-grey-4;
+    border-color: $nx-grey-4;
   }
 
   &:active {
     background-color: transparent;
-    border-color: $iq-slate;
+    border-color: $nx-slate;
   }
 
   &.disabled, &[disabled] {
@@ -91,18 +91,18 @@
 }
 
 .nx-btn--error {
-  background-color: $iq-fail-color;
-  border-color: $iq-fail-color;
-  color: $iq-off-white;
+  background-color: $nx-fail-color;
+  border-color: $nx-fail-color;
+  color: $nx-off-white;
 
   &:hover, &:focus, &:active {
-    background-color: $iq-fail-color;
-    border-color: $iq-fail-color-active;
-    color: $iq-off-white;
+    background-color: $nx-fail-color;
+    border-color: $nx-fail-color-active;
+    color: $nx-off-white;
   }
 
   &:active {
-    background-color: $iq-fail-color-active;
+    background-color: $nx-fail-color-active;
   }
 }
 
@@ -135,7 +135,7 @@
  */
 
 .nx-btn--dropdown {
-  $iq-drop-down-indentation: -12px;
+  $nx-drop-down-indentation: -12px;
 
   background-color: transparent;
   border-color: transparent;
@@ -143,7 +143,7 @@
   display: block;
   height: 32px;
   line-height: 32px;
-  margin: 0 0 0 $iq-drop-down-indentation;
+  margin: 0 0 0 $nx-drop-down-indentation;
   overflow: hidden;
   padding: 0 10px 0 12px;
   text-align: left;
@@ -156,12 +156,12 @@
   &:hover:not(.disabled):not([disabled]),
   &:focus:not(.disabled):not([disabled]) {
     border-color: transparent;
-    color: $iq-off-black;
+    color: $nx-off-black;
     text-decoration: none;
   }
 
   &:active:not(.disabled):not([disabled]) {
-    background-color: $iq-grey-1;
+    background-color: $nx-grey-1;
   }
 
   &:last-child {
@@ -181,6 +181,6 @@
 
   // This overrides the normal spacing for .nx-btn + .nx-btn above
   + .nx-btn--dropdown {
-    margin-left: $iq-drop-down-indentation;
+    margin-left: $nx-drop-down-indentation;
   }
 }

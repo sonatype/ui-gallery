@@ -17,7 +17,7 @@
 }
 
 .nx-list__title {
-  color: $iq-off-black;
+  color: $nx-off-black;
   line-height: 14px;
   margin: 0 0 9px 0;
 }
@@ -27,21 +27,21 @@
   @extend .truncate-ellipsis;
 
   border-top: 1px solid transparent;
-  border-bottom: 1px solid $iq-grey-1;
+  border-bottom: 1px solid $nx-grey-1;
   box-sizing: border-box;
-  color: $iq-off-black;
+  color: $nx-off-black;
   font-size: 14px;
   line-height: 14px;
   margin: 0;
   padding: 12px 10px 12px 8px;
   
   &:first-of-type {
-    border-top: 1px solid $iq-grey-3;
+    border-top: 1px solid $nx-grey-3;
   }
   
   &.iq-error {
-    border-top: 1px solid $iq-fail-color;
-    color: $iq-fail-color;
+    border-top: 1px solid $nx-fail-color;
+    color: $nx-fail-color;
   }
 
   .fa {
@@ -66,15 +66,15 @@
 .nx-list__item--empty {
   @include regular();
 
-  border-top: 1px solid $iq-grey-3; // assume it's always the first item
-  border-bottom: 1px solid $iq-grey-1;
-  color: $iq-slate;
+  border-top: 1px solid $nx-grey-3; // assume it's always the first item
+  border-bottom: 1px solid $nx-grey-1;
+  color: $nx-slate;
   font-size: 14px;
   text-align: center;
 }
 
 .nx-list__item--disabled {
-  color: $iq-grey-4;
+  color: $nx-grey-4;
   cursor: default;
 }
 
@@ -98,7 +98,7 @@
   margin: 0;
   padding-top: 4px;
   white-space: normal;
-  width: $iq-paragraph-width-maximum;
+  width: $nx-paragraph-width-maximum;
 }
 
 /*
@@ -106,45 +106,45 @@
  */
 .nx-list--clickable {
   .nx-list__title {
-    color: $iq-off-black;
+    color: $nx-off-black;
   }
 
   .nx-list__item {
     @include semi-bold();
 
-    color: $iq-slate;
+    color: $nx-slate;
   
     &:not(.nx-list__item--empty):not(.iq-disabled):not([disabled]) {
       &:hover, &:focus {
-        border-top: 1px solid $iq-grey-4;
-        border-bottom: 1px solid $iq-grey-4;
-        color: $iq-off-black;
+        border-top: 1px solid $nx-grey-4;
+        border-bottom: 1px solid $nx-grey-4;
+        color: $nx-off-black;
         cursor: pointer;
         outline-style: none; // removes :focus outline
       }
 
       &:active {
-        background-color: $iq-grey-1;
-        border-top: 1px solid $iq-grey-4;
-        border-bottom: 1px solid $iq-grey-4;
+        background-color: $nx-grey-1;
+        border-top: 1px solid $nx-grey-4;
+        border-bottom: 1px solid $nx-grey-4;
       }
     }
     
     &.nx-list__item--empty {
       @include regular();
 
-      border-top: 1px solid $iq-grey-3; // assume it's always the first item
-      color: $iq-slate;
+      border-top: 1px solid $nx-grey-3; // assume it's always the first item
+      color: $nx-slate;
     }
 
     &.iq-error {
-      color: $iq-fail-color;
+      color: $nx-fail-color;
 
       &:not(.iq-disabled):not([disabled]) {
         &:hover, &:focus, &:active {
-          background-color: $iq-fail-color-bg;
-          border: 1px solid $iq-fail-color;
-          color: $iq-fail-color;
+          background-color: $nx-fail-color-bg;
+          border: 1px solid $nx-fail-color;
+          color: $nx-fail-color;
           cursor: default;
         }
       }

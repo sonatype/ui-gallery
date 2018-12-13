@@ -1,12 +1,12 @@
-.iq-threat-indicators {
+.nx-threat-indicators {
   display: inline-block;
 }
 
-.iq-threat-indicator {
+.nx-threat-indicator {
   @include semi-bold();
   
-  background: $iq-threat-color-policy-none;
-  color: $iq-off-white;
+  background: $nx-threat-color-policy-none;
+  color: $nx-off-white;
   display: inline-block;
   font-size: 16px;
   height: 26px;
@@ -22,18 +22,18 @@
   }
 
   &.low {
-    background: $iq-threat-color-low;
+    background: $nx-threat-color-low;
   }
 
   &.moderate {
-    background: $iq-threat-color-moderate;
+    background: $nx-threat-color-moderate;
   }
 
   &.severe {
-    background: $iq-threat-color-severe;
+    background: $nx-threat-color-severe;
   }
 
   &.critical {
-    background: $iq-threat-color-critical;
+    background: $nx-threat-color-critical;
   }
 }

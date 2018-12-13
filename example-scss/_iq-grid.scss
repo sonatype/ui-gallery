@@ -5,7 +5,7 @@
 .iq-grid-col {
   @include flex(1 0);
 
-  border-left: 1px solid $iq-grey-2;
+  border-left: 1px solid $nx-grey-2;
   box-sizing: border-box;
   margin: 8px 0;
   padding: 0 12px;
@@ -54,18 +54,18 @@
 
 .iq-grid-h-keyline {
   border: none;
-  border-top: 1px solid $iq-grey-2;
+  border-top: 1px solid $nx-grey-2;
   margin: 0;
 }
 
 .iq-grid-h-keyline--white {
   border: none;
-  border-top: 1px solid $iq-off-white;
+  border-top: 1px solid $nx-off-white;
   margin: 0;
 }
 
 .iq-grid-col--noborder {
-  border-left-color: $iq-off-white;
+  border-left-color: $nx-off-white;
 }
 
 .iq-grid-col {
@@ -84,7 +84,7 @@
 
   line-height: 100%;
   margin: 0; // zeros out any <h#> margin
-  max-width: $iq-paragraph-width-maximum;
+  max-width: $nx-paragraph-width-maximum;
 }
 
 h1.iq-grid-header__title {
@@ -112,12 +112,12 @@ h3.iq-grid-header__title {
 
 .iq-grid-header__subtitle {
   line-height: 16px;
-  max-width: $iq-paragraph-width-maximum;
+  max-width: $nx-paragraph-width-maximum;
   padding-top: 2px;
 }
 
 .iq-grid-header__hrule {
-  border: 0 solid $iq-grey-4;
+  border: 0 solid $nx-grey-4;
   border-bottom-width: 1px;
   margin: 0;
   padding-top: 9px;

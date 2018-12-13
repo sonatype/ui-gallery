@@ -1,0 +1,51 @@
+<item-description>
+  <marked>
+    `.nx-threat-indicator` indicates quantity by its content and severity by its background color. The colors used are for demonstration purposes, actual colors may vary based on its application.
+  </marked>
+</item-description>
+
+<item-example-html>
+
+  <h3>Single token</h3>
+  <div class="nx-threat-indicators">
+    <div class="nx-threat-indicator none">2</div>
+  </div>
+
+  <hr>
+
+  <h3>Token with caption</h3>  
+  <div class="nx-threat-indicators">
+    <div class="nx-threat-indicator critical">9</div><!-- 
+ --><div class="nx-caption">
+      <h3 class="nx-caption__text">This is the caption</h3>
+      <p class="nx-caption__sub-text">This is the sub-text</p>
+    </div>
+  </div>
+
+  <hr>
+  
+  <h3>Multiple tokens</h3>
+  <div class="nx-threat-indicators">
+    <div class="nx-threat-indicator none">2</div><!-- 
+ --><div class="nx-threat-indicator low">11</div><!-- 
+ --><div class="nx-threat-indicator moderate">23</div><!-- 
+ --><div class="nx-threat-indicator severe">0</div><!-- 
+ --><div class="nx-threat-indicator critical">99</div>
+  </div>
+
+  <hr>
+
+  <h3>Multiple tokens with caption</h3>  
+  <div class="nx-threat-indicators">
+    <div class="nx-threat-indicator none">2</div><!-- 
+ --><div class="nx-threat-indicator low">113</div><!-- 
+ --><div class="nx-threat-indicator moderate">223</div><!-- 
+ --><div class="nx-threat-indicator severe">10</div><!-- 
+ --><div class="nx-threat-indicator critical">3229</div><!-- 
+ --><div class="nx-caption">
+      <h3 class="nx-caption__text">This is the caption</h3>
+      <p class="nx-caption__sub-text">This is the sub-text</p>
+    </div>
+  </div>
+
+</item-example-html>
