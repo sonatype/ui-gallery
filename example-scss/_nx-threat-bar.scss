@@ -2,7 +2,7 @@
   Threat Legends
  */
 
-.iq-threat-bar {
+.nx-threat-bar {
   display: inline-block;
   height: 100%;
   margin: 0 8px 0 -12px;
@@ -10,14 +10,14 @@
   width: 8px;
 
   @each $threatdef in join($threat-levels, $threat-bars) {
-    &.iq-threat-bar--#{nth($threatdef, 1)} {
+    &.nx-threat-bar--#{nth($threatdef, 1)} {
       background-color: #{nth($threatdef, 3)};
     }
   }
 
   @each $threatdef in $threat-levels {
     @each $threatLevel in nth($threatdef, 4) {
-      &.iq-threat-bar--#{$threatLevel} {
+      &.nx-threat-bar--#{$threatLevel} {
         background-color: nth($threatdef, 3);
       }
     }
@@ -25,15 +25,15 @@
 
   @each $threat in $policy-threat-levels {
     @each $threatLevel in nth($threat, 4) {
-      &.iq-threat-bar--policy-level-#{$threatLevel} {
+      &.nx-threat-bar--policy-level-#{$threatLevel} {
         background-color: nth($threat, 3);
       }
     }
   }
 }
 
-.iq-list__item {
-  .iq-threat-bar {
+.nx-list__item {
+  .nx-threat-bar {
     height: 40px;
     margin: -12px 4px -12px -8px;
   }
