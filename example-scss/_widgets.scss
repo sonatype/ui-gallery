@@ -9,7 +9,7 @@
 @import "nx-lists";
 @import "nx-btn";
 @import "iq-indicator-row";
-@import "iq-threat-indicators";
+@import "nx-threat-indicators";
 @import "iq-coverage-indicator";
 @import "nx-counter";
 @import "nx-nav-pills";
@@ -96,14 +96,14 @@
   }
 }
 
-.iq-caption {
+.nx-caption {
   display: inline-block;
   height: 26px;
   margin-left: 10px;
   vertical-align: top;
 }
 
-.iq-caption__text {
+.nx-caption__text {
   display: block;
   font-size: 14px;
   line-height: 12px;
@@ -112,7 +112,7 @@
   text-transform: uppercase;
 }
 
-.iq-caption__sub-text {
+.nx-caption__sub-text {
   display: block;
   font-size: 14px;
   line-height: 14px;
