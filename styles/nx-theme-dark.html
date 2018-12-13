@@ -1,0 +1,71 @@
+<item-description>
+  <marked>
+    `.nx-sidebar--theme-dark` is a purely stylistic modification to the color scheme of the default sidebar.
+
+    **Note:** The examples on this page are shown for styling purposes only. For information about any of the widgets used here you should check their respective pages in the gallery.
+  </marked>
+</item-description>
+
+<item-example-html>
+
+<!-- force sidebar height/width for the sake of this example -->
+<style>
+  .nx-page-sidebar--theme-dark {
+    height: 1200px;
+    width: 320px;
+  }
+</style>
+
+<div class="nx-page-sidebar nx-page-sidebar--theme-dark">
+  <h2>Sidebar with dark theming</h2>
+
+  <form ng-init="value = null; objectOptions = [{name: 'foo', value: 1}, {name:'bar', value: 2}]">
+    <div class="nx-form-group">
+      <label>Object options</label>
+      <dropdown-selector options="objectOptions" ng-model="value" option-name-param="name" option-value-param="value">
+      </dropdown-selector>
+    </div>
+    <div class="nx-form-group">
+      <label class="nx-label">Default</label>
+      <input type="text" class="nx-text-input ng-empty ng-pristine">
+    </div>
+    <fieldset class="nx-checkbox-group nx-form-group">
+      <legend class="nx-label">Checkboxes</legend>
+      <nx-checkbox label="Subscribe"></nx-checkbox>
+      <nx-checkbox label="disabled" is-disabled="true"></nx-checkbox>
+    </fieldset>
+    <fieldset class="nx-radio-group nx-form-group">
+      <legend class="nx-label">Radio buttons</legend>
+      <nx-radio model="color.name" value="'red'">Red</nx-radio>
+      <nx-radio model="color.name" value="'blue'" is-disabled="true">Blue</nx-radio>
+    </fieldset>
+    <fieldset class="nx-checkbox-group nx-form-group" ng-controller="iqTreeViewMultiSelectExampleController as vm">
+      <legend class="nx-label">IQ Tree View Multi-select</legend>
+      <nx-tree-view-multi-select available="vm.available"
+                                 selected="vm.selected"
+                                 on-change="vm.onChange(selected, toggledId)"
+                                 tooltip-generator="'in ' + entity.organizationName"
+                                 filter-placeholder="Application Name"
+                                 filter-threshold="5"
+                                 name="applications"
+                                 sort-entities="vm.sort">
+        Test Applications
+      </nx-tree-view-multi-select>
+    </fieldset>
+    <fieldset class="nx-radio-group nx-form-group" ng-controller="iqTreeViewRadioSelectExampleController as vm">
+      <legend class="nx-label">IQ Tree View Radio-select</legend>
+      <nx-tree-view-radio-select available="vm.ages"
+                                 selected-id="vm.selectedId"
+                                 on-change="vm.selectAge(selected)">
+        Age
+      </nx-tree-view-radio-select>
+    </fieldset>
+  </form>
+  <h3>Primary and default buttons are used unmodified</h3>
+  <div class="nx-btn-bar">
+    <button class="nx-btn nx-btn--tertiary">Tertiary button</button>
+  </div>
+  
+</div>
+
+</item-example-html>
