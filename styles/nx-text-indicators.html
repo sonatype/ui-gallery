@@ -1,5 +1,9 @@
 <item-description>
+  <marked>
   Text indicators, normally used in tables or lists to convey extra information about the data in the row/list item.
+  
+  Usually, but not always, paired with `.nx-pull-right`.
+  </marked>
 </item-description>
 
 <item-example-html>
@@ -9,15 +13,21 @@
     </h4>
     <ul>
       <li class="nx-list__item">
-        <span class="iq-text-indicator iq-text-indicator--waived">Waived<i class="fa fa-check"></i></span>
+        List item content
+        <span class="nx-text-indicator nx-text-indicator--waived nx-pull-right">
+          Waived<i class="fa fa-check"></i>
+        </span>
       </li>
     </ul>
   </div>
-  
+</item-example-html> 
+<item-example-html>
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
-        <th colspan="4" class="nx-cell nx-cell--header">Text indicator in a table cell</th>
+        <th colspan="4" class="nx-cell nx-cell--header">
+          Text indicator in a table cell
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -26,7 +36,9 @@
         <td class="nx-cell">Content 2</td>
         <td class="nx-cell">Content 3</td>
         <td class="nx-cell">
-          <span class="iq-text-indicator iq-text-indicator--waived">Waived<i class="fa fa-check"></i></span>
+          <span class="nx-text-indicator nx-text-indicator--waived nx-pull-right">
+            Waived<i class="fa fa-check"></i>
+          </span>
         </td>
       </tr>
     </tbody>
