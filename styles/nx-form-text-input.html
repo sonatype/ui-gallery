@@ -1,0 +1,69 @@
+<item-description>
+  <marked>
+    Standard nx- styled text input form element with validation styles.
+    
+    Generic validation classes have been provided as well as styling for the AngularJS ng- prefixed classes used by IQ.
+  </marked>
+</item-description>
+
+<item-example-html title="Generic validation classes">
+  <div class="example-form">
+    <form>
+      <div class="nx-form-group">
+        <label class="nx-label">Default</label>
+        <input type="text" class="nx-text-input nx-field-empty nx-field-pristine">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label">Valid</label>
+        <input type="text" class="nx-text-input nx-field-valid">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label">Dirty and Invalid</label>
+        <input type="text" class="nx-text-input nx-field-dirty nx-field-invalid">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label nx-label--optional">Default</label>
+        <input type="text" class="nx-text-input nx-field-pristine">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label nx-label--optional">Disabled</label>
+        <input type="text" class="nx-text-input" disabled>
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label">Disabled with a default value</label>
+        <input type="text" class="nx-text-input nx-field-dirty" value="Default value" disabled>
+      </div>
+    </form>
+  </div>
+</item-example-html>
+
+<item-example-html title="AngularJS validation classes">
+  <div class="example-form">
+    <form>
+      <div class="nx-form-group">
+        <label class="nx-label">Default</label>
+        <input type="text" class="nx-text-input ng-empty ng-pristine">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label">Valid</label>
+        <input type="text" class="nx-text-input ng-valid">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label">Dirty and Invalid</label>
+        <input type="text" class="nx-text-input ng-dirty ng-invalid">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label nx-label--optional">Default</label>
+        <input type="text" class="nx-text-input ng-pristine">
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label nx-label--optional">Disabled</label>
+        <input type="text" class="nx-text-input" disabled>
+      </div>
+      <div class="nx-form-group">
+        <label class="nx-label">Disabled with a default value</label>
+        <input type="text" class="nx-text-input ng-dirty" value="Default value" disabled>
+      </div>
+    </form>
+  </div>
+</item-example-html>

@@ -4,13 +4,10 @@
 @import "./example-scss/nx-globals";
 @import "./example-scss/widgets";
 @import "./example-scss/nx-tile";
-@import "./example-scss/form";
+@import "./example-scss/nx-forms";
 @import "./example-scss/icons";
 @import "./example-scss/nx-page-header";
 @import "./example-scss/nx-page-layout";
-@import "./example-scss/iq-theme-dark";
+@import "./example-scss/nx-theme-dark";
 
-// Styles utilized for the Lightning Talk that introduced the UI Gallery
-// These styles are not required for any project
-// they're just provided to show how the presentation was built.
 @import "./example-scss/lightningtalk";
