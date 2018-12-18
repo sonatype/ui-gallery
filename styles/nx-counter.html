@@ -6,35 +6,34 @@
   </marked>
 </item-description>
 
+<style>
+  h2, h3 {
+    max-width: 200px; // shortened to make positioning examples more obvious
+  }
+
+  h2 .nx-counter {
+    float: right;
+    margin-top: 2px;
+  }
+
+  h3 .nx-counter {
+    float: right;
+  }
+</style>
+
 <item-example-html>
-  <style>
-    h2, h3 {
-      max-width: 200px; // shortened to make positioning examples more obvious
-    }
+  <h2>Default <span class="nx-counter">42</span></h2>
+</item-example-html>
 
-    h2 .nx-counter {
-      float: right;
-      margin-top: 2px;
-    }
-  
-    h3 .nx-counter {
-      float: right;
-    }
-  </style>
+<item-example-html>
+  <h2>Active <span class="nx-counter nx-counter--active">2 of 2</span></h2>
+</item-example-html>
 
-  <h3>Default<span class="nx-counter">42</span></h3>
+<item-example-html>
+  <h2>All Time <span class="nx-counter">all time</span></h2>
+</item-example-html>
 
-  <hr>
-
-  <h2>Active<span class="nx-counter nx-counter--active">2 of 2</span></h2>
-
-  <hr>
-
-  <h3>Text only<span class="nx-counter">all time</span></h3>
-
-  <hr>
-  
-  <h3>Tree-view positioning</h3>
+<item-example-html title="Tree-view positioning">
   <div class="nx-tree-view">
     <a class="nx-tree-view__trigger" ng-click="isExpanded1 = !isExpanded1">
       <div class="nx-tree-view__twisty">
