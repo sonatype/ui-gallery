@@ -2,23 +2,24 @@
   Tile partition Grid system.
 </item-description>
 
-<item-example-html>
-  <style>
-    .nx-grid-col {
-      min-height: 60px;
-    }
-    
-    .nx-grid-col--200px {
-      /* Mixin format would be:
-      @include flex(0 0 200px);
-      */
-      -webkit-box-flex: 0 0 200px;
-      -moz-box-flex: 0 0 200px;
-      -webkit-flex: 0 0 200px;
-      -ms-flex: 0 0 200px;
-      flex: 0 0 200px;
-    }
-  </style>
+<style>
+  .nx-grid-col {
+    min-height: 60px;
+  }
+  
+  .nx-grid-col--200px {
+    /* Mixin format would be:
+    @include flex(0 0 200px);
+    */
+    -webkit-box-flex: 0 0 200px;
+    -moz-box-flex: 0 0 200px;
+    -webkit-flex: 0 0 200px;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+  }
+</style>
+
+<item-example-html title="Basic grid styles">
   <hr class="nx-grid-h-keyline">
   <div class="nx-grid-row">
     <div class="nx-grid-col nx-grid-col--25">25%</div>
@@ -71,8 +72,8 @@
     <div class="nx-grid-col">Default column stretches to fill available space --- range-rover hacker disposable shoes shoes long-chain hydrocarbons hotdog grenade chrome rain bomb skyscraper weathered engine fetishism cardboard. bicycle knife refrigerator semiotics 3D-printed dome computer</div>
   </div>
   <hr class="nx-grid-h-keyline">
-  
-  <!-- Grids with Titles -->
+</item-example-html>
+<item-example-html title="Various grid title styles">
   <div class="nx-grid-row">
     <div class="nx-grid-col nx-grid-col--50">
       <div class="nx-grid-header">
