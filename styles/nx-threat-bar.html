@@ -1,19 +1,19 @@
 <item-description>
   <marked>
-`.iq-threat-bar` is used at the left edge of a table cell or list item to indicate via colour the threat level of the information to follow.
+`.nx-threat-bar` is used at the left edge of a table cell or list item to indicate via colour the threat level of the information to follow.
 
 There are three scales to choose from: threat level by name, threat level by number, and policy threat level by number. The names and colour variables are located in the `/scss/_variables.scss` file. All three are represented in the table below.
 
-Other threat indicators such as <a href="/#/iq-threat-indicators">threat indicators</a> and threat backgrounds have similar purposes but different applications.
+Other threat indicators such as <a href="/#/nx-threat-indicators">threat indicators</a> and threat backgrounds have similar purposes but different applications.
 
 Typically the threat level is set programmatically:
-`&lt;span class="iq-threat-bar iq-threat-bar--critical"&gt;&lt;/span&gt;`
+`&lt;span class="nx-threat-bar nx-threat-bar--critical"&gt;&lt;/span&gt;`
 
-`&lt;span class="iq-threat-bar iq-threat-bar--5"&gt;&lt;/span&gt;`
+`&lt;span class="nx-threat-bar nx-threat-bar--5"&gt;&lt;/span&gt;`
 
-`&lt;span class="iq-threat-bar iq-threat-bar--policy-level-2"&gt;&lt;/span&gt;`
+`&lt;span class="nx-threat-bar nx-threat-bar--policy-level-2"&gt;&lt;/span&gt;`
 
-For examples in the application look at:
+For examples in IQ Server look at:
 `/frontend/owner.manager/summary/owner.summary.view.html`
 `/frontend/owner.manager/summary/ownerPolicyList/ownerPolicyList.html`
 
@@ -24,19 +24,19 @@ For examples in the application look at:
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
-        <th class="nx-cell nx-cell--header iq-clickable">
+        <th class="nx-cell nx-cell--header nx-clickable">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
           </div>
           Header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable nx-cell--selected">
+        <th class="nx-cell nx-cell--header nx-clickable nx-cell--selected">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i>
           </div>
           Selected header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable">
+        <th class="nx-cell nx-cell--header nx-clickable">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
           </div>
@@ -45,30 +45,30 @@ For examples in the application look at:
       </tr>
     </thead>
     <tbody>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--none"></span> Threat Level None
+          <span class="nx-threat-bar nx-threat-bar--none"></span> Threat Level None
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--moderate"></span> Threat Level Moderate
+          <span class="nx-threat-bar nx-threat-bar--moderate"></span> Threat Level Moderate
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--severe"></span> Threat Level Severe
+          <span class="nx-threat-bar nx-threat-bar--severe"></span> Threat Level Severe
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--critical"></span> Threat Level Critical
+          <span class="nx-threat-bar nx-threat-bar--critical"></span> Threat Level Critical
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -80,19 +80,19 @@ For examples in the application look at:
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
-        <th class="nx-cell nx-cell--header iq-clickable">
+        <th class="nx-cell nx-cell--header nx-clickable">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
           </div>
           Header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable nx-cell--selected">
+        <th class="nx-cell nx-cell--header nx-clickable nx-cell--selected">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i>
           </div>
           Selected header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable">
+        <th class="nx-cell nx-cell--header nx-clickable">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
           </div>
@@ -101,30 +101,30 @@ For examples in the application look at:
       </tr>
     </thead>
     <tbody>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--0"></span> Threat Level 0
+          <span class="nx-threat-bar nx-threat-bar--0"></span> Threat Level 0
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--1"></span> Threat Level 1-3
+          <span class="nx-threat-bar nx-threat-bar--1"></span> Threat Level 1-3
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--4"></span> Threat Level 4-7
+          <span class="nx-threat-bar nx-threat-bar--4"></span> Threat Level 4-7
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--8"></span> Threat Level 8-10
+          <span class="nx-threat-bar nx-threat-bar--8"></span> Threat Level 8-10
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -136,19 +136,19 @@ For examples in the application look at:
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
-        <th class="nx-cell nx-cell--header iq-clickable">
+        <th class="nx-cell nx-cell--header nx-clickable">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
           </div>
           Header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable nx-cell--selected">
+        <th class="nx-cell nx-cell--header nx-clickable nx-cell--selected">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i>
           </div>
           Selected header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable">
+        <th class="nx-cell nx-cell--header nx-clickable">
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
           </div>
@@ -157,37 +157,37 @@ For examples in the application look at:
       </tr>
     </thead>
     <tbody>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--policy-level-0"></span> Threat Bar Policy Level 0
+          <span class="nx-threat-bar nx-threat-bar--policy-level-0"></span> Threat Bar Policy Level 0
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--policy-level-1"></span> Threat Bar Policy Level 1
+          <span class="nx-threat-bar nx-threat-bar--policy-level-1"></span> Threat Bar Policy Level 1
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--policy-level-2"></span> Threat Bar Policy Level 2-3
+          <span class="nx-threat-bar nx-threat-bar--policy-level-2"></span> Threat Bar Policy Level 2-3
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--policy-level-4"></span> Threat Bar Policy Level 4-7
+          <span class="nx-threat-bar nx-threat-bar--policy-level-4"></span> Threat Bar Policy Level 4-7
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell">
-          <span class="iq-threat-bar iq-threat-bar--policy-level-8"></span> Threat Bar Policy Level 8-10
+          <span class="nx-threat-bar nx-threat-bar--policy-level-8"></span> Threat Bar Policy Level 8-10
         </td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
