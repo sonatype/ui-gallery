@@ -1,17 +1,3 @@
-// NOTE: Typography mixins are located in _typography.scss
-@mixin iq-arrow-up() {
-  border-color: transparent transparent #fff transparent;
-  border-style: solid;
-  border-width: 0 5px 5px 5px;
-  content: "";
-  height: 0;
-  margin-left: -5px;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 0;
-}
-
 /*
   Flexbox
 */
@@ -30,38 +16,4 @@
   -webkit-flex:  $values;
   -ms-flex:  $values;
   flex:  $values;
-}
-
-/*
- #Placeholder classes
-*/
-%link {
-  &.disabled {
-    color: $nx-light-blue;
-    cursor: default;
-
-    &:hover {
-      color: $nx-light-blue;
-    }
-  }
-
-  &:not(.disabled) {
-    color: $nx-link-color;
-
-    &:hover:not(:active) {
-      color: $nx-link-color;
-      text-decoration: underline;
-    }
-    
-    &:active {
-      color: $nx-link-color-active;
-      text-decoration: none;
-    }
-  }
-}
-
-.truncate-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

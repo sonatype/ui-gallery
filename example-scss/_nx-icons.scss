@@ -164,29 +164,6 @@ $font-families: ('sonatype-icons', 'sonatype-glyphicons');
   }
 }
 
-.hexagon--list-item {
-  margin-right: 8px;
-  vertical-align: bottom;
-}
-
-/*
-  ## License Threat Group Colors
-  Colors for license threat group icons
-*/
-.fa-book {
-  @each $threat in $threat-levels {
-    @each $threatLevel in nth($threat, 4) {
-      &.threat-level-#{$threatLevel} {
-        color: nth($threat, 3);
-      }
-    }
-  }
-}
-
-.fa-info-circle {
-  color: $nx-dark-blue;
-}
-
 .fa.loading-spinner {
   margin-right: 8px;
 }

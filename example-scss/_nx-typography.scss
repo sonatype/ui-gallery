@@ -34,20 +34,6 @@
   font-style: normal;
 }
 
-// These are deprecated - use the mixins instead
-// will remove from here when all references have been removed
-.bold {
-  font-family: Proxima Nova Bold, sans-serif;
-}
-
-.semi-bold {
-  font-family: Proxima Nova Semibold, sans-serif;
-}
-
-.regular {
-  font-family: Proxima Nova Regular, sans-serif;
-}
-
 @mixin regular() {
   font-family: Proxima Nova Regular, sans-serif;
 }
@@ -67,12 +53,10 @@ body {
   line-height: 18px;
 }
 
-$h1-font-size: 26px;
-
 h1 {
   @include bold();
   
-  font-size: $h1-font-size;
+  font-size: 26px;
   line-height: 28px;
   margin-bottom: 24px;
 }
@@ -151,12 +135,4 @@ label.checkbox, label.radio {
   @include regular();
   
   font-size: 14px;
-}
-
-// see CLM-7344 for details on removing this style
-h1 + div > *:first-child, 
-h2 + div > *:first-child, 
-h3 + div > *:first-child, 
-h4 + div > *:first-child {
-  margin-top: 0;
 }

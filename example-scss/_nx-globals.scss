@@ -21,7 +21,7 @@ a {
   float: right;
 }
 
-.iq-error {
+.nx-error {
   background-color: $nx-fail-color-bg;
   border: 1px solid $nx-fail-color;
   color: $nx-fail-color;
@@ -31,4 +31,10 @@ a {
   height: auto;
   max-height: 400px; // default value - magic number
   overflow-x: hidden;
+}
+
+.truncate-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
