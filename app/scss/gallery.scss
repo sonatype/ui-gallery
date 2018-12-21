@@ -9,11 +9,6 @@
 @import "markdown";
 @import "charts";
 
-body {
-  font-size: 16px;
-  line-height: 1.25;
-}
-
 // CUSTOM STYLES FOR GALLERY
 
 .nx-title__brand {
@@ -39,4 +34,9 @@ code {
   border-radius: 2px;
   display: inline-block;
   padding: 2px 3px;
+}
+
+item-description {
+  font-size: 16px;
+  line-height: 21px;
 }
