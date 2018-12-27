@@ -31,35 +31,35 @@
   </div>
 </item-description>
 
-<item-example-html>
+<item-example-html title="Basic table styles">
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
-        <th class="nx-cell nx-cell--header iq-clickable"> 
+        <th class="nx-cell nx-cell--header nx-clickable"> 
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
           </div>
           Header 
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable nx-cell--selected"> 
+        <th class="nx-cell nx-cell--header nx-clickable nx-cell--selected"> 
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i> 
           </div>
           Selected header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable"> 
+        <th class="nx-cell nx-cell--header nx-clickable"> 
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
           </div>
           Header
         </th>
-        <th class="nx-cell nx-cell--header iq-clickable"> 
+        <th class="nx-cell nx-cell--header nx-clickable"> 
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
           </div>
           Header
         </th>
-        <th class="nx-cell nx-cell--header nx-cell--header--noborder iq-clickable"> 
+        <th class="nx-cell nx-cell--header nx-cell--header--noborder nx-clickable"> 
           <div class="nx-col-sort-icons">
             <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
           </div>
@@ -69,7 +69,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell nx-cell--label">Clickable row</td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -77,7 +77,7 @@
         <td class="nx-cell">Content 4</td>
         <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell nx-cell--label">Row Label</td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -85,7 +85,7 @@
         <td class="nx-cell">Content 4</td>
         <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell nx-cell--label">Row Label</td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -93,7 +93,7 @@
         <td class="nx-cell">Content 4</td>
         <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell nx-cell--label">Row Label</td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -101,7 +101,7 @@
         <td class="nx-cell">Content 4</td>
         <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell nx-cell--label">Row Label</td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -109,7 +109,7 @@
         <td class="nx-cell">Content 4</td>
         <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
       </tr>
-      <tr class="nx-table-row iq-clickable">
+      <tr class="nx-table-row nx-clickable">
         <td class="nx-cell nx-cell--label">Row Label</td>
         <td class="nx-cell">Content 1</td>
         <td class="nx-cell">Content 2</td>
@@ -139,9 +139,8 @@
       </tr>
     </tbody>
   </table>
-
-  <h2>Empty table</h2>
-  
+</item-example-html>
+<item-example-html title="Empty table">
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
@@ -168,6 +167,86 @@
     <tbody>
       <tr class="nx-table-row">
         <td class="nx-cell nx-cell--empty" colspan="6">This table contains no data and this message tells you that.</td>
+      </tr>
+    </tbody>
+  </table>
+</item-example-html>
+
+<item-example-html title="Column filters">
+  <table class="nx-table">
+    <thead>
+      <tr class="nx-table-row nx-table-row--header">
+        <th class="nx-cell nx-cell--header nx-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header 
+        </th>
+        <th class="nx-cell nx-cell--header nx-clickable nx-cell--selected"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i> 
+          </div>
+          Selected header
+        </th>
+        <th class="nx-cell nx-cell--header nx-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header
+        </th>
+        <th class="nx-cell nx-cell--header nx-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          Header
+        </th>
+        <th class="nx-cell nx-cell--header nx-cell--header--noborder nx-clickable"> 
+          <div class="nx-col-sort-icons">
+            <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+          </div>
+          No left border
+        </th>
+        <th class="nx-cell nx-cell--header nx-cell--chevron"></th>
+      </tr>
+      <tr class="nx-table-row nx-table-row--filters">
+        <th class="nx-cell nx-cell--filter">
+          <span class="input-prepend">
+            <i class="fa fa-filter add-on"></i><input type="text" placeholder="placeholder">
+          </span>
+        </th>
+        <th class="nx-cell nx-cell--filter">
+          <span class="input-prepend">
+            <i class="fa fa-filter add-on"></i><input type="text" placeholder="placeholder">
+          </span>
+        </th>
+        <th colspan="4" class="nx-cell nx-cell--filter">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="nx-table-row nx-clickable">
+        <td class="nx-cell nx-cell--label">Clickable row</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row nx-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
+      </tr>
+      <tr class="nx-table-row nx-clickable">
+        <td class="nx-cell nx-cell--label">Row Label</td>
+        <td class="nx-cell">Content 1</td>
+        <td class="nx-cell">Content 2</td>
+        <td class="nx-cell">Content 3</td>
+        <td class="nx-cell">Content 4</td>
+        <td class="nx-cell nx-cell--chevron"><i class="fa fa-chevron-right"></i></td>
       </tr>
     </tbody>
   </table>

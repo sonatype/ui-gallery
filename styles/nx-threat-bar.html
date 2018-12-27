@@ -1,22 +1,26 @@
 <item-description>
   <marked>
-    `.nx-threat-bar` is used at the left edge of a table cell or list item to indicate via colour the threat level of the information to follow.
+`.nx-threat-bar` is used at the left edge of a table cell or list item to indicate via colour the threat level of the information to follow.
 
-    There are three scales to choose from: threat level by name, threat level by number, and policy threat level by number. The names and colour variables are located in the `/scss/_variables.scss` file. All three are represented in the table below.
+There are three scales to choose from: threat level by name, threat level by number, and policy threat level by number. The names and colour variables are located in the `/scss/_variables.scss` file. All three are represented in the table below.
 
-    Other threat indicators such as <a href="/#/nx-threat-indicators">threat indicators</a> and threat backgrounds have similar purposes but different applications.
+Other threat indicators such as <a href="/#/nx-threat-indicators">threat indicators</a> and threat backgrounds have similar purposes but different applications.
 
-    Typically the threat level is set programmatically:
-    `&lt;span class="nx-threat-bar nx-threat-bar--critical"&gt;&lt;/span&gt;`
+Typically the threat level is set programmatically:
+`&lt;span class="nx-threat-bar nx-threat-bar--critical"&gt;&lt;/span&gt;`
 
-    `&lt;span class="nx-threat-bar nx-threat-bar--5"&gt;&lt;/span&gt;`
+`&lt;span class="nx-threat-bar nx-threat-bar--5"&gt;&lt;/span&gt;`
 
-    `&lt;span class="nx-threat-bar nx-threat-bar--policy-level-2"&gt;&lt;/span&gt;`
+`&lt;span class="nx-threat-bar nx-threat-bar--policy-level-2"&gt;&lt;/span&gt;`
+
+For examples in IQ Server look at:
+`/frontend/owner.manager/summary/owner.summary.view.html`
+`/frontend/owner.manager/summary/ownerPolicyList/ownerPolicyList.html`
+
   </marked>
 </item-description>
 
-<item-example-html>
-  <h3>Threat levels by name</h3>
+<item-example-html title="Threat levels by name">
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
@@ -72,8 +76,7 @@
     </tbody>
   </table>
 </item-example-html>
-<item-example-html>
-  <h3>Threat levels by number</h3>
+<item-example-html title="Threat levels by number">
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">
@@ -129,8 +132,7 @@
     </tbody>
   </table>
 </item-example-html>
-<item-example-html>
-  <h3>Threat levels by policy number</h3>
+<item-example-html title="Threat levels by policy number">
   <table class="nx-table">
     <thead>
       <tr class="nx-table-row nx-table-row--header">

@@ -13,10 +13,10 @@
   </div>
 </item-description>
 
-<item-example-html>
+<item-example-html title="Default list">
   <div class="nx-list">
     <h4 class="nx-list__title">
-      Unordered list
+      List title
     </h4>
     <ul>
       <li class="nx-list__item">
@@ -30,30 +30,32 @@
       </li>
     </ul>
   </div>
-  
+</item-example-html>
+<item-example-html title="List with a tertiary button">  
   <div class="nx-list">
     <h4 class="nx-list__title">
-      List with a tertiary button
+      List title
     </h4>
     <ul>
       <li class="nx-list__item nx-list-item--with-modifier-icon">
-        <button class="nx-btn nx-btn--tertiary nx-btn--icon-only iq-pull-right" type="button">
+        <button class="nx-btn nx-btn--tertiary nx-btn--icon-only nx-pull-right" type="button">
           <i class="fa fa-trash"></i>
         </button>
         List item
       </li>
       <li class="nx-list__item nx-list-item--with-modifier-icon">
-        <button class="nx-btn nx-btn--tertiary nx-btn--icon-only iq-pull-right" type="button">
+        <button class="nx-btn nx-btn--tertiary nx-btn--icon-only nx-pull-right" type="button">
           <i class="fa fa-trash"></i>
         </button>
         List item
       </li>
     </ul>
   </div>
-    
+</item-example-html>
+<item-example-html title="Multi-line list">     
   <div class="nx-list">
     <h4 class="nx-list__title">
-      Multi-line list
+      List title
     </h4>
     <ul class="nx-list">
       <li class="nx-list__item">
@@ -74,9 +76,11 @@
       </li>
     </ul>
   </div>
+</item-example-html>
+<item-example-html title="Bulleted list"> 
   <div class="nx-list nx-list--bulleted">
     <h4 class="nx-list__title">
-      Bulleted list
+      List title
     </h4>
     <ul>
       <li class="nx-list__item">
@@ -90,20 +94,37 @@
       </li>
     </ul>
   </div>
+</item-example-html>
+<item-example-html title="Empty list"> 
   <div class="nx-list">
     <h4 class="nx-list__title">
-      Empty list
+      List title
     </h4>
     <div class="nx-list__item nx-list__item--empty">
       No actions message.
     </div>
   </div>
+</item-example-html>
+<item-example-html title="List with error state"> 
   <div class="nx-list">
     <h4 class="nx-list__title">
-      List error state
+      List title
     </h4>
-    <div class="nx-list__item iq-error">
+    <div class="nx-list__item nx-error">
       <i class="fa fa-warning"></i>Failed to load actions message
     </div>
   </div>
+</item-example-html>
+
+<item-example-html title="Definition list"> 
+  <dl class="nx-list nx-list--definition-list">
+    <dt class="nx-list__item nx-list__item--label">Label</dt><!--
+ --><dd class="nx-list__item">Content goes here</dd>
+    <dt class="nx-list__item nx-list__item--label">Label</dt><!--
+ --><dd class="nx-list__item">Content goes here</dd>
+    <dt class="nx-list__item nx-list__item--label">Label</dt><!--
+ --><dd class="nx-list__item">Content goes here</dd>
+    <dt class="nx-list__item nx-list__item--label">Label</dt><!--
+ --><dd class="nx-list__item">Content goes here</dd>
+  </dl>
 </item-example-html>

@@ -36,20 +36,51 @@
 </div>
 
 <div class="nx-tile">
-  <div class="iq-grid-row">
-    <div class="iq-grid-col iq-grid-col--50">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
+      <h2>How to add a new component to the gallery</h2>
+    </div>
+  </div>
+  <marked>
+    * create an html page using the following structure (see template.html)
+
+      ```html
+      &lt;item-description&gt;
+        Usage docs
+        &lt;marked&gt;
+          You can use markdown inside &lt;marked&gt; tag
+        &lt;/marked&gt;
+      &lt;/item-description&gt;
+
+      &lt;item-example-html title="My Example"&gt;
+        example html
+      &lt;/item-example-html&gt;
+      ```
+
+    * map the component name to the html page created above (add an entry to `config.js`)
+    ```js
+    'component-name' : 'components/component-name.html',
+    ```
+
+    * (only for js components) add necessary imports and angular module dependencies in `config.js`
+
+  </marked>
+</div>
+
+<div class="nx-tile">
+  <div class="nx-grid-row">
+    <div class="nx-grid-col nx-grid-col--50">
       <div class="nx-tile-header">
         <div class="nx-tile-header__title">
           <h2>To do</h2>
         </div>
       </div>
       <marked>
-        - refactor iq- to nx- styles
         - more documentation
         - full page template, single, double, triple column
       </marked>
     </div>
-    <div class="iq-grid-col iq-grid-col--50">
+    <div class="nx-grid-col nx-grid-col--50">
       <div class="nx-tile-header">
         <div class="nx-tile-header__title">
           <h2>Help requested</h2>
@@ -58,7 +89,7 @@
       <marked>
         - nx-nav-pills - page scrolling navigation
         - nx-tool-tip functionality
-        - NPM packaging (Elijah El-Haddad)
+        - NPM packaging
         - nx-modal functionality
         - nx-tree-view refactor AngularJS functionality
       </marked>

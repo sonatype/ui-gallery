@@ -19,24 +19,26 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'tiles': 'styles/nx-tile.html',
       'pull-right': 'styles/nx-pull-right.html',
       'scrolling block': 'styles/nx-scrollable.html',
-      'grid': 'styles/nx-grid.html'
+      'grid': 'styles/nx-grid.html',
+      'nx-theme-dark': 'styles/nx-theme-dark.html'
     })
 
     .constant('widgetsConfig', {
-      'buttons': 'styles/nx-btn.html',
-      'nav pills': 'styles/nx-nav-pills.html',
-      //'iq-dropdown': 'styles/iq-dropdown.html',
       'alerts': 'styles/nx-alerts.html',
-      // 'iq-modal': 'styles/iq-modal/iq-modal.html',
-      'read-only': 'styles/nx-read-only.html',
-      'tree-views': 'styles/nx-tree-view.html',
+      'buttons': 'styles/nx-btn.html',
+      'counters': 'styles/nx-counter.html',
       'lists': 'styles/nx-list.html',
       'clickable lists': 'styles/nx-list--clickable.html',
-      'threat indicators': 'styles/nx-threat-indicators.html',
-      'counters': 'styles/nx-counter.html',
-      'text indicators': 'styles/iq-text-indicators.html',
+      'nav pills': 'styles/nx-nav-pills.html',
+      //'iq-dropdown': 'styles/iq-dropdown.html',
+      // 'iq-modal': 'styles/iq-modal/iq-modal.html',
+      'pagination': 'styles/nx-pagination.html',
+      'read-only': 'styles/nx-read-only.html',
+      'tabs': 'styles/nx-tabs.html',
+      'text indicators': 'styles/nx-text-indicators.html',
       'threat bars': 'styles/nx-threat-bar.html',
-      'pagination': 'styles/nx-pagination.html'
+      'threat indicators': 'styles/nx-threat-indicators.html',
+      'tree-views': 'styles/nx-tree-view.html'
     })
 
     .constant('htmlConfig', {

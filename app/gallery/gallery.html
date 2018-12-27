@@ -1,27 +1,25 @@
-<header class="iq-header">
-  <div class="iq-header__inner">
-    <div class="iq-title">
-      <a ui-sref="home"><img src="./example-assets/img/sonatype-header.png" class="nx-pull-left" alt="Logo"></a>
-      <div class="iq-title__brand">
+<header class="nx-header nx-header--fixed">
+  <div class="nx-header__inner">
+    <div class="nx-title">
+      <a ui-sref="home"><img src="./example-assets/img/logo_sonatype_32x32.png" class="nx-pull-left" alt="Logo"></a>
+      <div class="nx-title__brand">
         <a ui-sref="home">Sonatype Style Gallery</a>
       </div>
-      <div class="iq-title__version">
+      <div class="nx-title__version">
         Serving all your styling needs since 2018
       </div>
     </div>
   </div>
 </header>
 
-<main class="iq-main-view">
-  <div class="iq-root-container iq-root-container--gallery" maximize-container-height>
-    <aside class="iq-sidebar">
-      <h2>
-        The classics
-      </h2>
-      <navigation></navigation>
-    </aside><!--
-  --><main class="iq-body-container">
-      <div ui-view></div>
-    </main>
-  </div>
-</main>
+<div class="nx-root-container">
+  <aside class="nx-page-sidebar">
+    <h2>
+      Examples
+    </h2>
+    <navigation></navigation>
+  </aside>
+  <main class="nx-page-main">
+    <div ui-view></div>
+  </main>
+</div>

@@ -1,3 +1,26 @@
+/*
+ # Read-only form groups
+ */
+
+.nx-read-only {
+  margin-top: 0;
+  margin-bottom: 13px;
+  
+  > dt, > div > dt {
+    @include semi-bold();
+    
+    color: $nx-off-black;
+    display: block;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 1px;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 .nx-read-only-data {
   margin-left: 0;
   padding-left: 12px;
@@ -21,7 +44,6 @@
   span {
     display: block;
     margin-right: 0;
-    margin-bottom: 8px;
   }
 }
 

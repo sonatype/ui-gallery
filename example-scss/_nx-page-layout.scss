@@ -8,43 +8,37 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
-
-  &.iq-body { // for styles that shouldn't leak out of IQ to e.g. audit reports
-    min-width: 1024px;
-  }
 }
 
-.iq-main-view {
+.nx-root-container {
   background-color: $nx-off-white;
   box-sizing: border-box;
+  display: flex;
   margin: 0 auto;
   max-width: $nx-page-width-max;
   min-width: $nx-page-width-min;
 }
 
-.iq-sidebar {
+.nx-page-sidebar {
   background-color: $nx-grey-2;
   border-right: 1px solid $nx-grey-3;
   border-left: solid 1px $nx-grey-4;
   box-sizing: border-box;
-  display: inline-block;
+  flex: 0 1 auto;
   overflow-x: hidden;
+  padding: 8px;
   position: relative;
   vertical-align: top;
   white-space: normal;
   width: $nx-sidebar-width;
   z-index: $nx-sidebar-zindex;
-
-  // Hack to prevent rendering issues in Chrome. This will create a new layer with its own backing surface, preventing
-  // the background and text from disappearing. Witnessed on Chrome 43.0.2357.130 (64-bit) on a MBP laptop screen.
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
-.iq-body-container {
+.nx-page-main {
   background: url("../example-assets/img/tile_bg.png");
   border-right: solid 1px $nx-grey-4;
   box-sizing: border-box;
-  display: inline-block;
+  flex: 0 1 auto;
   overflow-x: hidden;
   vertical-align: top;
   white-space: normal;
@@ -59,7 +53,7 @@ body {
   }
 }
 
-.iq-body-container--single-pane {
+.nx-page-main--single-pane {
   border-left: solid 1px $nx-grey-4;
   width: 100%;
 }

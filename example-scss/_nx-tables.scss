@@ -171,3 +171,43 @@
   padding-right: 0;
   width: 32px;
 }
+
+// used on pages where we want an input field at the top of the table column to filter the column contents
+// it is expected that the column filters will be located in the <thead>
+.iq-table-row--filters {
+  border-color: transparent;
+
+  &:last-child .iq-cell.iq-cell--filter {
+    // override high-specificity style
+    border-color: transparent;
+  }
+}
+
+.nx-cell--filter {
+  $height: 30px;
+
+  border-color: transparent;
+  height: $height;
+  line-height: $height;
+  padding: 3px 0 0 8px; 
+
+  .input-prepend {
+    line-height: $height;
+    margin: 0;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  input {
+    line-height: $height;
+    width: calc(100% - 48px);
+  }
+  
+  &:first-child {
+    padding-left: 8px;
+  }
+  
+  &:last-child {
+    padding-right: 8px;
+  }
+}

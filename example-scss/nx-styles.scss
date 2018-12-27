@@ -1,12 +1,13 @@
-@import "./example-scss/variables";
-@import "./example-scss/typography";
-@import "./example-scss/mixins";
+@import "./example-scss/nx-variables";
+@import "./example-scss/nx-typography";
+@import "./example-scss/nx-mixins";
 @import "./example-scss/nx-globals";
-@import "./example-scss/widgets";
-@import "./example-scss/content";
+@import "./example-scss/nx-widgets";
 @import "./example-scss/nx-tile";
 @import "./example-scss/nx-forms";
-@import "./example-scss/icons";
-@import "./example-scss/mainHeader";
-@import "./example-scss/iq-theme-dark";
+@import "./example-scss/nx-icons";
+@import "./example-scss/nx-page-header";
+@import "./example-scss/nx-page-layout";
+@import "./example-scss/nx-theme-dark";
+
 @import "./example-scss/lightningtalk";

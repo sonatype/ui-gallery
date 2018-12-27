@@ -9,53 +9,17 @@
 @import "markdown";
 @import "charts";
 
-body {
-  font-size: 16px;
-  line-height: 1.25;
-}
-
-// Page Layout
-
-.iq-root-container--gallery {
-  display: flex;
-  
-  .iq-sidebar {
-    flex: 0 1 auto;
-    padding-left: 8px;
-  }
-  
-  main {
-    flex: 0 1 auto;
-  }
-}
-
-// Global
-
-.iq-error {
-  background-color: #fce2e2;
-  border-color: #831d1d;
-  color: #831d1d;
-}
-
-.iq-alert__message {
-  margin-bottom: 8px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  i {
-    margin-right: 8px;
-  }
-}
-
 // CUSTOM STYLES FOR GALLERY
 
-.iq-title__brand {
+.nx-title__brand {
   a, a:hover {
     color: #fff;
     text-decoration: none;
   }
+}
+
+.nx-title img {
+  margin-top: 4px;
 }
 
 .nx-tile__gallery {
@@ -70,4 +34,9 @@ code {
   border-radius: 2px;
   display: inline-block;
   padding: 2px 3px;
+}
+
+item-description {
+  font-size: 16px;
+  line-height: 21px;
 }

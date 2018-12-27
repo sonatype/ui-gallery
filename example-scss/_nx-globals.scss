@@ -21,7 +21,7 @@ a {
   float: right;
 }
 
-.iq-error {
+.nx-error {
   background-color: $nx-fail-color-bg;
   border: 1px solid $nx-fail-color;
   color: $nx-fail-color;
@@ -32,3 +32,46 @@ a {
   max-height: 400px; // default value - magic number
   overflow-x: hidden;
 }
+
+.truncate-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Duplicate of the Bootstrap class
+.input-prepend {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  .add-on {
+    background-color: $nx-off-white;
+    border: 1px solid $nx-grey-4;
+    border-right: none;
+    box-shadow: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    margin-right: -1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    vertical-align: top;
+    width: auto;
+    min-width: 16px;
+
+    + input[type=text] {
+      border: 1px solid $nx-grey-4;
+      border-left: none;
+      border-radius: 0;
+      box-shadow: none;
+      height: 20px;
+      padding: 0;
+      vertical-align: top;
+    }
+  }
+}
+

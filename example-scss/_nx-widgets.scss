@@ -1,0 +1,54 @@
+/*
+  #Widgets
+*/
+
+@import "nx-alerts";
+@import "iq-dropdowns";
+@import "nx-tables";
+@import "nx-grid";
+@import "nx-lists";
+@import "nx-btn";
+@import "nx-threat-indicators";
+@import "nx-counter";
+@import "nx-nav-pills";
+@import "nx-text-indicators.scss";
+@import "nx-threat-bar";
+@import "nx-pagination";
+@import "nx-read-only";
+@import "nx-tree-view";
+@import "nx-tabs";
+
+/*
+  #System notice
+ */
+.iq-system-notice {
+  max-width: $nx-paragraph-width-maximum;
+}
+
+/*
+  #Captions
+ */
+
+.nx-caption {
+  display: inline-block;
+  height: 26px;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.nx-caption__text {
+  display: block;
+  font-size: 14px;
+  line-height: 12px;
+  margin: 0 0 2px 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.nx-caption__sub-text {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+}

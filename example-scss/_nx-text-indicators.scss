@@ -1,8 +1,8 @@
-.iq-text-indicator {
+.nx-text-indicator {
   @include semi-bold();
 }
 
-.iq-text-indicator--waived {
+.nx-text-indicator--waived {
   color: $nx-dark-green;
   
   .fa-check {
