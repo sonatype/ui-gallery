@@ -20,7 +20,8 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
       'pull-right': 'styles/nx-pull-right.html',
       'scrolling block': 'styles/nx-scrollable.html',
       'grid': 'styles/nx-grid.html',
-      'nx-theme-dark': 'styles/nx-theme-dark.html'
+      'nx-theme-dark': 'styles/nx-theme-dark.html',
+      'nx-typography': 'styles/nx-typography.html'
     })
 
     .constant('widgetsConfig', {
