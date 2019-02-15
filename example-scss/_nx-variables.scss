@@ -108,6 +108,9 @@ $nx-grey-border: 1px solid $nx-grey-3;
 // sidebar manage filter dropdown higher than main content
 $nx-sidebar-zindex: 4;
 
+// box-shadow to appear over scrollable contents
+$nx-dashboard-headers-zindex: 2;
+
 /*
   #Page elements
 */
@@ -119,3 +122,5 @@ $nx-content-width: 75.9%;
 $nx-sidebar-width: 100% - $nx-content-width;
 
 $nx-paragraph-width-maximum: 562px;
+
+$nx-scrollbar-width: 15px;

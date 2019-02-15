@@ -1,0 +1,198 @@
+<item-description>
+  <marked>
+    Table with a fixed header and contents that scroll.
+
+    This is a complex table that has many moving parts.
+    - a parent `.nx-tile--table-name` with `positon: relative;`
+    - a parent `nx-scrollable--table-name` which uses both the detect-scrollbar and maximize-container-height directives
+    - `@include table-fixed-widths($numColumns)` in the custom `nx-scrollable--table-name` SCSS which has the table's column count as its input
+    - in this case our table has five columns so our mixin would be set like this: `@include table-fixed-widths(5);`
+
+    The mixin will work for simple tables which do not require fixed sizes for any of the table columns. For more complicated tables look at 
+    `_dashboard.scss` in the IQ Brain project for examples of tables with normal, expanding, and fixed width columns.
+  </marked>
+</item-description>
+
+<item-example-html title="Fixed header table with scrolling contents">
+  <div class="nx-tile nx-tile--fixed-table-example">
+    <div class="nx-scrollable nx-scrollable--fixed-table" detect-scrollbar="" maximize-container-height>
+      <table class="nx-table nx-table--fixed">
+        <thead class="nx-table--fixed__header">
+          <tr class="nx-table-row">
+            <th class="nx-cell nx-cell--header nx-clickable"> 
+              <div class="nx-col-sort-icons">
+                <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+              </div>
+              Header 
+            </th><!--
+         --><th class="nx-cell nx-cell--header nx-clickable nx-cell--selected"> 
+              <div class="nx-col-sort-icons">
+                <i class="fa fa-caret-up"></i><i class="fa fa-caret-down down"></i> 
+              </div>
+              Selected header
+            </th><!--
+         --><th class="nx-cell nx-cell--header nx-clickable"> 
+              <div class="nx-col-sort-icons">
+                <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+              </div>
+              Header
+            </th><!--
+         --><th class="nx-cell nx-cell--header nx-clickable"> 
+              <div class="nx-col-sort-icons">
+                <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+              </div>
+              Header
+            </th><!--
+         --><th class="nx-cell nx-cell--header nx-cell--header--noborder nx-clickable"> 
+              <div class="nx-col-sort-icons">
+                <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i> 
+              </div>
+              No left border
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nx-table--fixed__content">
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Clickable row</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row">
+            <td class="nx-cell nx-cell--label">Non-clickable row</td><!--
+         --><td class="nx-cell">with icon</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row">
+            <td class="nx-cell nx-cell--label">Non-clickable row</td><!--
+         --><td class="nx-cell">with tertiary icon button</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Clickable row</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row nx-clickable">
+            <td class="nx-cell nx-cell--label">Row Label</td><!--
+         --><td class="nx-cell">Content 1</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row">
+            <td class="nx-cell nx-cell--label">Non-clickable row</td><!--
+         --><td class="nx-cell">with icon</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+          <tr class="nx-table-row">
+            <td class="nx-cell nx-cell--label">Non-clickable row</td><!--
+         --><td class="nx-cell">with tertiary icon button</td><!--
+         --><td class="nx-cell">Content 2</td><!--
+         --><td class="nx-cell">Content 3</td><!--
+         --><td class="nx-cell">Content 4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <style>
+    /* 
+     Hacks for Gallery
+     You can safely ignore these styles
+     */
+    
+    .nx-tile--fixed-table-example {
+      border: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    
+    .nx-table--fixed__header {
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</item-example-html>
+
+<div class="nx-tile">
+  <div class="nx-tile-header">
+    <div class="nx-tile-header__title">
+      <h2>SCSS Mixin Usage</h2>
+    </div>
+  </div>
+  <div hljs hljs-language="scss" hljs-include="'styles/nx-table-fixed.scss'"></div>
+</div>

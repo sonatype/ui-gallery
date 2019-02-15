@@ -2,6 +2,8 @@
   #Tables
 */
 
+$nx-table-header-height: 40px;
+
 .nx-table {
   border-collapse: collapse;
   display: table;
@@ -17,7 +19,7 @@
     }
   }
 
-  &.iq-clickable {
+  &.nx-clickable {
     &:last-child {
       &:hover .nx-cell {
         border-bottom: 1px solid $nx-grey-4;
@@ -175,10 +177,10 @@
 
 // used on pages where we want an input field at the top of the table column to filter the column contents
 // it is expected that the column filters will be located in the <thead>
-.iq-table-row--filters {
+.nx-table-row--filters {
   border-color: transparent;
 
-  &:last-child .iq-cell.iq-cell--filter {
+  &:last-child .nx-cell.nx-cell--filter {
     // override high-specificity style
     border-color: transparent;
   }
@@ -210,5 +212,78 @@
   
   &:last-child {
     padding-right: 8px;
+  }
+}
+
+/*
+  #Table with a fixed header and scrolling contents
+ */
+
+// a page utilizing a fixed header table will require a modified ".nx-scrollable", e.g. ".nx-scrollable--mypage".
+// This custom ".nx-scrollable--mypage" should invoke the `table-fixed-widths` mixin with the desired number
+// of columns in order to get width styles for that many equal-width columns. See the gallery for an example
+
+.nx-table--fixed {
+  border-bottom: 1px solid $nx-grey-1;
+  display: block;
+  margin-top: 0;
+
+  thead, tbody {
+    display: block;
+  }
+
+  .nx-table-row {
+    display: block;
+    width: 100%;
+  }
+}
+
+.nx-table--fixed__header {
+  @include semi-bold();
+
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px $nx-grey-1;
+  display: block;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  text-transform: uppercase;
+  width: calc(100% - 16px);
+  z-index: $nx-dashboard-headers-zindex;
+
+  .nx-cell--header {
+    display: inline-block;
+    height: $nx-table-header-height;
+    line-height: $nx-table-header-height;
+
+    &:first-child {
+      border-left: 1px solid $nx-grey-1;
+      line-height: 40px;
+    }
+
+    &:last-child {
+      padding-right: 11px;
+    }
+  }
+}
+
+.nx-table--fixed__content {
+  display: block;
+  padding-top: $nx-table-header-height; // pushes top row from below header
+  position: relative;
+
+  .nx-cell {
+    border-left: 1px solid $nx-off-white;
+    display: inline-block;
+    min-width: 0;
+
+    &:last-child {
+      padding-right: 11px;
+    }
+
+    &.nx-cell--empty {
+      width: 100%;
+    }
   }
 }

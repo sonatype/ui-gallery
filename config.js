@@ -44,6 +44,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
 
     .constant('htmlConfig', {
       'tables': 'styles/nx-table.html',
+      'tables with fixed headers': 'styles/nx-table-fixed.html',
       'input - text': 'styles/nx-form-text-input.html',
       'textarea': 'styles/nx-form-textarea.html',
       'form layout': 'styles/nx-form-layout/nx-form-layout.html'

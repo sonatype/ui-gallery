@@ -1,0 +1,9 @@
+// These 3 files are loaded by default in IQ
+//@import "~bootstrap-sass/lib/variables";
+@import "../example-scss/nx-variables";
+@import "../example-scss/nx-mixins";
+
+// Example usage of the table-fixed-widths mixin that must be used for each nx-table-fixed
+.nx-tile--fixed-table-example .nx-scrollable--fixed-table {
+  @include table-fixed-widths(5);
+}

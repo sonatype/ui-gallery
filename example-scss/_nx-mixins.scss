@@ -17,3 +17,30 @@
   -ms-flex:  $values;
   flex:  $values;
 }
+
+/*
+  Tables with a fixed header
+ */
+ @mixin table-fixed-widths($numColumns) {
+  .nx-table--fixed__header, .nx-table--fixed__content {
+    .nx-cell {
+      width: calc((100% / #{$numColumns}) - (24px + 1px));
+    }
+
+    .nx-cell--empty {
+      width: 100%;
+    }
+  }
+
+  &.scrollbar-present {
+    .nx-table--fixed__content {
+      .nx-cell {
+        width: calc(((100% + #{$nx-scrollbar-width}) / #{$numColumns}) - (24px + 1px));
+      }
+
+      .nx-cell:last-child {
+        width: calc(((100% + #{$nx-scrollbar-width}) / #{$numColumns}) - (24px + 1px) - #{$nx-scrollbar-width});
+      }
+    }
+  }
+}
