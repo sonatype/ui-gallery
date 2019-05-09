@@ -1,0 +1,43 @@
+// Colour Picker
+
+.nx-color-picker {
+  background: $nx-grey-3;
+  padding: 4px;
+  width: 166px;
+}
+
+.nx-color-picker-row {
+  font-size: 0;
+  line-height: 0;
+
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+}
+
+.nx-color-picker-color {
+  border: 1px solid $nx-off-black;
+  cursor: pointer;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  width: 32px;
+
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  @each $color-name, $pickable-color in $pickable-colors {
+    &.#{$color-name} {
+      background-color: $pickable-color;
+    }
+  }
+
+  &.selected {
+    border: 1px solid $nx-off-white;
+    box-shadow: 1px 1px 5px $nx-off-black;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+  }
+}

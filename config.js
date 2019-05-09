@@ -27,6 +27,7 @@ export default angular.module('config', [iqFormLayoutModule.name, iqModalModule.
     .constant('widgetsConfig', {
       'alerts': 'styles/nx-alerts.html',
       'buttons': 'styles/nx-btn.html',
+      'color picker': 'styles/nx-color-picker.html',
       'counters': 'styles/nx-counter.html',
       'lists': 'styles/nx-list.html',
       'clickable lists': 'styles/nx-list--clickable.html',
