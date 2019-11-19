@@ -24,7 +24,7 @@
     "sass-loader": "=6.0.6",
     "uglify-js": "=2.8.29",
     "webpack": "=3.8.1",
-    "webpack-dev-server": "=2.7.1"
+    "webpack-dev-server": "=3.1.11"
   },
   "scripts": {
     "gallery": "webpack-dev-server --config webpack.config.gallery.js"
