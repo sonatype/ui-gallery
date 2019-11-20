@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@uirouter/angularjs": "=1.0.5",
-    "angular": "=1.6.10",
+    "angular": "=1.7.9",
     "components-font-awesome": "=4.3.0"
   },
   "devDependencies": {
